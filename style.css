@@ -1,0 +1,53 @@
+/* CSS код ниже */
+
+@font-face {
+    font-family: "GenshinFont";
+    src: url('zh-cn.ttf');
+}
+
+body {
+    background:black;
+    font-family: GenshinFont;
+    font-size: 70px;
+    text-align: center;
+}
+
+ table {
+    background: rgba(63,94,91,0.7);
+    -webkit-backdrop-filter: blur(17px);
+    backdrop-filter: blur(17px);
+}
+  
+.emptycell {
+    background-color: rgba(0,0,0,0.4);
+}
+
+td {
+    backdrop-filter: drop-shadow(10px)
+}
+
+.bannerrow, .char, .whitecell {
+    background-color:white;
+    width:128px;
+    height:128px;
+}
+
+p {
+    margin: 0;
+    padding: 0
+}
+
+table, th, tb, td, tr {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    align-content: center
+}
+
+img {
+    display: block;
+}
+
+td {
+    padding: 0;
+
+}
