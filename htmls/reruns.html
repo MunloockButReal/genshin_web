@@ -984,9 +984,11 @@
             }
         });
 
-        $("img").click(function () {
-            window.open(characterLinks[$(this).attr("alt")]);
-        });
+            $("img").click(function () {
+                if (Object.keys(characterLinks).includes($(this).attr("alt"))) {
+                    window.open(characterLinks[$(this).attr("alt")]);
+                }
+            });
     </script>
 
 </body>
