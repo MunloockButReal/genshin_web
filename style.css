@@ -49,5 +49,16 @@ img {
 
 td {
     padding: 0;
+}
 
+[class*="v1"] {
+    padding: 20px
+}
+
+[class*="v2"] {
+    padding: 20px
+}
+
+[class*="v3"] {
+    padding: 20px
 }
