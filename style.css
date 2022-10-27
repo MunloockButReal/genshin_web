@@ -51,3 +51,9 @@ td {
     padding: 0;
 
 }
+
+.imagelink {
+    display:flex;
+    margin:0;
+    justify-content:center
+}
