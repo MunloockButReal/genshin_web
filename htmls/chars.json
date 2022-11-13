@@ -1,0 +1,551 @@
+[
+  {
+    "version": "0.1",
+    "Rarity": 5,
+    "name": "ГГ",
+    "HP": 10875,
+    "ATK": 212,
+    "DEF": 683,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Фишль",
+    "HP": 9189,
+    "ATK": 244,
+    "DEF": 594,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Сахароза",
+    "HP": 9244,
+    "ATK": 170,
+    "DEF": 703,
+    "Abil": "ED(Anemo): 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Эмбер",
+    "HP": 9461,
+    "ATK": 223,
+    "DEF": 601,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Лиза",
+    "HP": 9570,
+    "ATK": 232,
+    "DEF": 573,
+    "Abil": "EM: 96"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Нин Гуанг",
+    "HP": 9787,
+    "ATK": 212,
+    "DEF": 573,
+    "Abil": "ED(Geo): 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Барбара",
+    "HP": 9787,
+    "ATK": 159,
+    "DEF": 669,
+    "Abil": "HP: 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Синь Цю",
+    "HP": 10222,
+    "ATK": 202,
+    "DEF": 758,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "Кли",
+    "HP": 10287,
+    "ATK": 311,
+    "DEF": 615,
+    "Abil": "ED(Pyro): 28.8%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "Мона",
+    "HP": 10409,
+    "ATK": 287,
+    "DEF": 653,
+    "Abil": "ER: 32%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "Венти",
+    "HP": 10531,
+    "ATK": 263,
+    "DEF": 669,
+    "Abil": "ER: 32%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Сян Линь",
+    "HP": 10875,
+    "ATK": 225,
+    "DEF": 669,
+    "Abil": "EM: 96"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Чунь Юнь",
+    "HP": 10984,
+    "ATK": 223,
+    "DEF": 648,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Кэйа",
+    "HP": 11636,
+    "ATK": 223,
+    "DEF": 792,
+    "Abil": "ER: 26.7%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Рэйзор",
+    "HP": 11962,
+    "ATK": 234,
+    "DEF": 751,
+    "Abil": "ED(Phys): 30%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Ноэлль",
+    "HP": 12071,
+    "ATK": 191,
+    "DEF": 799,
+    "Abil": "DEF: 30%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "ЦиЦи",
+    "HP": 12368,
+    "ATK": 287,
+    "DEF": 922,
+    "Abil": "Heal: 22.2%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": "4",
+    "name": "Беннет",
+    "HP": 12397,
+    "ATK": 191,
+    "DEF": 771,
+    "Abil": "ER: 26.7%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "Дилюк",
+    "HP": 12981,
+    "ATK": 335,
+    "DEF": 784,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 4,
+    "name": "Бэй Доу",
+    "HP": 13050,
+    "ATK": 225,
+    "DEF": 648,
+    "Abil": "ED(Electro): 24%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "КэЦин",
+    "HP": 13103,
+    "ATK": 323,
+    "DEF": 799,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "1.0",
+    "Rarity": 5,
+    "name": "Джинн",
+    "HP": 14695,
+    "ATK": 239,
+    "DEF": 769,
+    "Abil": "Heal: 22.2%"
+  },
+  {
+    "version": "1.1",
+    "Rarity": 4,
+    "name": "Диона",
+    "HP": 9570,
+    "ATK": 212,
+    "DEF": 601,
+    "Abil": "ED(Cryo): 24%"
+  },
+  {
+    "version": "1.1",
+    "Rarity": 4,
+    "name": "Синь Янь",
+    "HP": 11201,
+    "ATK": 249,
+    "DEF": 799,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.1",
+    "Rarity": 5,
+    "name": "Тарталья",
+    "HP": 13103,
+    "ATK": 301,
+    "DEF": 815,
+    "Abil": "ED(Hydro): 28.8%"
+  },
+  {
+    "version": "1.1",
+    "Rarity": 5,
+    "name": "Чжун",
+    "HP": 14695,
+    "ATK": 251,
+    "DEF": 738,
+    "Abil": "ED(Geo): 28.8%"
+  },
+  {
+    "version": "1.2",
+    "Rarity": 5,
+    "name": "Гань Юй",
+    "HP": 9797,
+    "ATK": 335,
+    "DEF": 630,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "1.2",
+    "Rarity": 5,
+    "name": "Альбедо",
+    "HP": 13226,
+    "ATK": 251,
+    "DEF": 876,
+    "Abil": "ED(Geo): 28.8%"
+  },
+  {
+    "version": "1.3",
+    "Rarity": 5,
+    "name": "Сяо",
+    "HP": 12736,
+    "ATK": 349,
+    "DEF": 799,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "1.3",
+    "Rarity": 5,
+    "name": "Ху Тао",
+    "HP": 15552,
+    "ATK": 106,
+    "DEF": 876,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "1.4",
+    "Rarity": 4,
+    "name": "Розария",
+    "HP": 12289,
+    "ATK": 240,
+    "DEF": 710,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "1.5",
+    "Rarity": 4,
+    "name": "Янь Фей",
+    "HP": 9352,
+    "ATK": 240,
+    "DEF": 587,
+    "Abil": "ED(Pyro): 24%"
+  },
+  {
+    "version": "1.5",
+    "Rarity": 5,
+    "name": "Эола",
+    "HP": 13226,
+    "ATK": 342,
+    "DEF": 751,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "1.6",
+    "Rarity": 5,
+    "name": "Казуха",
+    "HP": 13348,
+    "ATK": 297,
+    "DEF": 807,
+    "Abil": "EM: 115.2"
+  },
+  {
+    "version": "2.0",
+    "Rarity": 5,
+    "name": "Ёимия",
+    "HP": 10164,
+    "ATK": 323,
+    "DEF": 615,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "2.0",
+    "Rarity": 4,
+    "name": "Саю",
+    "HP": 11854,
+    "ATK": 244,
+    "DEF": 745,
+    "Abil": "EM: 96"
+  },
+  {
+    "version": "2.0",
+    "Rarity": 5,
+    "name": "Аяка",
+    "HP": 12858,
+    "ATK": 342,
+    "DEF": 784,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "2.1",
+    "Rarity": 4,
+    "name": "Сара",
+    "HP": 9570,
+    "ATK": 195,
+    "DEF": 628,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "2.1",
+    "Rarity": 5,
+    "name": "Райдэн",
+    "HP": 12907,
+    "ATK": 337,
+    "DEF": 789,
+    "Abil": "ER: 32%"
+  },
+  {
+    "version": "2.1",
+    "Rarity": 5,
+    "name": "Кокоми",
+    "HP": 13471,
+    "ATK": 234,
+    "DEF": 657,
+    "Abil": "ED(Hydro): 28.8%"
+  },
+  {
+    "version": "2.1",
+    "Rarity": 5,
+    "name": "Элой",
+    "HP": 10899,
+    "ATK": 234,
+    "DEF": 676,
+    "Abil": "ED(Cryo): 28.8%"
+  },
+  {
+    "version": "2.2",
+    "Rarity": 4,
+    "name": "Тома",
+    "HP": 10331,
+    "ATK": 202,
+    "DEF": 751,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "2.3",
+    "Rarity": 4,
+    "name": "Горо",
+    "HP": 9570,
+    "ATK": 183,
+    "DEF": 648,
+    "Abil": "ED(Geo): 24%"
+  },
+  {
+    "version": "2.3",
+    "Rarity": 5,
+    "name": "Итто",
+    "HP": 12858,
+    "ATK": 227,
+    "DEF": 959,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "2.4",
+    "Rarity": 4,
+    "name": "Юнь",
+    "HP": 10657,
+    "ATK": 191,
+    "DEF": 734,
+    "Abil": "ER: 26.7%"
+  },
+  {
+    "version": "2.4",
+    "Rarity": 5,
+    "name": "Шэнь Хэ",
+    "HP": 12993,
+    "ATK": 304,
+    "DEF": 830,
+    "Abil": "ATK: 28.8%"
+  },
+  {
+    "version": "2.5",
+    "Rarity": 5,
+    "name": "Яэ Мико",
+    "HP": 10372,
+    "ATK": 340,
+    "DEF": 569,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "2.6",
+    "Rarity": 5,
+    "name": "Аято",
+    "HP": 13715,
+    "ATK": 299,
+    "DEF": 769,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "2.7",
+    "Rarity": 4,
+    "name": "Куки",
+    "HP": 12289,
+    "ATK": 212,
+    "DEF": 751,
+    "Abil": "HP: 24%"
+  },
+  {
+    "version": "2.7",
+    "Rarity": 5,
+    "name": "Е Лань",
+    "HP": 14450,
+    "ATK": 244,
+    "DEF": 548,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "2.8",
+    "Rarity": 4,
+    "name": "Хэйдзо",
+    "HP": 10657,
+    "ATK": 225,
+    "DEF": 684,
+    "Abil": "ED(Anemo): 24%"
+  },
+  {
+    "version": "3.0",
+    "Rarity": 4,
+    "name": "Коллеи",
+    "HP": 9789,
+    "ATK": 200,
+    "DEF": 600,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "3.0",
+    "Rarity": 5,
+    "name": "Тигнари",
+    "HP": 10850,
+    "ATK": 268,
+    "DEF": 630,
+    "Abil": "ED(Dendro): 28.8%"
+  },
+  {
+    "version": "3.0",
+    "Rarity": 4,
+    "name": "Кандакия",
+    "HP": 10875,
+    "ATK": 212,
+    "DEF": 683,
+    "Abil": "HP: 24%"
+  },
+  {
+    "version": "3.0",
+    "Rarity": 4,
+    "name": "Дори",
+    "HP": 12397,
+    "ATK": 223,
+    "DEF": 723,
+    "Abil": "HP: 24%"
+  },
+  {
+    "version": "3.1",
+    "Rarity": 5,
+    "name": "Сайно",
+    "HP": 12491,
+    "ATK": 318,
+    "DEF": 859,
+    "Abil": "CR: 24.2%"
+  },
+  {
+    "version": "3.1",
+    "Rarity": 5,
+    "name": "Нилоу",
+    "HP": 15185,
+    "ATK": 230,
+    "DEF": 729,
+    "Abil": "CD: 88.4%"
+  },
+  {
+    "version": "3.2",
+    "Rarity": 5,
+    "name": "Нахида",
+    "HP": 10360,
+    "ATK": 299,
+    "DEF": 630,
+    "Abil": "EM: 115.2"
+  },
+  {
+    "version": "3.2",
+    "Rarity": 4,
+    "name": "Лайла",
+    "HP": 11092,
+    "ATK": 217,
+    "DEF": 655,
+    "Abil": "HP: 24%"
+  },
+  {
+    "version": "3.3",
+    "Rarity": 4,
+    "name": "Фaрузан",
+    "HP": 9570,
+    "ATK": 196,
+    "DEF": 628,
+    "Abil": "ATK: 24%"
+  },
+  {
+    "version": "3.3",
+    "Rarity": 5,
+    "name": "Сказитель",
+    "HP": 10164,
+    "ATK": 328,
+    "DEF": 607,
+    "Abil": "CR: 24.2%"
+  }
+]

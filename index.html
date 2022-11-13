@@ -2,27 +2,31 @@
 <html>
 
 <head>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="elements.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/elements.css" rel="stylesheet" type="text/css">
+    <link href="css/button.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.5.1.js"></script>
     <title>GenshinWebHub</title>
-    <script type="text/javascript">
-        function go(loc) {
-            document.getElementById('myIFrame').width = 0;
-            document.getElementById('myIFrame').height = 0;
-            document.getElementById('myIFrame').src = loc;
-        }
-    </script>
 </head>
 
 <body>
 
     <div class="button-div">
-        <button class="BRT-Buttons brt-button-black" onclick="go('htmls/banners.html')">Banners</button>
-        <button class="BRT-Buttons brt-button-black" onclick="go('htmls/reruns.html')">Reruns</button>
-        <button class="BRT-Buttons brt-button-black" onclick="go('htmls/chars_tab.html')">Tables</button>
+        <form action="htmls/banners.html">
+            <input class="BRT-Buttons brt-button-black" type="submit" value="Banners">
+        </form>
+        <form action="htmls/reruns.html">
+            <input class="BRT-Buttons brt-button-black" type="submit" value="Reruns">
+        </form>
+        <form action="htmls/chars_tab.html">
+            <input class="BRT-Buttons brt-button-black" type="submit" value="Tables">
+        </form>        
+        <form action="#">
+            <input class="BRT-Buttons brt-button-black" type="submit" value="Main">
+        </form>
     </div>
 
+    <!-- 
     <iframe id="myIFrame" class="iframe-show-pages" src="htmls/reruns.html" scrolling="no"
         name="iframe_i_need" onload="
             document.getElementById('myIFrame').width  = document.getElementById('myIFrame').contentWindow.document.body.scrollWidth + 20 + 'px';
@@ -42,7 +46,7 @@
       </script>
     
 
-<!-- <div>
+<div>
     <a href="htmls/banners.html" target="iframe_i_need">Banners</a> -
     <a href="htmls/reruns.html" target="iframe_i_need">Reruns</a> -
     <a href="htmls/chars_tab.html" target="iframe_i_need">Tables</a>

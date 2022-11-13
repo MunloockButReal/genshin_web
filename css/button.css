@@ -1,0 +1,28 @@
+.BRT-Buttons {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    display: inline;
+    margin: 5px;
+
+}
+
+.brt-button-black {
+    background-color: #555555;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.MyChartable {
+    display: flex;
+    justify-content: center;
+}

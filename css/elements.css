@@ -1,6 +1,6 @@
 
-.anemo, .geo, .electro, .dendro, .hdydro, .pyro, .cryo {
-    font-size: 2.3rem
+.anemo, .geo, .electro, .dendro, .hydro, .pyro, .cryo {
+    font-size: 2rem;
 }
 
 .hydro {
@@ -108,8 +108,6 @@
     color: white;
 
 }
-
-
 
 /* 
 

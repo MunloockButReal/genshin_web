@@ -1,0 +1,38 @@
+:root {
+  background-color: #181818;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+table {
+  border-spacing: 0;
+  width: auto;
+  border: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 16px;
+}
+
+td:hover {
+  color: white;
+  opacity: 1;
+}
+
+tr:nth-child(even) {
+  background-color: #272727;
+  color: whitesmoke;
+}
+
+tr:nth-child(odd) {
+  background-color: #383838;
+  color: whitesmoke;
+}
