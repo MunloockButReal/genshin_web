@@ -1,93 +1,103 @@
 @font-face {
-   
-    font-family: "GenshinFont";
-    src: url('../font/zh-cn.ttf');
+  font-family: "GenshinFont";
+  src: url("../font/zh-cn.ttf");
 }
 
 body {
-    background: black;
-    font-family:"GenshinFont";   
-    font-size: 1.6rem;
-    text-align: center;
+  background: #080808; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #080808,
+    #181818
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #080808,
+    #181818
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "GenshinFont";
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 table {
-    background: rgba(63, 94, 91, 0.7);
-    -webkit-backdrop-filter: blur(17px);
-    backdrop-filter: blur(17px);
+  background: rgba(63, 94, 91, 0.7);
+  -webkit-backdrop-filter: blur(17px);
+  backdrop-filter: blur(17px);
 }
 
 .emptycell {
-    background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 td {
-    backdrop-filter: drop-shadow(10px);
-    padding: 0px;
+  backdrop-filter: drop-shadow(10px);
+  padding: 0px;
 }
 
 .bannerrow,
 .char,
 .whitecell {
-    background-color: white;
-    width: 5rem;
-    height: auto;
+  background-color: white;
+  width: 5rem;
+  height: auto;
 }
 
 table,
 th,
 td,
 tr {
-    border-collapse: collapse;
-    border: 1px solid #000;
-    align-content: center
+  border-collapse: collapse;
+  border: 1px solid #000;
+  align-content: center;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 th {
-    width: 5rem;
-    height: 2.5rem;
+  width: 5rem;
+  height: 2.5rem;
 }
 
 .Banners,
 .Reruns,
 .chartabs {
-    width: 20rem;
-    height: auto;
-    outline: 2rem green;
+  width: 20rem;
+  height: auto;
+  outline: 2rem green;
 }
 
 .image-link-div {
-    display: flex;
-    justify-content: space-around;
-    height: min-content;
+  display: flex;
+  justify-content: space-around;
+  height: min-content;
 }
 
 ::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
+  height: 8px;
+  width: 8px;
 }
 
 body {
-overflow-y: visible;
+  overflow-y: visible;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #434343;
-    border-radius: 3px;
+  background: #434343;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #434343ab;
+  background-color: #434343ab;
 }
 
 ::-webkit-scrollbar-corner {
-    visibility: none;
+  visibility: none;
 }
