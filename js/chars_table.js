@@ -51,45 +51,11 @@ function loadTableData(charData) {
     tableBody.innerHTML = dataHtml;
 }
 let colorsArray = [
-    "#aa0000",
-    "#ae0c00",
-    "#b31800",
-    "#b72400",
-    "#bb3000",
-    "#bf3d00",
-    "#c44900",
-    "#c85500",
-    "#cc6100",
-    "#d06d00",
-    "#d57900",
-    "#d98500",
-    "#dd9100",
-    "#e19d00",
-    "#e6a900",
-    "#eab600",
-    "#eec200",
-    "#f2ce00",
-    "#f7da00",
-    "#fbe600",
-    "#fff200",
-    "#f2ee00",
-    "#e6e900",
-    "#d9e500",
-    "#cce000",
-    "#bfdc00",
-    "#b3d700",
-    "#a6d300",
-    "#99ce00",
-    "#8cca00",
-    "#80c600",
-    "#73c100",
-    "#66bd00",
-    "#59b800",
-    "#4db400",
-    "#40af00",
-    "#33ab00",
-    "#26a600",
-    "#1aa200",
+    "#aa0000", "#ae0c00", "#b31800", "#b72400", "#bb3000", "#bf3d00", "#c44900", "#c85500",
+    "#cc6100", "#d06d00", "#d57900", "#d98500", "#dd9100", "#e19d00", "#e6a900", "#eab600",
+    "#eec200", "#f2ce00", "#f7da00", "#fbe600", "#fff200", "#f2ee00", "#e6e900", "#d9e500",
+    "#cce000", "#bfdc00", "#b3d700", "#a6d300", "#99ce00", "#8cca00", "#80c600", "#73c100",
+    "#66bd00", "#59b800", "#4db400", "#40af00", "#33ab00", "#26a600", "#1aa200",
 ];
 function colorcode(columnName) {
     var f = document.getElementsByClassName(columnName);
@@ -97,10 +63,6 @@ function colorcode(columnName) {
     var max = Math.round(parseInt(f[f.length - 1].innerHTML) * 1.05);
 
     step = Math.round(((max - min) / colorsArray.length)); // step for minmax color
-
-    console.log(min)
-    console.log(max)
-    console.log(step)
     let currentmin = min; // Minimum for color
     let current = 0; // current
     let colorNumber = 0; // Color number from p[]
@@ -110,14 +72,14 @@ function colorcode(columnName) {
         if (current < currentmin + step - 1) {
             f[l].style.backgroundColor = colorsArray[colorNumber];
             if (colorNumber > 5) {
-                f[l].style.color = "#080808";
+                f[l].style.color = "#000000";
             }
         } else {
             colorNumber++;
             currentmin += step;
             f[l].style.backgroundColor = colorsArray[colorNumber];
             if (colorNumber > 5) {
-                f[l].style.color = "#080808";
+                f[l].style.color = "#000000";
             }
         }
     }
@@ -125,15 +87,7 @@ function colorcode(columnName) {
 
 
 function sortTable(n) {
-    var table,
-        rows,
-        switching,
-        i,
-        x,
-        y,
-        shouldSwitch,
-        dir,
-        switchcount = 0;
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("MyTableBody");
     switching = true;
     dir = "asc";
