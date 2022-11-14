@@ -24,11 +24,6 @@ td {
   padding: 16px;
 }
 
-td:hover {
-  color: white;
-  opacity: 1;
-}
-
 tr:nth-child(even) {
   background-color: #272727;
   color: whitesmoke;
@@ -36,5 +31,5 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   background-color: #383838;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
