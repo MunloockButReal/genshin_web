@@ -21,10 +21,20 @@ var url = "../htmls/chars.json";
 fetch(url).then((response) => 
 { return response.json(); }).then((data) => 
 { CharData = data });
+function readData() {
+let response = await fetch(url);
 
+if (response.ok) { // если HTTP-статус в диапазоне 200-299
+  // получаем тело ответа (см. про этот метод ниже)
+  let charData = await response.json();
+} else {
+  alert("Ошибка HTTP: " + response.status);
+}
+}
 // Dynamic table
 
 window.onload = () => {
+readData();
     loadTableData(charData);
     //sort and color HP
     sortTable(3);
