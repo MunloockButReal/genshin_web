@@ -37,7 +37,7 @@ if (response.ok) { // если HTTP-статус в диапазоне 200-299
 // Dynamic table
 
 window.onload = () => {
-readData();
+
     loadTableData(charData);
     //sort and color HP
     sortTable(3);
