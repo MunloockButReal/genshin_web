@@ -14,7 +14,7 @@ xhr.onreadystatechange = function () {
         }
     }
 };
-*/
+
 
 var charData;
 function dataRead() {
@@ -24,7 +24,7 @@ fetch(url).then((response) =>
 { let charData = data });
 }
 
-/*
+
 function readData() {
 let response = fetch(url);
 
@@ -35,6 +35,19 @@ if (response.ok) { // если HTTP-статус в диапазоне 200-299
   alert("Ошибка HTTP: " + response.status);
 }
 }*/
+
+        let Chardata;
+
+        $.ajax({
+            url: "../js/chars.json",
+            dataType: 'json',
+            async: false,
+            success: function (data) {
+                Chardata = data;
+            }
+        });
+
+
 // Dynamic table
 
 window.onload = () => {
