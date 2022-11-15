@@ -1,4 +1,5 @@
 // File reader
+/*
 var url = "../htmls/chars.json";
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
@@ -13,6 +14,12 @@ xhr.onreadystatechange = function () {
         }
     }
 };
+*/
+
+let CharData;
+fetch('chars.json').then((response) => 
+{ return response.json(); }).then((data) => 
+{ CharData = data });
 
 // Dynamic table
 
