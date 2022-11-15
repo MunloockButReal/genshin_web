@@ -16,10 +16,10 @@ xhr.onreadystatechange = function () {
 };
 */
 function dataRead() {
-let charData = [];
+var charData = [];
 var url = "../htmls/chars.json";
 fetch(url).then((response) => 
-{ return response.json(); }).then((data) => 
+{ return response.text(); }).then((data) => 
 { charData = data });
 }
 
