@@ -21,7 +21,7 @@ function dataRead() {
 var url = "../htmls/chars.json";
 fetch(url).then((response) => 
 { return response.text(); }).then((data) => 
-{ charData = data });
+{ let charData = data });
 }
 
 /*
