@@ -16,7 +16,7 @@ xhr.onreadystatechange = function () {
 };
 */
 
-let CharData;
+var CharData;
 var url = "../htmls/chars.json";
 fetch(url).then((response) => 
 { return response.json(); }).then((data) => 
