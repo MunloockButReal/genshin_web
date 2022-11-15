@@ -36,14 +36,14 @@ if (response.ok) { // если HTTP-статус в диапазоне 200-299
 }
 }*/
 
-        let Chardata;
+        let charData;
 
         $.ajax({
             url: "../js/chars.json",
             dataType: 'json',
             async: false,
             success: function (data) {
-                Chardata = data;
+                charData = data;
             }
         });
 
