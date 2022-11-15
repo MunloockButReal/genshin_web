@@ -15,13 +15,13 @@ xhr.onreadystatechange = function () {
     }
 };
 */
-
+function dataRead() {
 let charData = [];
 var url = "../htmls/chars.json";
 fetch(url).then((response) => 
 { return response.json(); }).then((data) => 
 { charData = data });
-
+}
 
 /*
 function readData() {
@@ -37,7 +37,7 @@ if (response.ok) { // если HTTP-статус в диапазоне 200-299
 // Dynamic table
 
 window.onload = () => {
-
+dataRead();
     loadTableData(charData);
     //sort and color HP
     sortTable(3);
