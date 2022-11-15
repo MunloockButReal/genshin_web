@@ -1,5 +1,5 @@
 // File reader
-var url = "chars.json";
+var url = "../htmls/chars.json";
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
 xhr.send();
