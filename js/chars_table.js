@@ -39,7 +39,7 @@ if (response.ok) { // если HTTP-статус в диапазоне 200-299
         let charData;
 
         $.ajax({
-            url: "../js/chars.json",
+            url: "../htmls/chars.json",
             dataType: 'json',
             async: false,
             success: function (data) {
