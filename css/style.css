@@ -4,18 +4,7 @@
 }
 
 body {
-  background: #080808; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #080808,
-    #181818
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #080808,
-    #181818
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #080808;
   font-family: "GenshinFont";
   font-size: 1.6rem;
   text-align: center;
@@ -41,7 +30,7 @@ td {
 .whitecell {
   background-color: white;
   width: 5rem;
-  height: auto;
+  height: 5rem;
 }
 
 table,
