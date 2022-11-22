@@ -178,6 +178,7 @@
 	{
 		"name": "Collei",
 		"vision": "dendro",
+		"rarity": 4,
 		"url": "../images/characters/Collei.webp",
 		"byVersion": [16, 2],
 		"byBanner": [33, 5]

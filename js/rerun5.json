@@ -162,6 +162,7 @@
 	{
 		"name": "Tighnari",
 		"vision": "dendro",
+		"rarity": 5,
 		"url": "../images/characters/Tighnari.webp",
 		"byVersion": [16, 2],
 		"byBanner": [33, 5]
