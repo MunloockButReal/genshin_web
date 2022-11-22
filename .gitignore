@@ -1,6 +1,10 @@
-*.vsidx
+*.vsidxd
 codesnap/*
 vscode/*
+.vscode/*
+.vs/
+ignore/
 backupfiel
 images/characters-orig/*
 node_modules/*
+bannershtml.rar
