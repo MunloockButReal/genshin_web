@@ -1,0 +1,209 @@
+[
+	{
+		"name": "Barbara",
+		"vision": "hydro",
+		"rarity": 4,
+		"url": "../images/characters/Barbara.webp",
+		"byVersion": [0, 2, 0, 1, 3, 3, 2, 1],
+		"byBanner": [0, 6, 2, 2, 8, 6, 6, 2]
+	},
+	{
+		"name": "Fischl",
+		"vision": "electro",
+		"rarity": 4,
+		"url": "../images/characters/Fischl.webp",
+		"byVersion": [0, 1, 1, 1, 5, 3, 2],
+		"byBanner": [0, 3, 5, 2, 11, 7, 5]
+	},
+	{
+		"name": "Xiangling",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "../images/characters/Xiangling.webp",
+		"byVersion": [0, 1, 0, 4, 1, 2, 3, 1],
+		"byBanner": [0, 4, 2, 8, 4, 4, 8, 2]
+	},
+	{
+		"name": "Xingqiu",
+		"vision": "hydro",
+		"rarity": 4,
+		"url": "../images/characters/Xingqiu.webp",
+		"byVersion": [0, 1, 0, 1, 2, 2, 4, 2],
+		"byBanner": [1, 3, 2, 3, 5, 5, 9, 4]
+	},
+	{
+		"name": "Sucrose",
+		"vision": "anemo",
+		"rarity": 4,
+		"url": "../images/characters/Sucrose.webp",
+		"byVersion": [0, 1, 1, 1, 1, 4, 2, 2],
+		"byBanner": [1, 2, 4, 3, 3, 9, 6, 4]
+	},
+	{
+		"name": "Noel",
+		"vision": "geo",
+		"rarity": 4,
+		"url": "../images/characters/Noel.webp",
+		"byVersion": [0, 1, 1, 0, 4, 3, 3, 0],
+		"byBanner": [1, 3, 3, 1, 9, 7, 7, 1]
+	},
+	{
+		"name": "Diona",
+		"vision": "cryo",
+		"rarity": 4,
+		"url": "../images/characters/Diona.webp",
+		"byVersion": [1, 1, 1, 1, 1, 2, 3, 2],
+		"byBanner": [2, 3, 4, 4, 3, 4, 7, 5]
+	},
+	{
+		"name": "Beidou",
+		"vision": "electro",
+		"rarity": 4,
+		"url": "../images/characters/Beidou.webp",
+		"byVersion": [1, 1, 1, 2, 2, 5, 1],
+		"byBanner": [2, 3, 5, 5, 5, 11, 2]
+	},
+	{
+		"name": "Ningguang",
+		"vision": "geo",
+		"rarity": 4,
+		"url": "../images/characters/Ningguang.webp",
+		"byVersion": [1, 1, 3, 1, 1, 3, 3],
+		"byBanner": [2, 4, 7, 3, 3, 7, 7]
+	},
+	{
+		"name": "Chongyun",
+		"vision": "cryo",
+		"rarity": 4,
+		"url": "../images/characters/Chongyun.webp",
+		"byVersion": [1, 1, 3, 1, 1, 2, 4],
+		"byBanner": [3, 4, 6, 3, 3, 6, 8]
+	},
+	{
+		"name": "Razor",
+		"vision": "electro",
+		"rarity": 4,
+		"url": "../images/characters/Razor.webp",
+		"byVersion": [1, 2, 1, 6, 4, 0],
+		"byBanner": [3, 5, 4, 13, 8, 1]
+	},
+	{
+		"name": "Xinyan",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "../images/characters/Xinyan.webp",
+		"byVersion": [1, 1, 1, 1, 4, 2, 3],
+		"byBanner": [3, 2, 5, 3, 9, 5, 6]
+	},
+	{
+		"name": "Bennett",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "../images/characters/Bennett.webp",
+		"byVersion": [2, 0, 2, 3, 1, 2, 2, 0],
+		"byBanner": [4, 2, 6, 6, 4, 5, 4, 1]
+	},
+	{
+		"name": "Rosaria",
+		"vision": "cryo",
+		"rarity": 4,
+		"url": "../images/characters/Rosaria.webp",
+		"byVersion": [4, 1, 1, 1, 2, 5],
+		"byBanner": [10, 3, 3, 2, 6, 10]
+	},
+	{
+		"name": "Yanfei",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "../images/characters/Yanfei.webp",
+		"byVersion": [5, 1, 1, 1, 2, 4],
+		"byBanner": [11, 3, 3, 4, 4, 9]
+	},
+	{
+		"name": "Sayu",
+		"vision": "anemo",
+		"rarity": 4,
+		"url": "../images/characters/Sayu.webp",
+		"byVersion": [7, 1, 3, 3, 1],
+		"byBanner": [16, 3, 7, 6, 3]
+	},
+	{
+		"name": "Sara",
+		"vision": "electro",
+		"rarity": 4,
+		"url": "../images/characters/Sara.webp",
+		"byVersion": [8, 3, 6],
+		"byBanner": [17, 8, 12]
+	},
+	{
+		"name": "Thoma",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "../images/characters/Thoma.webp",
+		"byVersion": [9, 2, 2, 2, 0],
+		"byBanner": [20, 4, 5, 6, 0]
+	},
+	{
+		"name": "Gorou",
+		"vision": "geo",
+		"rarity": 4,
+		"url": "../images/characters/Gorou.webp",
+		"byVersion": [10, 3, 4],
+		"byBanner": [22, 7, 8]
+	},
+	{
+		"name": "Yunjin",
+		"vision": "geo",
+		"rarity": 4,
+		"url": "../images/characters/Yunjin.webp",
+		"byVersion": [11, 1, 1, 3],
+		"byBanner": [23, 3, 4, 6]
+	},
+	{
+		"name": "Shinobu",
+		"vision": "electro",
+		"rarity": 4,
+		"url": "../images/characters/Shinobu.webp",
+		"byVersion": [14, 2, 1],
+		"byBanner": [30, 4, 3]
+	},
+	{
+		"name": "Heizo",
+		"vision": "anemo",
+		"rarity": 4,
+		"url": "../images/characters/Heizo.webp",
+		"byVersion": [15, 2, 0],
+		"byBanner": [31, 6, 0]
+	},
+	{
+		"name": "Collei",
+		"vision": "dendro",
+		"url": "../images/characters/Collei.webp",
+		"byVersion": [16, 2],
+		"byBanner": [33, 5]
+	},
+	{
+		"name": "Dori",
+		"vision": "electro",
+		"rarity": 4,
+		"url": "../images/characters/Dori.webp",
+		"byVersion": [16, 2],
+		"byBanner": [34, 4]
+	},
+	{
+		"name": "Candace",
+		"vision": "hydro",
+		"rarity": 4,
+		"url": "../images/characters/Candace.webp",
+		"byVersion": [17, 1],
+		"byBanner": [35, 3]
+	},
+	{
+		"name": "Layla",
+		"vision": "cryo",
+		"rarity": 4,
+		"url": "../images/characters/Layla.webp",
+		"byVersion": [18, 0],
+		"byBanner": [38, 0]
+	}
+]
