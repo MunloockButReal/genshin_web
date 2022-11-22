@@ -2,37 +2,37 @@
 let charData;
 
 $.ajax({
-    url: "../htmls/chars.json",
-    dataType: "json",
-    async: false,
-    success: function (data) {
-        charData = data;
-    },
+	url: '../htmls/chars.json',
+	dataType: 'json',
+	async: false,
+	success: function (data) {
+		charData = data;
+	},
 });
 
 window.onload = () => {
-    // Dynamic table
-    loadTableData(charData);
-    //sort and color HP
-    sortTable(3);
-    colorcode("HP");
-    //sort and color ATK
-    sortTable(4);
-    colorcode("ATK");
-    // sort and color DEF
-    sortTable(5);
-    colorcode("DEF");
-    //back to default sort on load
-    sortTable(3);
-    sortTable(0);
+	// Dynamic table
+	loadTableData(charData);
+	//sort and color HP
+	sortTable(3);
+	colorcode('HP');
+	//sort and color ATK
+	sortTable(4);
+	colorcode('ATK');
+	// sort and color DEF
+	sortTable(5);
+	colorcode('DEF');
+	//back to default sort on load
+	sortTable(3);
+	sortTable(0);
 };
 
 function loadTableData(charData) {
-    const tableBody = document.getElementById("MyTableBody");
-    let dataHtml = "";
+	const tableBody = document.getElementById('MyTableBody');
+	let dataHtml = '';
 
-    for (let char of charData) {
-        dataHtml += ` <tr>
+	for (let char of charData) {
+		dataHtml += ` <tr>
                         <td class="version">${char.version}</td>
                         <td class="Rarity">${char.Rarity}</td>
                         <td class="Name">${char.name}</td>
@@ -42,91 +42,105 @@ function loadTableData(charData) {
                         <td class="Abil">${char.Abil}</td>
                         </tr>
                         `;
-    }
-    tableBody.innerHTML = dataHtml;
+	}
+	tableBody.innerHTML = dataHtml;
 }
-let colorsArray = [
-    "#aa0000", "#ae0c00", "#b31800", "#b72400", "#bb3000", "#bf3d00",
-    "#c44900", "#c85500", "#cc6100", "#d06d00", "#d57900", "#d98500",
-    "#dd9100", "#e19d00", "#e6a900", "#eab600", "#eec200", "#f2ce00",
-    "#f7da00", "#fbe600", "#fff200", "#f2ee00", "#e6e900", "#d9e500",
-    "#cce000", "#bfdc00", "#b3d700", "#a6d300", "#99ce00", "#8cca00",
-    "#80c600", "#73c100", "#66bd00", "#59b800", "#4db400", "#40af00",
-    "#33ab00", "#26a600", "#1aa200"];
 
 function colorcode(columnName) {
-    var f = document.getElementsByClassName(columnName);
-    var min = Math.round(parseInt(f[0].innerHTML) * 0.95);
-    var max = Math.round(parseInt(f[f.length - 1].innerHTML) * 1.05);
+	var f = document.body.getElementsByClassName(columnName);
 
-    step = Math.round((max - min) / colorsArray.length);
-    let currentmin = min;
-    let current = 0;
-    let colorNumber = 0;
+	var min = parseInt(f[0].innerHTML);
+	var max = parseInt(f[f.length - 1].innerHTML);
 
-    for (l = 0; l < f.length; l++) {
-        current = f[l].innerHTML;
-        if (current < currentmin + step - 1) {
-            f[l].style.backgroundColor = colorsArray[colorNumber];
-            if (colorNumber > 5) {
-                f[l].style.color = "#000000";
-            }
-        } else {
-            colorNumber++;
-            currentmin += step;
-            f[l].style.backgroundColor = colorsArray[colorNumber];
-            if (colorNumber > 5) {
-                f[l].style.color = "#000000";
-            }
-        }
-    }
+	let currentmin = min;
+	let current = 0;
+
+	// Background color generation
+	var rainbow = new Rainbow();
+	rainbow.setSpectrum('darkred', 'orange', 'green');
+	rainbow.setNumberRange(0, f.length);
+
+	var hex = [];
+	for (let i = 0; i <= f.length; i++) {
+		hex.push('#' + 1);
+	}
+	//
+	step = Math.round((max - min) / f.length);
+
+	for (l = 0; l < f.length; l++) {
+		hex = '#' + rainbow.colourAt(l);
+		current = f[l].innerHTML;
+
+		if (current < currentmin + step) {
+			f[l].style.backgroundColor = '#' + rainbow.colourAt(l);
+			f[l].style.color = tinycolor.mostReadable(rainbow.colourAt(l), [
+				'white',
+				'black',
+			]);
+		} else {
+			currentmin += step;
+			f[l].style.backgroundColor = '#' + rainbow.colourAt(l);
+			f[l].style.color = tinycolor.mostReadable(rainbow.colourAt(l + 1), [
+				'white',
+				'black',
+			]);
+		}
+	}
 }
 
 function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("MyTableBody");
-    switching = true;
-    dir = "asc";
-    while (switching) {
-        switching = false;
-        rows = table.getElementsByTagName("TR");
-        for (i = 0; i < rows.length - 1; i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
+	var table,
+		rows,
+		switching,
+		i,
+		x,
+		y,
+		shouldSwitch,
+		dir,
+		switchcount = 0;
+	table = document.getElementById('MyTableBody');
+	switching = true;
+	dir = 'asc';
+	while (switching) {
+		switching = false;
+		rows = table.getElementsByTagName('TR');
+		for (i = 0; i < rows.length - 1; i++) {
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName('TD')[n];
+			y = rows[i + 1].getElementsByTagName('TD')[n];
 
-            if (dir == "asc") {
-                if (x.innerHTML - y.innerHTML > 0) {
-                    shouldSwitch = true;
-                    break;
-                }
-                if (isNaN(+x.innerHTML))
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        shouldSwitch = true;
-                        break;
-                    }
-            } else if (dir == "desc") {
-                if (x.innerHTML - y.innerHTML < 0) {
-                    shouldSwitch = true;
-                    break;
-                }
+			if (dir == 'asc') {
+				if (x.innerHTML - y.innerHTML > 0) {
+					shouldSwitch = true;
+					break;
+				}
+				if (isNaN(+x.innerHTML))
+					if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+						shouldSwitch = true;
+						break;
+					}
+			} else if (dir == 'desc') {
+				if (x.innerHTML - y.innerHTML < 0) {
+					shouldSwitch = true;
+					break;
+				}
 
-                if (isNaN(+x.innerHTML))
-                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                        shouldSwitch = true;
-                        break;
-                    }
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount++;
-        } else {
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-        }
-    }
+				if (isNaN(+x.innerHTML))
+					if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+						shouldSwitch = true;
+						break;
+					}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == 'asc') {
+				dir = 'desc';
+				switching = true;
+			}
+		}
+	}
 }
