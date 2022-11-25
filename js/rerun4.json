@@ -206,5 +206,13 @@
 		"url": "../images/characters/Layla.webp",
 		"byVersion": [18, 0],
 		"byBanner": [38, 0]
+	},
+	{
+		"name": "Faruzan",
+		"vision": "anemo",
+		"rarity": 4,
+		"url": "../images/characters/Faruzan.webp",
+		"byVersion": [19, 0],
+		"byBanner": [39, 1]
 	}
 ]
