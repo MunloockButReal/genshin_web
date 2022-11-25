@@ -22,6 +22,12 @@ function sortField(field, way) {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	} else if (field === 'byVersion' || field === 'byBanner') {
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
+	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
+		if (field === 'lastDurationV') {
+			field = 'byVersion';
+		} else field = 'byBanner';
+		return (a, b) =>
+			a[field][a[field].length - 1] > b[field][b[field].length - 1] ? w1 : w2;
 	} else return (a, b) => (a[field][0] > b[field][0] ? w2 : w1);
 }
 /**
@@ -35,6 +41,7 @@ function sortField(field, way) {
 function changeTableSort(divID, number, bool, field, way) {
 	loadTableData(divID, read(number).sort(sortField(field, way)), bool);
 	addEventsOnChars();
+	resizePage();
 }
 
 function createVersionHeader(table) {
@@ -57,6 +64,13 @@ function createVersionHeaderMain(table) {
 }
 
 function createVersions(ext, mainTable) {
+	let v1max = 6;
+	let v2max = 8;
+	let v3max = 3;
+	versionCount = 20;
+	// (version * 2)
+	bannersCount = versionCount * 2;
+
 	for (let h = 1; h < 4; h++) {
 		// Генерирует подверсию (.0 ... .8)
 
@@ -65,7 +79,7 @@ function createVersions(ext, mainTable) {
 			let th = document.createElement('th');
 			if (ext) {
 				// 1.0-1.6
-				if (h == 1 && j < 7) {
+				if (h == 1 && j <= v1max) {
 					vOneColspan = th;
 					// 1.3
 					if (h == 1 && j == 3) {
@@ -78,13 +92,13 @@ function createVersions(ext, mainTable) {
 						vOneColspan.innerText = h + '.' + j;
 						bannerrow.append(vOneColspan);
 					}
-				} else if (h == 2 && j < 9) {
+				} else if (h == 2 && j <= v2max) {
 					// 2.(0-9)
 					vTwoColspan = th;
 					vTwoColspan.colSpan = 2;
 					vTwoColspan.innerText = h + '.' + j;
 					bannerrow.append(vTwoColspan);
-				} else if (h == 3 && j < 3) {
+				} else if (h == 3 && j <= v3max) {
 					// 3.(0-2)
 					vThreeColspan = th;
 					vThreeColspan.colSpan = 2;
@@ -95,16 +109,16 @@ function createVersions(ext, mainTable) {
 				// Если требуется таблица по версиям
 
 				// 1.(0-6)
-				if (h == 1 && j < 7) {
+				if (h == 1 && j <= v1max) {
 					vOne = th;
 					vOne.innerText = h + '.' + j;
 					bannerrow.append(vOne);
-				} else if (h == 2 && j < 9) {
+				} else if (h == 2 && j <= v2max) {
 					// 2.(0-8)
 					vTwo = th;
 					vTwo.innerText = h + '.' + j;
 					bannerrow.append(vTwo);
-				} else if (h == 3 && j < 3) {
+				} else if (h == 3 && j <= v3max) {
 					// 3.(0-2)
 					vThree = th;
 					vThree.innerText = h + '.' + j;
@@ -127,7 +141,7 @@ function createVersions(ext, mainTable) {
 
 		// bottomRowCell = document.createElement('td');
 
-		for (let i = 0; i <= 38; i++) {
+		for (let i = 0; i <= bannersCount; i++) {
 			tdU = document.createElement('td');
 			tdB = document.createElement('td');
 
@@ -140,7 +154,7 @@ function createVersions(ext, mainTable) {
 			imgD.classList.add('char');
 			(imgU.height = 128), (imgD.height = 128);
 
-			// Upper part, 1 - 39
+			// Upper part
 			{
 				let name;
 				// prettier-ignore
@@ -158,6 +172,8 @@ function createVersions(ext, mainTable) {
 					case 37: name = 'Albedo'; break;
 					case 38: name = 'Yoimiya'; break;
 					case 39: name = 'Yae'; break;
+					case 40: name = 'Itto'; break;
+					case 41: name = 'Ayato'; break
 				}
 
 				let link = `../images/characters/${name}.webp`;
@@ -167,7 +183,7 @@ function createVersions(ext, mainTable) {
 				imgU.alt = alt;
 				tdU.append(imgU);
 			}
-			// Bottom part 1 - 39
+			// Bottom part
 			{
 				let name;
 				// prettier-ignore
@@ -185,7 +201,7 @@ function createVersions(ext, mainTable) {
 					case 15: case 32: name = 'Kazuha'; break;
 					case 16: case 29: name = 'Ayaka' ; break;
 					case 17: case 33: name = 'Yoimiya'; break;
-					case 18: name = 'Raiden'; break;
+					case 18: case 41: name = 'Raiden'; break;
 					case 19: case 27: case 35: name = 'Kokomi'; break
 					case 23: case 31: name = 'Itto'; break;
 					case 26: name = 'Yae'; break;
@@ -194,6 +210,7 @@ function createVersions(ext, mainTable) {
 					case 36: name = 'Cyno'; break;
 					case 37: name = 'Nilou'; break;
 					case 38: name = 'Nahida'; break
+					case 40: name = 'Wanderer'; break
 				}
 
 				let link = `../images/characters/${name}.webp`;
