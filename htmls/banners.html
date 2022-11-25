@@ -13,7 +13,8 @@
   <script>
     window.onload = () => {
       loadTableDataMain('rerunTable', read(4).sort(sortField('vision', 'desc')), true);
-      addEventsOnChars()
+      addEventsOnChars();
+      resizePage();
     };
 
   </script>
@@ -22,30 +23,32 @@
 </head>
 
 <body>
-  <div class="button-div">
-    <form action="#">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
-    </form>
-    <form action="reruns.html">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="Reruns" />
-    </form>
-    <form action="chars_tab.html">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="Tables" />
-    </form>
-    <form action="../index.html">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="Main" />
-    </form>
-  </div>
 
-  <!---------------------------------------------------------------------------------------------------->
+  <div class="pagewrapper">
+    <div class="button-div">
+      <form action="#">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
+      </form>
+      <form action="reruns.html">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="Reruns" />
+      </form>
+      <form action="chars_tab.html">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="Tables" />
+      </form>
+      <form action="../index.html">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="Main" />
+      </form>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
 
 
-  <div class="rerunTables">
-    <div id="rerunTable" class="rerunTables">
-      <!-- Table here -->
+    <div class="tableDiv">
+      <div id="rerunTable" class="rerunTables">
+        <!-- Table here -->
+      </div>
     </div>
   </div>
-
 
 
 </body>
