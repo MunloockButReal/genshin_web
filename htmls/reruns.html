@@ -15,51 +15,64 @@
     window.onload = () => {
       loadTableData('rerunTable', read(5), false);
       addEventsOnChars();
+      resizePage();
     }
   </script>
   <title>Reruns</title>
 </head>
 
 <body>
-  <div class="buttons">
-    <div class="button-div">
-      <form action="banners.html">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
-      </form>
-      <form action="#">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Reruns" />
-      </form>
-      <form action="chars_tab.html">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Tables" />
-      </form>
-      <form action="../index.html">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Main" />
-      </form>
-    </div>
-    <div>
-      <input class="BRT-Buttons brt-button-black" type="submit" value="5* Banners"
-        onclick="changeTableSort('rerunTable', 5, true, 'byBanner', 'desc')">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="5* Version"
-        onclick="changeTableSort('rerunTable', 5, false, 'byVersion', 'desc')">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="5* Vision"
-        onclick="changeTableSort('rerunTable', 5, false, 'vision', 'desc')">
-    </div>
-    <div>
-      <input class="BRT-Buttons brt-button-black" type="submit" value="4* Banners"
-        onclick="changeTableSort('rerunTable',4, true, 'byBanner', 'desc')">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="4* Version"
-        onclick="changeTableSort('rerunTable',4, false, 'byVersion', 'desc')">
-      <input class="BRT-Buttons brt-button-black" type="submit" value="4* Vision"
-        onclick="changeTableSort('rerunTable',4, false, 'vision', 'desc')">
-    </div>
-  </div>
-  <!-- ---------------------------------------------------------------------------------------------- -->
+  <div class="pagewrapper">
+    <div class="buttons">
+      <div class="button-div">
+        <form action="banners.html">
+          <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
+        </form>
+        <form action="#">
+          <input class="BRT-Buttons brt-button-black" type="submit" value="Reruns" />
+        </form>
+        <form action="chars_tab.html">
+          <input class="BRT-Buttons brt-button-black" type="submit" value="Tables" />
+        </form>
+        <form action="../index.html">
+          <input class="BRT-Buttons brt-button-black" type="submit" value="Main" />
+        </form>
+      </div>
+      <div>
+        <input class="BRT-Buttons brt-button-black" type="submit" value="5* Banners"
+          onclick="changeTableSort('rerunTable', 5, true, 'byBanner', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="5* Version"
+          onclick="changeTableSort('rerunTable', 5, false, 'byVersion', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="5* Vision"
+          onclick="changeTableSort('rerunTable', 5, false, 'vision', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="5* lastDurationV"
+          onclick="changeTableSort('rerunTable', 5, false, 'lastDurationV', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="5* lastDurationB"
+          onclick="changeTableSort('rerunTable', 5, true, 'lastDurationB', 'desc')">
+      </div>
 
-  <div class="rerunTables">
-    <div id="rerunTable" class="rerunTables">
-      <!-- Table here -->
+      <div>
+        <input class="BRT-Buttons brt-button-black" type="submit" value="4* Banners"
+          onclick="changeTableSort('rerunTable',4, true, 'byBanner', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="4* Version"
+          onclick="changeTableSort('rerunTable',4, false, 'byVersion', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="4* Vision"
+          onclick="changeTableSort('rerunTable',4, false, 'vision', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="4* lastDurationV"
+          onclick="changeTableSort('rerunTable',4, false, 'lastDurationV', 'desc')">
+        <input class="BRT-Buttons brt-button-black" type="submit" value="4* lastDurationB"
+          onclick="changeTableSort('rerunTable',4, true, 'lastDurationB', 'desc')">
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="tableDiv">
+      <div id="rerunTable" class="rerunTables">
+        <!-- Table here -->
+      </div>
     </div>
   </div>
+
 </body>
 
 </html>
