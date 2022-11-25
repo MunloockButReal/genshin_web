@@ -16,3 +16,12 @@ function addEventsOnChars() {
 		window.open(characterLinks[$(this).attr('alt')]);
 	});
 }
+
+function resizePage() {
+	let box = document.querySelector(`.reruns`);
+	let width = box.offsetWidth;
+	let height = box.offsetHeight;
+	$('body').css('min-width', width + 25 + 'px');
+	$('body').css('display', 'flex');
+	$('body').css('justify-content', 'center');
+}
