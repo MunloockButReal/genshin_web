@@ -3,6 +3,7 @@
 
 <head>
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
   <link href="../css/elements.css" rel="stylesheet" type="text/css" />
   <link href="../css/button.css" rel="stylesheet" type="text/css" />
   <script src="../js/jquery-3.6.1.js"></script>
@@ -25,8 +26,10 @@
 <body>
 
   <div class="pagewrapper">
-    <div class="button-div">
-      <form action="#">
+    <div id="buttonDiv" class="button-div">
+      <input style="display: block;" class="BRT-Buttons brt-button-black" type="submit" value="Remove all buttons"
+        onclick="document.getElementById('buttonDiv').remove();">
+      <form>
         <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
       </form>
       <form action="reruns.html">
