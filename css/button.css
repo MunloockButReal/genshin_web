@@ -1,29 +1,41 @@
 .BRT-Buttons {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.3rem;
-    display: inline;
-    margin: 5px;
-    border-radius: 1rem;
-
+	border: none;
+	padding: 15px 32px;
+	font-size: 1.3rem;
+	margin: 5px;
+	border-radius: 0.5rem;
 }
 
 .brt-button-black {
-    background-color: #555555;
+	--button-bg-hue: 0;
+	--button-bg-saturation: 0%;
+	--button-bg-lightness: 20%;
+	background-color: hsl(
+		var(--button-bg-hue),
+		var(--button-bg-saturation),
+		var(--button-bg-lightness)
+	);
+	color: hsl(0, 100%, 100%);
+}
+
+.brt-button-black:hover {
+	--button-bg-lightness: 30%;
 }
 
 .button-div {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem;
+	display: flex;
+	justify-content: center;
 }
 
 .MyChartable {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+}
+
+@media (prefers-color-scheme: light) {
+	.brt-button-black {
+		--button-bg-hue: 0;
+		--button-bg-saturation: 0%;
+		--button-bg-lightness: 10%;
+	}
 }
