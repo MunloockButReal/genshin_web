@@ -4,20 +4,22 @@
 }
 
 body {
-	background: #080808;
 	font-family: 'GenshinFont';
 	font-size: 1.6rem;
 	text-align: center;
 }
 
+body {
+	color: hsl(0, 0%, 0%);
+	background-color: hsl(30, 30%, 75%);
+}
+
 table {
-	background: rgba(63, 94, 91, 0.7);
-	-webkit-backdrop-filter: blur(17px);
-	backdrop-filter: blur(17px);
+	background: rgb(255, 255, 255);
 }
 
 .emptycell {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: #00000099;
 }
 
 td {
@@ -28,7 +30,7 @@ td {
 .bannerrow,
 .char,
 .whitecell {
-	background-color: #fdfdfd;
+	/* background-color: #fdfdfd; */
 	width: 5rem;
 	height: 5rem;
 }
@@ -46,37 +48,17 @@ img {
 	display: block;
 }
 
-th {
-	width: 5rem;
-	height: 2.5rem;
+.char {
+	background-color: hsl(0, 0%, 100%);
 }
-
-.Banners,
-.Reruns,
-.chartabs {
-	width: 20rem;
-	height: auto;
-	outline: 2rem green;
-}
-
-.rerunTables {
+/* .rerunTables {
 	display: flex;
 	justify-content: space-around;
-}
-
-.image-link-div {
-	display: flex;
-	justify-content: space-around;
-	height: min-content;
-}
+} */
 
 ::-webkit-scrollbar {
-	height: 8px;
-	width: 8px;
-}
-
-body {
-	overflow-y: visible;
+	height: 1rem;
+	width: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -84,14 +66,45 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #434343;
-	border-radius: 3px;
+	background: #101010;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #434343ab;
+	background-color: #101010ab;
 }
 
 ::-webkit-scrollbar-corner {
 	visibility: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: hsl(0, 0%, 3%);
+	}
+	.bannerrow {
+		color: white;
+	}
+	table {
+		background: hsla(0, 0%, 26%, 0.251);
+		/* color: hsl(0, 0%, 100%); */
+	}
+
+	.pyro,
+	.hydro,
+	.cryo,
+	.electro {
+		color: hsl(0, 0%, 100%);
+	}
+	.char {
+		background-color: hsl(0, 0%, 10%);
+	}
+	::-webkit-scrollbar-thumb {
+		background: hsl(0, 0%, 50%);
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: hsl(0, 0%, 20%);
+	}
+	::-webkit-scrollbar-track {
+		background-color: hsl(0, 0%, 5%);
+	}
 }
