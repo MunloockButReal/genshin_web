@@ -15,20 +15,33 @@ function read(rarity) {
 
 window.onload = () => {};
 
+/**
+ *
+ * @param {string=} field vision, byVersion, byBanner, lastDurationV, lastDurationB /n Anything else(but nothing) will be ignored
+ * @param {string=} way desc, anything else will be count as 'asc'
+ * @returns sorted array
+ */
 function sortField(field, way) {
 	way === 'desc' ? ((w2 = 1), (w1 = -1)) : ((w1 = 1), (w2 = -1));
 
 	if (field === 'vision') {
+		// sort by vision
+
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	} else if (field === 'byVersion' || field === 'byBanner') {
+		//sort by banner or version (first element)
+
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
 	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
+		// sorting by last element of banner or version
+
 		if (field === 'lastDurationV') {
 			field = 'byVersion';
 		} else field = 'byBanner';
+
 		return (a, b) =>
 			a[field][a[field].length - 1] > b[field][b[field].length - 1] ? w1 : w2;
-	} else return (a, b) => (a[field][0] > b[field][0] ? w2 : w1);
+	} else return 0;
 }
 /**
  *
@@ -178,10 +191,11 @@ function createVersions(ext, mainTable) {
 
 				let link = `../images/characters/${name}.webp`;
 				let alt = `${name}`;
-
-				imgU.src = link;
-				imgU.alt = alt;
-				tdU.append(imgU);
+				if (`${name}` != 'undefined') {
+					imgU.src = link;
+					imgU.alt = alt;
+					tdU.append(imgU);
+				}
 			}
 			// Bottom part
 			{
@@ -218,6 +232,7 @@ function createVersions(ext, mainTable) {
 
 				imgD.src = link;
 				imgD.alt = alt;
+
 				tdB.append(imgD);
 			}
 		}
@@ -260,22 +275,14 @@ function paintjob(number, charVision, cell, ext) {
 	let colorT = tinycolor(color);
 
 	if (number == 4) {
-		multiplier = 0.045 * 2;
 		darkenMult = 2.7 * 1.5;
 	} else if (number == 5) {
-		multiplier = 0.045;
 		darkenMult = 2.7;
 	}
 
 	if (!ext) {
-		multiplier *= 2;
-		darkenMult *= 2;
-
-		if (cell.innerText * multiplier < 0.99) {
-			colorT.setAlpha(cell.innerText * multiplier);
-		} else colorT.setAlpha(0.99);
+		darkenMult *= 1.4;
 	}
-
 	cell.style.backgroundColor = tinycolor(colorT)
 		.darken(cell.innerText * darkenMult)
 		.toString();
