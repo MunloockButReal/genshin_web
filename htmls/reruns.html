@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <link href="../css/button.css" rel="stylesheet" type="text/css" />
   <link href="../css/elements.css" rel="stylesheet" type="text/css" />
@@ -23,8 +24,11 @@
 
 <body>
   <div class="pagewrapper">
-    <div class="buttons">
+
+    <div id="buttonDiv" class=" buttons">
       <div class="button-div">
+        <input style="display: block;" class="BRT-Buttons brt-button-black" type="submit" value="Remove all buttons"
+          onclick="document.getElementById('buttonDiv').remove();">
         <form action="banners.html">
           <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
         </form>
