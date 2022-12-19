@@ -79,8 +79,8 @@ function createVersionHeaderMain(table) {
 function createVersions(ext, mainTable) {
 	let v1max = 6;
 	let v2max = 8;
-	let v3max = 3;
-	versionCount = 20;
+	let v3max = 4;
+	versionCount = v1max + v2max + v3max + 3;
 	// (version * 2)
 	bannersCount = versionCount * 2;
 
@@ -179,7 +179,8 @@ function createVersions(ext, mainTable) {
 					case 27: name = 'Raiden'; break;
 					case 28: 
 					case 36: name = 'Venti'; break;
-					case 30: name = 'Xiao'; break;
+					case 30:
+					case 42: name = 'Xiao'; break;
 					case 32: name = 'Klee'; break;
 					case 34: name = 'Tighnari'; break;
 					case 37: name = 'Albedo'; break;
@@ -187,6 +188,7 @@ function createVersions(ext, mainTable) {
 					case 39: name = 'Yae'; break;
 					case 40: name = 'Itto'; break;
 					case 41: name = 'Ayato'; break
+					case 43: name = 'Yelan'; break
 				}
 
 				let link = `../images/characters/${name}.webp`;
@@ -210,7 +212,7 @@ function createVersions(ext, mainTable) {
 					case 6: name = 'Ganyu'; break;
 					case 7: case 24: name = 'Xiao'; break;
 					case 8: name = 'Keqing'; break;
-					case 9: case 21: name = 'Tao'; break;
+					case 9: case 21: case 43: name = 'Tao'; break;
 					case 13: name = 'Eula'; break;
 					case 15: case 32: name = 'Kazuha'; break;
 					case 16: case 29: name = 'Ayaka' ; break;
@@ -225,15 +227,16 @@ function createVersions(ext, mainTable) {
 					case 37: name = 'Nilou'; break;
 					case 38: name = 'Nahida'; break
 					case 40: name = 'Wanderer'; break
+					case 42: name = 'Alhatham'; break
 				}
 
 				let link = `../images/characters/${name}.webp`;
 				let alt = `${name}`;
-
-				imgD.src = link;
-				imgD.alt = alt;
-
-				tdB.append(imgD);
+				if (`${name}` != 'undefined') {
+					imgD.src = link;
+					imgD.alt = alt;
+					tdB.append(imgD);
+				}
 			}
 		}
 
