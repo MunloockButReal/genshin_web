@@ -30,14 +30,17 @@ function sortField(field, way) {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	} else if (field === 'byVersion' || field === 'byBanner') {
 		//sort by banner or version (first element)
-		field = 'byBanner';
 
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
 	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
 		// sorting by last element of banner or version
-		field = 'byBanner';
+
+		if (field === 'lastDurationV') {
+			field = 'byVersion';
+		} else field = 'byBanner';
+
 		return (a, b) =>
-			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
+			a[field][a[field].length - 1] > b[field][b[field].length - 1] ? w1 : w2;
 	} else return 0;
 }
 /**
@@ -73,19 +76,19 @@ function createVersionHeaderMain(table) {
 	table.append(bannerrow);
 }
 
-var vtb = [];
+var newBannerSystemCounter = [];
+
 function createVersions(ext, mainTable) {
-	let verToBanner = [];
 	let v1max = 6;
 	let v2max = 8;
-	let v3max = 4;
-	versionCount = v1max + v2max + v3max + 3;
+	let v3max = 3;
+	versionCount = 20;
 	// (version * 2)
 	bannersCount = versionCount * 2;
 
+	let countB = 0;
 	for (let h = 1; h < 4; h++) {
 		// Генерирует подверсию (.0 ... .8)
-
 		for (let j = 0; j < 9; j++) {
 			// Если требуется таблица по баннерам
 			let th = document.createElement('th');
@@ -95,70 +98,71 @@ function createVersions(ext, mainTable) {
 					vOneColspan = th;
 					// 1.3
 					if (h == 1 && j == 3) {
+						str = h + '.' + j + '.';
+						newBannerSystemCounter.push(str + 1);
+						newBannerSystemCounter.push(str + 2);
+						newBannerSystemCounter.push(str + 3);
+
 						vOneColspan.colSpan = 3;
 						vOneColspan.innerText = h + '.' + j;
 						bannerrow.append(vOneColspan);
-
-						verToBanner.push(h + '.' + j + '.' + 1);
-						verToBanner.push(h + '.' + j + '.' + 2);
-						verToBanner.push(h + '.' + j + '.' + 3);
 					} else {
+						str = h + '.' + j + '.';
+						newBannerSystemCounter.push(str + 1);
+						newBannerSystemCounter.push(str + 2);
 						// 1.0 - 1.2 , 1.4 - 1.6
 						vOneColspan.colSpan = 2;
 						vOneColspan.innerText = h + '.' + j;
 						bannerrow.append(vOneColspan);
-
-						verToBanner.push(h + '.' + j + '.' + 1);
-						verToBanner.push(h + '.' + j + '.' + 2);
 					}
 				} else if (h == 2 && j <= v2max) {
+					str = h + '.' + j + '.';
+					newBannerSystemCounter.push(str + 1);
+					newBannerSystemCounter.push(str + 2);
 					// 2.(0-9)
 					vTwoColspan = th;
 					vTwoColspan.colSpan = 2;
 					vTwoColspan.innerText = h + '.' + j;
 					bannerrow.append(vTwoColspan);
-
-					verToBanner.push(h + '.' + j + '.' + 1);
-					verToBanner.push(h + '.' + j + '.' + 2);
 				} else if (h == 3 && j <= v3max) {
+					str = h + '.' + j + '.';
+					newBannerSystemCounter.push(str + 1);
+					newBannerSystemCounter.push(str + 2);
 					// 3.(0-2)
 					vThreeColspan = th;
 					vThreeColspan.colSpan = 2;
 					vThreeColspan.innerText = h + '.' + j;
 					bannerrow.append(vThreeColspan);
-
-					verToBanner.push(h + '.' + j + '.' + 1);
-					verToBanner.push(h + '.' + j + '.' + 2);
 				}
 			} else {
 				// Если требуется таблица по версиям
 
 				// 1.(0-6)
 				if (h == 1 && j <= v1max) {
+					str = h + '.' + j;
+					newBannerSystemCounter.push(str);
+
 					vOne = th;
 					vOne.innerText = h + '.' + j;
 					bannerrow.append(vOne);
-
-					verToBanner.push(h + '.' + j);
 				} else if (h == 2 && j <= v2max) {
+					str = h + '.' + j;
+					newBannerSystemCounter.push(str);
 					// 2.(0-8)
 					vTwo = th;
 					vTwo.innerText = h + '.' + j;
 					bannerrow.append(vTwo);
-
-					verToBanner.push(h + '.' + j);
 				} else if (h == 3 && j <= v3max) {
+					str = h + '.' + j;
+					newBannerSystemCounter.push(str);
 					// 3.(0-2)
 					vThree = th;
 					vThree.innerText = h + '.' + j;
 					bannerrow.append(vThree);
-
-					verToBanner.push(h + '.' + j);
 				}
 			}
 		}
 	}
-	vtb = verToBanner;
 
 	if (mainTable) {
 		upRow = document.createElement('tr');
@@ -198,8 +202,7 @@ function createVersions(ext, mainTable) {
 					case 27: name = 'Raiden'; break;
 					case 28: 
 					case 36: name = 'Venti'; break;
-					case 30:
-					case 42: name = 'Xiao'; break;
+					case 30: name = 'Xiao'; break;
 					case 32: name = 'Klee'; break;
 					case 34: name = 'Tighnari'; break;
 					case 37: name = 'Albedo'; break;
@@ -207,7 +210,6 @@ function createVersions(ext, mainTable) {
 					case 39: name = 'Yae'; break;
 					case 40: name = 'Itto'; break;
 					case 41: name = 'Ayato'; break
-					case 43: name = 'Yelan'; break
 				}
 
 				let link = `../images/characters/${name}.webp`;
@@ -231,7 +233,7 @@ function createVersions(ext, mainTable) {
 					case 6: name = 'Ganyu'; break;
 					case 7: case 24: name = 'Xiao'; break;
 					case 8: name = 'Keqing'; break;
-					case 9: case 21: case 43: name = 'Tao'; break;
+					case 9: case 21: name = 'Tao'; break;
 					case 13: name = 'Eula'; break;
 					case 15: case 32: name = 'Kazuha'; break;
 					case 16: case 29: name = 'Ayaka' ; break;
@@ -246,16 +248,15 @@ function createVersions(ext, mainTable) {
 					case 37: name = 'Nilou'; break;
 					case 38: name = 'Nahida'; break
 					case 40: name = 'Wanderer'; break
-					case 42: name = 'Alhatham'; break
 				}
 
 				let link = `../images/characters/${name}.webp`;
 				let alt = `${name}`;
-				if (`${name}` != 'undefined') {
-					imgD.src = link;
-					imgD.alt = alt;
-					tdB.append(imgD);
-				}
+
+				imgD.src = link;
+				imgD.alt = alt;
+
+				tdB.append(imgD);
 			}
 		}
 
@@ -312,13 +313,51 @@ function paintjob(number, charVision, cell, ext) {
 	// prettier-ignore
 	cell.style.color = tinycolor.mostReadable(cell.style.backgroundColor, ['000','fff',]);
 }
-function fillTableBody(body, charData, ext) {
-	for (let char of charData) {
-		let chDataNew = [];
-		// Проверка на bool ext
-		//
 
-		chData = char.byBanner;
+function fillTableBody(body, charData, ext) {
+	// if (!ext) {
+	// 	console.log(newBannerSystemCounter);
+	// 	console.log(newBannerSystemCounter.indexOf('2.3'));
+	// 	console.log(
+	// 		newBannerSystemCounter.indexOf('2.3') -
+	// 			newBannerSystemCounter.indexOf('1.6') -
+	// 			1
+	// 	);
+	// 	console.log(
+	// 		newBannerSystemCounter.indexOf('3.2') -
+	// 			newBannerSystemCounter.indexOf('2.3') -
+	// 			1
+	// 	);
+
+	// 	let test =
+	// 		newBannerSystemCounter.indexOf('3.2') -
+	// 		newBannerSystemCounter.indexOf('3.2') -
+	// 		1;
+	// 	if (test < 0) {
+	// 		test++;
+	// 	}
+	// 	console.log(test);
+	// } else {
+	// 	console.log(newBannerSystemCounter);
+	// 	console.log(newBannerSystemCounter.indexOf('2.3.1'));
+	// 	console.log(
+	// 		newBannerSystemCounter.indexOf('2.3.1') -
+	// 			newBannerSystemCounter.indexOf('1.6.2') -
+	// 			1
+	// 	);
+	// 	console.log(
+	// 		newBannerSystemCounter.indexOf('3.2.2') -
+	// 			newBannerSystemCounter.indexOf('2.3.1') -
+	// 			1
+	// 	);
+	// }
+
+	for (let char of charData) {
+		let chData;
+
+		// Проверка на bool ext
+		ext ? (chData = char.byBanner) : (chData = char.byVersion);
+
 		// Задаётся имя и цвет персонажа для всего ряда
 		charVision = document.createElement('tr');
 		charVision.classList.add(`${char.vision}`);
@@ -330,59 +369,110 @@ function fillTableBody(body, charData, ext) {
 		body.appendChild(charVision);
 
 		// Сколько всего потребуется создавать ячеек
-		if (!ext) {
-			for (let n = 0; n < chData.length; n++) {
-				chDataNew.push(chData[n].slice(0, -2));
+
+		for (let i = 0; i <= chData.length - 1; i++) {
+			// if (chData[charData.length - 1] != '3.3') {
+			// 	lastElement = chData.findLast((element) => element);
+			// 	console.log('lastElement != 3.3, lastElement = ' + lastElement);
+
+			// 	lastElementNB = newBannerSystemCounter.findLast((element) => element);
+
+			// 	console.log(newBannerSystemCounter.indexOf(lastElementNB));
+			// 	console.log(newBannerSystemCounter.indexOf(lastElement));
+			// 	console.log(
+			// 		newBannerSystemCounter.indexOf(lastElementNB) -
+			// 			newBannerSystemCounter.indexOf(lastElement)
+			// 	);
+			// 	var addc =
+			// 		newBannerSystemCounter.indexOf(lastElementNB) -
+			// 		newBannerSystemCounter.indexOf(lastElement);
+			// } else {
+			// 	lastElement = chData.findLast((element) => element);
+
+			// 	console.log('lastElement = 3.3  - true | ' + lastElement);
+			// }
+
+			console.log('chData.length = ' + chData.length);
+			console.log('chData.length + 1 = ' + (chData.length + 1));
+			// console.log(chData[i + 1]);
+			// console.log(
+			// 	newBannerSystemCounter.indexOf(chData[i + 1]) -
+			// 		newBannerSystemCounter.indexOf(chData[i])
+			// );
+
+			// if (chData[i] != undefined) {
+			if (i <= chData.length) {
+				console.log(' ');
+				console.log('i = ' + i);
+				console.log('chData[i] = ' + chData[i]);
+				console.log('CharDataLenght = ' + chData.length);
 			}
-			chData = chDataNew;
-		}
-		for (let i = 0; i <= chData.length; i++) {
-			if (chData[i] != undefined) {
-				// Заполнение "пустыми" ячейками до первого момента баннера персонажа
-				if (i == 0) {
-					for (let a = 0; a < vtb.indexOf(chData[0]); a++) {
-						var emptyCell = document.createElement('td');
-						emptyCell.classList.add('emptycell');
-						charVision.append(emptyCell);
-					}
-				}
-				let dif = vtb.indexOf(chData[i + 1]) - vtb.indexOf(chData[i]);
 
-				let difLast =
-					vtb.indexOf(vtb[vtb.length - 1]) -
-					vtb.indexOf(chData[chData.length - 1]);
-
-				if (chData[i + 1] == undefined) {
-					dif = difLast + 1;
-				}
-
-				// Промежутки между баннерами персонажа
-
-				for (let noCharCell = 0; noCharCell < dif; noCharCell++) {
-					if (chData[i] != undefined) {
-						let charCell = document.createElement('td');
-						// 0  = Баннер персонажа
-
-						if (noCharCell != 0) {
-							charCell.classList.add('noCharBanner');
-							charCell.innerText = noCharCell;
-
-							paintjob(char.rarity, char.vision, charCell, ext);
-
-							charVision.append(charCell);
-						} else {
-							itIsChar = document.createElement('img');
-							itIsChar.classList.add('char');
-							itIsChar.src = `${char.url}`;
-							itIsChar.alt = `${char.name}`;
-							itIsChar.height = 128;
-
-							charCell.appendChild(itIsChar);
-							charVision.append(charCell);
-						}
-					}
+			// Заполнение "пустыми" ячейками до первого момента баннера персонажа
+			if (i == 0) {
+				for (let a = 0; a < newBannerSystemCounter.indexOf(chData[0]); a++) {
+					var emptyCell = document.createElement('td');
+					emptyCell.classList.add('emptycell');
+					charVision.append(emptyCell);
 				}
 			}
+
+			// Промежутки между баннерами персонажа
+			// for (let noCharCell = 0; noCharCell <= chData[i + 1]; noCharCell++) {
+			let place =
+				newBannerSystemCounter.indexOf(chData[i + 1]) -
+				newBannerSystemCounter.indexOf(chData[i]) -
+				1;
+
+			console.log(newBannerSystemCounter.indexOf(chData[i + 1]));
+			console.log(newBannerSystemCounter.indexOf(chData[i]));
+			console.log('place = ' + place);
+
+			// console.log('newBannerSystemCounter.indexOf(chData[i + 1])');
+			// console.log(newBannerSystemCounter.indexOf(chData[i + 1]));
+			// console.log('newBannerSystemCounter.indexOf(chData[i])');
+			// console.log(newBannerSystemCounter.indexOf(chData[i]));
+			// console.log('place');
+			// console.log(place);
+
+			if (place < 0) {
+				place = 0;
+			}
+
+			console.log('place = ' + place);
+
+			{
+				let lastElement = 0;
+				let lastElementNB = 0;
+
+				for (let noCharCell = 0; noCharCell <= place; noCharCell++) {
+					// if (chData[i] != undefined) {
+					let charCell = document.createElement('td');
+					// 0  = Баннер персонажа
+					if (noCharCell != 0) {
+						charCell.classList.add('noCharBanner');
+						charCell.innerText = noCharCell;
+
+						paintjob(char.rarity, char.vision, charCell, ext);
+
+						charVision.append(charCell);
+					} else if (noCharCell == 0) {
+						itIsChar = document.createElement('img');
+						itIsChar.classList.add('char');
+						itIsChar.src = `${char.url}`;
+						itIsChar.alt = `${char.name}`;
+						itIsChar.height = 128;
+
+						charCell.appendChild(itIsChar);
+						charVision.append(charCell);
+
+						// console.log('addc = ' + addc);
+					}
+				}
+
+				// }
+			}
+			// }
 		}
 	}
 }
