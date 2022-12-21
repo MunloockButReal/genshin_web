@@ -30,17 +30,14 @@ function sortField(field, way) {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	} else if (field === 'byVersion' || field === 'byBanner') {
 		//sort by banner or version (first element)
+		field = 'byBanner';
 
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
 	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
 		// sorting by last element of banner or version
-
-		if (field === 'lastDurationV') {
-			field = 'byVersion';
-		} else field = 'byBanner';
-
+		field = 'byBanner';
 		return (a, b) =>
-			a[field][a[field].length - 1] > b[field][b[field].length - 1] ? w1 : w2;
+			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
 	} else return 0;
 }
 /**
@@ -76,7 +73,9 @@ function createVersionHeaderMain(table) {
 	table.append(bannerrow);
 }
 
+var vtb = [];
 function createVersions(ext, mainTable) {
+	let verToBanner = [];
 	let v1max = 6;
 	let v2max = 8;
 	let v3max = 4;
@@ -99,11 +98,18 @@ function createVersions(ext, mainTable) {
 						vOneColspan.colSpan = 3;
 						vOneColspan.innerText = h + '.' + j;
 						bannerrow.append(vOneColspan);
+
+						verToBanner.push(h + '.' + j + '.' + 1);
+						verToBanner.push(h + '.' + j + '.' + 2);
+						verToBanner.push(h + '.' + j + '.' + 3);
 					} else {
 						// 1.0 - 1.2 , 1.4 - 1.6
 						vOneColspan.colSpan = 2;
 						vOneColspan.innerText = h + '.' + j;
 						bannerrow.append(vOneColspan);
+
+						verToBanner.push(h + '.' + j + '.' + 1);
+						verToBanner.push(h + '.' + j + '.' + 2);
 					}
 				} else if (h == 2 && j <= v2max) {
 					// 2.(0-9)
@@ -111,12 +117,18 @@ function createVersions(ext, mainTable) {
 					vTwoColspan.colSpan = 2;
 					vTwoColspan.innerText = h + '.' + j;
 					bannerrow.append(vTwoColspan);
+
+					verToBanner.push(h + '.' + j + '.' + 1);
+					verToBanner.push(h + '.' + j + '.' + 2);
 				} else if (h == 3 && j <= v3max) {
 					// 3.(0-2)
 					vThreeColspan = th;
 					vThreeColspan.colSpan = 2;
 					vThreeColspan.innerText = h + '.' + j;
 					bannerrow.append(vThreeColspan);
+
+					verToBanner.push(h + '.' + j + '.' + 1);
+					verToBanner.push(h + '.' + j + '.' + 2);
 				}
 			} else {
 				// Если требуется таблица по версиям
@@ -126,20 +138,27 @@ function createVersions(ext, mainTable) {
 					vOne = th;
 					vOne.innerText = h + '.' + j;
 					bannerrow.append(vOne);
+
+					verToBanner.push(h + '.' + j);
 				} else if (h == 2 && j <= v2max) {
 					// 2.(0-8)
 					vTwo = th;
 					vTwo.innerText = h + '.' + j;
 					bannerrow.append(vTwo);
+
+					verToBanner.push(h + '.' + j);
 				} else if (h == 3 && j <= v3max) {
 					// 3.(0-2)
 					vThree = th;
 					vThree.innerText = h + '.' + j;
 					bannerrow.append(vThree);
+
+					verToBanner.push(h + '.' + j);
 				}
 			}
 		}
 	}
+	vtb = verToBanner;
 
 	if (mainTable) {
 		upRow = document.createElement('tr');
@@ -293,14 +312,13 @@ function paintjob(number, charVision, cell, ext) {
 	// prettier-ignore
 	cell.style.color = tinycolor.mostReadable(cell.style.backgroundColor, ['000','fff',]);
 }
-
 function fillTableBody(body, charData, ext) {
 	for (let char of charData) {
-		let chData;
-
+		let chDataNew = [];
 		// Проверка на bool ext
-		ext ? (chData = char.byBanner) : (chData = char.byVersion);
+		//
 
+		chData = char.byBanner;
 		// Задаётся имя и цвет персонажа для всего ряда
 		charVision = document.createElement('tr');
 		charVision.classList.add(`${char.vision}`);
@@ -312,22 +330,39 @@ function fillTableBody(body, charData, ext) {
 		body.appendChild(charVision);
 
 		// Сколько всего потребуется создавать ячеек
+		if (!ext) {
+			for (let n = 0; n < chData.length; n++) {
+				chDataNew.push(chData[n].slice(0, -2));
+			}
+			chData = chDataNew;
+		}
 		for (let i = 0; i <= chData.length; i++) {
 			if (chData[i] != undefined) {
 				// Заполнение "пустыми" ячейками до первого момента баннера персонажа
 				if (i == 0) {
-					for (let a = 0; a < chData[0]; a++) {
+					for (let a = 0; a < vtb.indexOf(chData[0]); a++) {
 						var emptyCell = document.createElement('td');
 						emptyCell.classList.add('emptycell');
 						charVision.append(emptyCell);
 					}
 				}
+				let dif = vtb.indexOf(chData[i + 1]) - vtb.indexOf(chData[i]);
+
+				let difLast =
+					vtb.indexOf(vtb[vtb.length - 1]) -
+					vtb.indexOf(chData[chData.length - 1]);
+
+				if (chData[i + 1] == undefined) {
+					dif = difLast + 1;
+				}
 
 				// Промежутки между баннерами персонажа
-				for (let noCharCell = 0; noCharCell <= chData[i + 1]; noCharCell++) {
+
+				for (let noCharCell = 0; noCharCell < dif; noCharCell++) {
 					if (chData[i] != undefined) {
 						let charCell = document.createElement('td');
 						// 0  = Баннер персонажа
+
 						if (noCharCell != 0) {
 							charCell.classList.add('noCharBanner');
 							charCell.innerText = noCharCell;
