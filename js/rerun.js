@@ -30,12 +30,12 @@ function sortField(field, way) {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	} else if (field === 'byVersion' || field === 'byBanner') {
 		//sort by banner or version (first element)
-		field = 'byBanner';
+		field = 'version';
 
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
 	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
 		// sorting by last element of banner or version
-		field = 'byBanner';
+		field = 'version';
 		return (a, b) =>
 			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
 	} else return 0;
@@ -45,7 +45,7 @@ function sortField(field, way) {
  * @param {string} divID Div where is table will be created
  * @param {number} number Rarity
  * @param {bool} bool Extended or not (true; false)
- * @param {string} field byVersion, byBanner, vision
+ * @param {string} field byVersion, version, vision
  * @param {string} way asc or desc
  */
 function changeTableSort(divID, number, bool, field, way) {
@@ -318,7 +318,7 @@ function fillTableBody(body, charData, ext) {
 		// Проверка на bool ext
 		//
 
-		chData = char.byBanner;
+		chData = char.version;
 		// Задаётся имя и цвет персонажа для всего ряда
 		charVision = document.createElement('tr');
 		charVision.classList.add(`${char.vision}`);

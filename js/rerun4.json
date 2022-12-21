@@ -4,195 +4,195 @@
 		"vision": "hydro",
 		"rarity": 4,
 		"url": "../images/characters/Barbara.webp",
-		"byBanner": ["1.0.1", "1.3.2", "1.4.2", "1.6.1", "2.3.2", "2.7.1", "3.1.2"]
+		"version": ["1.0.1", "1.3.2", "1.4.2", "1.6.1", "2.3.2", "2.7.1", "3.1.2"]
 	},
 	{
 		"name": "Fischl",
 		"vision": "electro",
 		"rarity": 4,
 		"url": "../images/characters/Fischl.webp",
-		"byBanner": ["1.0.1", "1.2.1", "1.4.2", "1.6.1", "2.5.1", "3.0.1"]
+		"version": ["1.0.1", "1.2.1", "1.4.2", "1.6.1", "2.5.1", "3.0.1"]
 	},
 	{
 		"name": "Xiangling",
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "../images/characters/Xiangling.webp",
-		"byBanner": ["1.0.1", "1.2.2", "1.3.3", "2.1.1", "2.3.2", "2.6.1", "3.1.2"]
+		"version": ["1.0.1", "1.2.2", "1.3.3", "2.1.1", "2.3.2", "2.6.1", "3.1.2"]
 	},
 	{
 		"name": "Xingqiu",
 		"vision": "hydro",
 		"rarity": 4,
 		"url": "../images/characters/Xingqiu.webp",
-		"byBanner": ["1.0.2", "1.2.2", "1.3.3", "1.5.2", "2.1.2", "2.4.2", "3.0.2"]
+		"version": ["1.0.2", "1.2.2", "1.3.3", "1.5.2", "2.1.2", "2.4.2", "3.0.2"]
 	},
 	{
 		"name": "Sucrose",
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "../images/characters/Sucrose.webp",
-		"byBanner": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2"]
+		"version": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2"]
 	},
 	{
 		"name": "Noel",
 		"vision": "geo",
 		"rarity": 4,
 		"url": "../images/characters/Noel.webp",
-		"byBanner": ["1.0.2", "1.2.2", "1.4.1", "1.5.1", "2.3.1", "2.7.1", "3.2.1"]
+		"version": ["1.0.2", "1.2.2", "1.4.1", "1.5.1", "2.3.1", "2.7.1", "3.2.1"]
 	},
 	{
 		"name": "Diona",
 		"vision": "cryo",
 		"rarity": 4,
 		"url": "../images/characters/Diona.webp",
-		"byBanner": ["1.1.1", "1.3.1", "1.5.1", "2.0.2", "2.2.2", "2.5.1", "3.0.1"]
+		"version": ["1.1.1", "1.3.1", "1.5.1", "2.0.2", "2.2.2", "2.5.1", "3.0.1"]
 	},
 	{
 		"name": "Beidou",
 		"vision": "electro",
 		"rarity": 4,
 		"url": "../images/characters/Beidou.webp",
-		"byBanner": ["1.1.1", "1.3.1", "1.5.2", "2.1.2", "2.4.2", "3.1.2"]
+		"version": ["1.1.1", "1.3.1", "1.5.2", "2.1.2", "2.4.2", "3.1.2"]
 	},
 	{
 		"name": "Ningguang",
 		"vision": "geo",
 		"rarity": 4,
 		"url": "../images/characters/Ningguang.webp",
-		"byBanner": ["1.1.1", "1.3.2", "2.0.1", "2.2.1", "2.4.1", "2.8.1"]
+		"version": ["1.1.1", "1.3.2", "2.0.1", "2.2.1", "2.4.1", "2.8.1"]
 	},
 	{
 		"name": "Chongyun",
 		"vision": "cryo",
 		"rarity": 4,
 		"url": "../images/characters/Chongyun.webp",
-		"byBanner": ["1.1.2", "1.3.3", "2.0.1", "2.2.1", "2.4.1", "2.7.2"]
+		"version": ["1.1.2", "1.3.3", "2.0.1", "2.2.1", "2.4.1", "2.7.2"]
 	},
 	{
 		"name": "Razor",
 		"vision": "electro",
 		"rarity": 4,
 		"url": "../images/characters/Razor.webp",
-		"byBanner": ["1.1.2", "1.4.1", "1.6.2", "2.6.2", "3.2.1"]
+		"version": ["1.1.2", "1.4.1", "1.6.2", "2.6.2", "3.2.1"]
 	},
 	{
 		"name": "Xinyan",
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "../images/characters/Xinyan.webp",
-		"byBanner": ["1.1.2", "1.3.1", "1.5.2", "2.0.2", "2.5.2", "2.8.2"]
+		"version": ["1.1.2", "1.3.1", "1.5.2", "2.0.2", "2.5.2", "2.8.2"]
 	},
 	{
 		"name": "Bennett",
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "../images/characters/Bennett.webp",
-		"byBanner": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1"]
+		"version": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1"]
 	},
 	{
 		"name": "Rosaria",
 		"vision": "cryo",
 		"rarity": 4,
 		"url": "../images/characters/Rosaria.webp",
-		"byBanner": ["1.4.2", "1.6.2", "2.1.2", "2.3.1", "2.6.2"]
+		"version": ["1.4.2", "1.6.2", "2.1.2", "2.3.1", "2.6.2"]
 	},
 	{
 		"name": "Yanfei",
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "../images/characters/Yanfei.webp",
-		"byBanner": ["1.5.1", "2.0.1", "2.2.1", "2.4.2", "2.7.1", "3.3.1"]
+		"version": ["1.5.1", "2.0.1", "2.2.1", "2.4.2", "2.7.1", "3.3.1"]
 	},
 	{
 		"name": "Sayu",
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "../images/characters/Sayu.webp",
-		"byBanner": ["2.0.2", "2.2.2", "2.6.2", "3.1.1"]
+		"version": ["2.0.2", "2.2.2", "2.6.2", "3.1.1"]
 	},
 	{
 		"name": "Sara",
 		"vision": "electro",
 		"rarity": 4,
 		"url": "../images/characters/Sara.webp",
-		"byBanner": ["2.1.1", "2.5.2", "3.3.2"]
+		"version": ["2.1.1", "2.5.2", "3.3.2"]
 	},
 	{
 		"name": "Thoma",
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "../images/characters/Thoma.webp",
-		"byBanner": ["2.2.2", "2.5.1", "2.8.1", "3.2.2"]
+		"version": ["2.2.2", "2.5.1", "2.8.1", "3.2.2"]
 	},
 	{
 		"name": "Gorou",
 		"vision": "geo",
 		"rarity": 4,
 		"url": "../images/characters/Gorou.webp",
-		"byBanner": ["2.3.2", "2.7.2", "3.3.1"]
+		"version": ["2.3.2", "2.7.2", "3.3.1"]
 	},
 	{
 		"name": "Yunjin",
 		"vision": "geo",
 		"rarity": 4,
 		"url": "../images/characters/Yunjin.webp",
-		"byBanner": ["2.4.1", "2.6.1", "2.8.2"]
+		"version": ["2.4.1", "2.6.1", "2.8.2"]
 	},
 	{
 		"name": "Shinobu",
 		"vision": "electro",
 		"rarity": 4,
 		"url": "../images/characters/Shinobu.webp",
-		"byBanner": ["2.7.2", "3.1.1"]
+		"version": ["2.7.2", "3.1.1"]
 	},
 	{
 		"name": "Heizo",
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "../images/characters/Heizo.webp",
-		"byBanner": ["2.8.1", "3.2.2"]
+		"version": ["2.8.1", "3.2.2"]
 	},
 	{
 		"name": "Collei",
 		"vision": "dendro",
 		"rarity": 4,
 		"url": "../images/characters/Collei.webp",
-		"byBanner": ["3.0.1"]
+		"version": ["3.0.1"]
 	},
 	{
 		"name": "Dori",
 		"vision": "electro",
 		"rarity": 4,
 		"url": "../images/characters/Dori.webp",
-		"byBanner": ["3.0.2"]
+		"version": ["3.0.2"]
 	},
 	{
 		"name": "Candace",
 		"vision": "hydro",
 		"rarity": 4,
 		"url": "../images/characters/Candace.webp",
-		"byBanner": ["3.1.1"]
+		"version": ["3.1.1"]
 	},
 	{
 		"name": "Layla",
 		"vision": "cryo",
 		"rarity": 4,
 		"url": "../images/characters/Layla.webp",
-		"byBanner": ["3.2.2"]
+		"version": ["3.2.2"]
 	},
 	{
 		"name": "Faruzan",
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "../images/characters/Faruzan.webp",
-		"byBanner": ["3.3.1"]
+		"version": ["3.3.1"]
 	},
 	{
 		"name": "Yaoyao",
 		"vision": "dendro",
 		"rarity": 4,
 		"url": "../images/characters/Yaoyao.webp",
-		"byBanner": ["3.4.1"]
+		"version": ["3.4.1"]
 	}
 ]
