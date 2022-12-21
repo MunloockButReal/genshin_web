@@ -2,7 +2,7 @@ function read(rarity) {
 	var charData;
 
 	$.ajax({
-		url: '../js/rerun' + rarity + '.json',
+		url: '../json/rerun' + rarity + '.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {
