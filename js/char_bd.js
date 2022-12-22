@@ -4,7 +4,7 @@ window.onload = () => {};
 
 function addEventsOnChars() {
 	$.ajax({
-		url: '../js/chars.json',
+		url: '../json/chars.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {

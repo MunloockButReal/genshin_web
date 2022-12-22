@@ -1,40 +1,38 @@
-
-body {
-  background: #080808;
+@font-face {
+	font-family: 'GenshinFont';
+	src: url('../font/zh-cn.ttf');
 }
-
 body {
-  font-family: sans-serif;
-  background-image: unset;
+	font-family: 'GenshinFont';
+	font-size: 1.1rem;
+	text-align: center;
+}
+body {
+	background: #080808;
 }
 
 table {
-  border-spacing: 0;
-  width: auto;
-  border: 1px solid #ddd;
+	border-spacing: 0;
+	width: auto;
+	border: 1px solid #ddd;
 }
 
 th {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 th,
 td {
-  text-align: center;
-  padding: 16px;
-}
-
-text {
-  outline: 2px #080808;
+	text-align: center;
+	padding: 16px;
 }
 
 tr:nth-child(even) {
-  background-color: #272727;
-  color: whitesmoke;
+	background-color: #272727;
+	color: whitesmoke;
 }
 
 tr:nth-child(odd) {
-  background-color: #383838;
-  color: #f5f5f5;
+	background-color: #383838;
+	color: #f5f5f5;
 }
-

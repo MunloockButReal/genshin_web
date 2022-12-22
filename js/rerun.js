@@ -2,7 +2,7 @@ function read(rarity) {
 	var charData;
 
 	$.ajax({
-		url: '../js/rerun' + rarity + '.json',
+		url: '../json/rerun' + rarity + '.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {
@@ -30,12 +30,12 @@ function sortField(field, way) {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	} else if (field === 'byVersion' || field === 'byBanner') {
 		//sort by banner or version (first element)
-		field = 'byBanner';
+		field = 'version';
 
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
 	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
 		// sorting by last element of banner or version
-		field = 'byBanner';
+		field = 'version';
 		return (a, b) =>
 			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
 	} else return 0;
@@ -45,7 +45,7 @@ function sortField(field, way) {
  * @param {string} divID Div where is table will be created
  * @param {number} number Rarity
  * @param {bool} bool Extended or not (true; false)
- * @param {string} field byVersion, byBanner, vision
+ * @param {string} field byVersion, version, vision
  * @param {string} way asc or desc
  */
 function changeTableSort(divID, number, bool, field, way) {
@@ -171,12 +171,33 @@ function createVersions(ext, mainTable) {
 		bottomRow = document.createElement('tr');
 		bottomRow.classList.add('bannerrow');
 
-		// bottomRowCell = document.createElement('td');
+		let chars = read(5);
+		let maxrc = 0;
+		for (c of chars) {
+			if (c.version.length > maxrc) {
+				maxrc = c.version.length;
+			}
+		}
+
+		let temp2 = [];
+		let testarr = [];
+		// for (let a of c
+		for (let i = 0; i < maxrc; i++) {
+			for (let a of chars) {
+				if (a.version[i] != undefined) {
+					if (temp2.includes(a.version[i])) {
+						testarr.push([`top`, a.name, vtb.indexOf(a.version[i])]);
+					} else {
+						testarr.push([`bottom`, a.name, vtb.indexOf(a.version[i])]);
+						temp2.push(a.version[i]);
+					}
+				}
+			}
+		}
 
 		for (let i = 0; i <= bannersCount; i++) {
 			tdU = document.createElement('td');
 			tdB = document.createElement('td');
-
 			upRow.appendChild(tdU);
 			bottomRow.append(tdB);
 
@@ -184,82 +205,31 @@ function createVersions(ext, mainTable) {
 			imgD = document.createElement('img');
 			imgU.classList.add('char');
 			imgD.classList.add('char');
-			(imgU.height = 128), (imgD.height = 128);
+			// (imgU.height = 128), (imgD.height = 128);
+			imgU.height = imgD.height = 128;
 
-			// Upper part
-			{
-				let name;
-				// prettier-ignore
-				switch (i + 1) {
-					case 22: name = 'Eula'; break; 
-					case 24: name = 'Shenhe'; break;
-					case 25: 
-					case 35: name = 'Ganyu'; break;
-					case 27: name = 'Raiden'; break;
-					case 28: 
-					case 36: name = 'Venti'; break;
-					case 30:
-					case 42: name = 'Xiao'; break;
-					case 32: name = 'Klee'; break;
-					case 34: name = 'Tighnari'; break;
-					case 37: name = 'Albedo'; break;
-					case 38: name = 'Yoimiya'; break;
-					case 39: name = 'Yae'; break;
-					case 40: name = 'Itto'; break;
-					case 41: name = 'Ayato'; break
-					case 43: name = 'Yelan'; break
-				}
-
-				let link = `../images/characters/${name}.webp`;
-				let alt = `${name}`;
-				if (`${name}` != 'undefined') {
-					imgU.src = link;
-					imgU.alt = alt;
-					tdU.append(imgU);
-				}
-			}
-			// Bottom part
-			{
-				let name;
-				// prettier-ignore
-				switch (i + 1) {
-					case 1: case 10: name = 'Venti'; break;
-					case 2: case 14: name = 'Klee'; break;
-					case 3: case 11: case 20: case 39: case 30: name = 'Tartaglia'; break;
-					case 4: case 12: case 25: case 34: name = 'Zhongli'; break;
-					case 5: case 22: name = 'Albedo'; break;
-					case 6: name = 'Ganyu'; break;
-					case 7: case 24: name = 'Xiao'; break;
-					case 8: name = 'Keqing'; break;
-					case 9: case 21: case 43: name = 'Tao'; break;
-					case 13: name = 'Eula'; break;
-					case 15: case 32: name = 'Kazuha'; break;
-					case 16: case 29: name = 'Ayaka' ; break;
-					case 17: case 33: name = 'Yoimiya'; break;
-					case 18: case 41: name = 'Raiden'; break;
-					case 19: case 27: case 35: name = 'Kokomi'; break
-					case 23: case 31: name = 'Itto'; break;
-					case 26: name = 'Yae'; break;
-					case 28: name = 'Ayato'; break;
-					case 30: name = 'Yelan'; break;
-					case 36: name = 'Cyno'; break;
-					case 37: name = 'Nilou'; break;
-					case 38: name = 'Nahida'; break
-					case 40: name = 'Wanderer'; break
-					case 42: name = 'Alhatham'; break
-				}
-
-				let link = `../images/characters/${name}.webp`;
-				let alt = `${name}`;
-				if (`${name}` != 'undefined') {
-					imgD.src = link;
-					imgD.alt = alt;
-					tdB.append(imgD);
+			for (let ch of testarr) {
+				row = ch[0];
+				charName = ch[1];
+				count = ch[2];
+				if (count == i) {
+					let link = `../images/characters/${charName}.webp`;
+					let alt = `${charName}`;
+					if (`${charName}` != 'undefined') {
+						if (row === `top`) {
+							imgU.src = link;
+							imgU.alt = alt;
+							tdU.append(imgU);
+						} else {
+							imgD.src = link;
+							imgD.alt = alt;
+							tdB.append(imgD);
+						}
+					}
 				}
 			}
 		}
 
-		// bottomRow.appendChild(bottomRowCell);
 		head.appendChild(upRow);
 		head.appendChild(bottomRow);
 	}
@@ -318,7 +288,7 @@ function fillTableBody(body, charData, ext) {
 		// Проверка на bool ext
 		//
 
-		chData = char.byBanner;
+		chData = char.version;
 		// Задаётся имя и цвет персонажа для всего ряда
 		charVision = document.createElement('tr');
 		charVision.classList.add(`${char.vision}`);
@@ -426,10 +396,6 @@ function loadTableDataMain(divForTableId, charData, ext) {
 	createHeadBody(table); // Голова и тело таблицы
 
 	createVersionHeaderMain(head); // Генерирует хедер Banners
-
-	{
-	}
-
 	createVersions(ext, true); // Генерирует версии в тело
 	fillTableBody(body, charData, ext); // Заполняет таблицу
 }
