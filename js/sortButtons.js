@@ -1,11 +1,16 @@
 $(document).ready(function () {
 	function f_resresh() {
+		console.log(sortType);
 		// extended banner or not
 		let bool;
 		if (bType === 'byBanner') {
 			bool = false;
 		} else if (bType === 'byVersion') {
 			bool = true;
+		}
+
+		if (sortType === 'LastSeen') {
+			sortType = 'lastDurationV';
 		}
 
 		loadTableData(
