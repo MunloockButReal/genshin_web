@@ -1,6 +1,5 @@
 $(document).ready(function () {
 	function f_resresh() {
-		console.log(sortType);
 		// extended banner or not
 		let bool;
 		if (bType === 'byBanner') {
