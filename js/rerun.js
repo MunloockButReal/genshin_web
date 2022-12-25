@@ -38,7 +38,9 @@ function sortField(field, way) {
 		field = 'version';
 		return (a, b) =>
 			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
-	} else return 0;
+	} else if (field === `name`) {
+		return (a, b) => (a[field] > b[field] ? w1 : w2);
+	}
 }
 /**
  *

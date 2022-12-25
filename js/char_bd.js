@@ -22,6 +22,8 @@ function resizePage() {
 	let width = box.offsetWidth;
 	let height = box.offsetHeight;
 	$('body').css('min-width', width + 25 + 'px');
-	$('body').css('display', 'flex');
+	$('body').css('min-height', height + 25 + 'px');
+	$('.pagewrapper').css('display', 'flex');
+	$('.pagewrapper').css('flex-direction', 'column');
 	$('body').css('justify-content', 'center');
 }
