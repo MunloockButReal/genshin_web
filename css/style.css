@@ -108,3 +108,17 @@ img {
 		background-color: hsl(0, 0%, 5%);
 	}
 }
+
+.radiobutton {
+	color: white;
+}
+
+.radiobutton2 {
+	display: block;
+	color: white;
+}
+
+.rerunTables {
+	display: flex;
+	justify-content: center;
+}

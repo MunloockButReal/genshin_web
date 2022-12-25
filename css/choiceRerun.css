@@ -1,0 +1,51 @@
+.choiceOptions {
+	list-style-type: none;
+	margin: 25px 0 0 0;
+	padding: 0;
+}
+
+.choiceOptions li {
+	margin: 0 5px 0 0;
+	width: 200px;
+	height: 50px;
+	position: relative;
+}
+
+.choiceOptions label,
+.choiceOptions input {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.choiceOptions input[type='radio'] {
+	opacity: 0;
+	z-index: 100;
+}
+
+.choiceOptions input[type='radio']:checked + label {
+	background: rgb(51, 51, 51);
+	color: white;
+}
+
+.choiceOptions label {
+	padding: 5px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	z-index: 90;
+}
+.choiceOptions li {
+	color: white;
+}
+.choiceOptions li:hover {
+	background: gray;
+	color: black;
+}
+
+.choiceOptionsDiv {
+	display: flex;
+	justify-content: center;
+}
