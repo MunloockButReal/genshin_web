@@ -331,27 +331,25 @@ function fillTableBody(body, charData, ext) {
 				// Промежутки между баннерами персонажа
 
 				for (let noCharCell = 0; noCharCell < dif; noCharCell++) {
-					if (chData[i] != undefined) {
-						let charCell = document.createElement('td');
-						// 0  = Баннер персонажа
+					let charCell = document.createElement('td');
+					// 0  = Баннер персонажа
 
-						if (noCharCell != 0) {
-							charCell.classList.add('noCharBanner');
-							charCell.innerText = noCharCell;
+					if (noCharCell != 0) {
+						charCell.classList.add('noCharBanner');
+						charCell.innerText = noCharCell;
 
-							paintjob(char.rarity, char.vision, charCell, ext);
+						paintjob(char.rarity, char.vision, charCell, ext);
 
-							charVision.append(charCell);
-						} else {
-							itIsChar = document.createElement('img');
-							itIsChar.classList.add('char');
-							itIsChar.src = `${char.url}`;
-							itIsChar.alt = `${char.name}`;
-							itIsChar.height = 128;
+						charVision.append(charCell);
+					} else {
+						itIsChar = document.createElement('img');
+						itIsChar.classList.add('char');
+						itIsChar.src = `${char.url}`;
+						itIsChar.alt = `${char.name}`;
+						itIsChar.height = 128;
 
-							charCell.appendChild(itIsChar);
-							charVision.append(charCell);
-						}
+						charCell.appendChild(itIsChar);
+						charVision.append(charCell);
 					}
 				}
 			}
