@@ -11,6 +11,7 @@
   <script src="/genshin_web/js/rerun.js"></script>
   <script src="/genshin_web/js/rainbowvis.js"></script>
   <script src="/genshin_web/js/tinycolor.js"></script>
+  <script src="/genshin_web/js/navbar.js"></script>
   <script>
     window.onload = () => {
       loadTableDataMain('rerunTable', read(4).sort(sortField('vision', 'desc')), true);
@@ -26,25 +27,8 @@
 <body>
 
   <div class="pagewrapper">
-    <div id="buttonDiv" class="button-div">
-      <input style="display: block;" class="BRT-Buttons brt-button-black" type="submit" value="Remove all buttons"
-        onclick="document.getElementById('buttonDiv').remove();">
-      <form>
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Banners" />
-      </form>
-      <form action="reruns.html">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Reruns" />
-      </form>
-      <form action="chars_tab.html">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Tables" />
-      </form>
-      <form action="/genshin_web/index.html">
-        <input class="BRT-Buttons brt-button-black" type="submit" value="Main" />
-      </form>
-    </div>
 
-    <!---------------------------------------------------------------------------------------------------->
-
+    <div class="navbar-page"></div>
 
     <div class="tableDiv">
       <div id="rerunTable" class="rerunTables">

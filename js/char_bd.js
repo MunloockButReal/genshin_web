@@ -1,7 +1,5 @@
 let characterLinks;
 
-window.onload = () => {};
-
 function addEventsOnChars() {
 	$.ajax({
 		url: '/genshin_web/json/chars.json',
