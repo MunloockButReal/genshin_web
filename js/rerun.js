@@ -2,7 +2,7 @@ function read(rarity) {
 	var charData;
 
 	$.ajax({
-		url: '/json/rerun' + rarity + '.json',
+		url: '/genshin_web/json/rerun' + rarity + '.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {
@@ -215,7 +215,7 @@ function createVersions(ext, mainTable) {
 				charName = ch[1];
 				count = ch[2];
 				if (count == i) {
-					let link = `/images/characters/${charName}.webp`;
+					let link = `/genshin_web/images/characters/${charName}.webp`;
 					let alt = `${charName}`;
 					if (`${charName}` != 'undefined') {
 						if (row === `top`) {
