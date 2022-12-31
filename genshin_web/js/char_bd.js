@@ -4,7 +4,7 @@ window.onload = () => {};
 
 function addEventsOnChars() {
 	$.ajax({
-		url: '/json/chars.json',
+		url: '/genshin_web/json/chars.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {

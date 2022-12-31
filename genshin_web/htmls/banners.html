@@ -2,15 +2,15 @@
 <html>
 
 <head>
-  <link href="/css/style.css" rel="stylesheet" type="text/css" />
-  <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
-  <link href="/css/elements.css" rel="stylesheet" type="text/css" />
-  <link href="/css/button.css" rel="stylesheet" type="text/css" />
-  <script src="/js/jquery-3.6.1.js"></script>
-  <script src="/js/char_bd.js"></script>
-  <script src="/js/rerun.js"></script>
-  <script src="/js/rainbowvis.js"></script>
-  <script src="/js/tinycolor.js"></script>
+  <link href="/genshin_web/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="/genshin_web/css/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="/genshin_web/css/elements.css" rel="stylesheet" type="text/css" />
+  <link href="/genshin_web/css/button.css" rel="stylesheet" type="text/css" />
+  <script src="/genshin_web/js/jquery-3.6.1.js"></script>
+  <script src="/genshin_web/js/char_bd.js"></script>
+  <script src="/genshin_web/js/rerun.js"></script>
+  <script src="/genshin_web/js/rainbowvis.js"></script>
+  <script src="/genshin_web/js/tinycolor.js"></script>
   <script>
     window.onload = () => {
       loadTableDataMain('rerunTable', read(4).sort(sortField('vision', 'desc')), true);
@@ -38,7 +38,7 @@
       <form action="chars_tab.html">
         <input class="BRT-Buttons brt-button-black" type="submit" value="Tables" />
       </form>
-      <form action="/index.html">
+      <form action="/genshin_web/index.html">
         <input class="BRT-Buttons brt-button-black" type="submit" value="Main" />
       </form>
     </div>
