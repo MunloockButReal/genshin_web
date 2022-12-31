@@ -3,179 +3,179 @@
 		"name": "Venti",
 		"vision": "anemo",
 		"rarity": 5,
-		"url": "../images/characters/Venti.webp",
+		"url": "/images/characters/Venti.webp",
 		"version": ["1.0.1", "1.4.1", "2.6.1", "3.1.1"]
 	},
 	{
 		"name": "Klee",
 		"vision": "pyro",
 		"rarity": 5,
-		"url": "../images/characters/Klee.webp",
+		"url": "/images/characters/Klee.webp",
 		"version": ["1.0.2", "1.6.1", "2.8.1"]
 	},
 	{
 		"name": "Tartaglia",
 		"vision": "hydro",
 		"rarity": 5,
-		"url": "../images/characters/Tartaglia.webp",
+		"url": "/images/characters/Tartaglia.webp",
 		"version": ["1.1.1", "1.4.2", "2.2.1", "3.2.2"]
 	},
 	{
 		"name": "Zhongli",
 		"vision": "geo",
 		"rarity": 5,
-		"url": "../images/characters/Zhongli.webp",
+		"url": "/images/characters/Zhongli.webp",
 		"version": ["1.1.2", "1.5.1", "2.4.2", "3.0.1"]
 	},
 	{
 		"name": "Albedo",
 		"vision": "geo",
 		"rarity": 5,
-		"url": "../images/characters/Albedo.webp",
+		"url": "/images/characters/Albedo.webp",
 		"version": ["1.2.1", "2.3.1", "3.1.2"]
 	},
 	{
 		"name": "Ganyu",
 		"vision": "cryo",
 		"rarity": 5,
-		"url": "../images/characters/Ganyu.webp",
+		"url": "/images/characters/Ganyu.webp",
 		"version": ["1.2.2", "2.4.2", "3.0.2"]
 	},
 	{
 		"name": "Xiao",
 		"vision": "anemo",
 		"rarity": 5,
-		"url": "../images/characters/Xiao.webp",
+		"url": "/images/characters/Xiao.webp",
 		"version": ["1.3.1", "2.4.1", "2.7.1", "3.4.1"]
 	},
 	{
 		"name": "Keqing",
 		"vision": "electro",
 		"rarity": 5,
-		"url": "../images/characters/Keqing.webp",
+		"url": "/images/characters/Keqing.webp",
 		"version": ["1.3.2"]
 	},
 	{
 		"name": "Tao",
 		"vision": "pyro",
 		"rarity": 5,
-		"url": "../images/characters/Tao.webp",
+		"url": "/images/characters/Tao.webp",
 		"version": ["1.3.3", "2.2.2", "3.4.2"]
 	},
 	{
 		"name": "Eula",
 		"vision": "cryo",
 		"rarity": 5,
-		"url": "../images/characters/Eula.webp",
+		"url": "/images/characters/Eula.webp",
 		"version": ["1.5.2", "2.3.1"]
 	},
 	{
 		"name": "Kazuha",
 		"vision": "anemo",
 		"rarity": 5,
-		"url": "../images/characters/Kazuha.webp",
+		"url": "/images/characters/Kazuha.webp",
 		"version": ["1.6.2", "2.8.1"]
 	},
 	{
 		"name": "Ayaka",
 		"vision": "cryo",
 		"rarity": 5,
-		"url": "../images/characters/Ayaka.webp",
+		"url": "/images/characters/Ayaka.webp",
 		"version": ["2.0.1", "2.6.2"]
 	},
 	{
 		"name": "Yoimiya",
 		"vision": "pyro",
 		"rarity": 5,
-		"url": "../images/characters/Yoimiya.webp",
+		"url": "/images/characters/Yoimiya.webp",
 		"version": ["2.0.2", "2.8.2", "3.2.1"]
 	},
 	{
 		"name": "Raiden",
 		"vision": "electro",
 		"rarity": 5,
-		"url": "../images/characters/Raiden.webp",
+		"url": "/images/characters/Raiden.webp",
 		"version": ["2.1.1", "2.5.2", "3.3.2"]
 	},
 	{
 		"name": "Kokomi",
 		"vision": "hydro",
 		"rarity": 5,
-		"url": "../images/characters/Kokomi.webp",
+		"url": "/images/characters/Kokomi.webp",
 		"version": ["2.1.2", "2.5.2", "3.0.2"]
 	},
 	{
 		"name": "Itto",
 		"vision": "geo",
 		"rarity": 5,
-		"url": "../images/characters/Itto.webp",
+		"url": "/images/characters/Itto.webp",
 		"version": ["2.3.2", "2.7.2", "3.3.1"]
 	},
 	{
 		"name": "Shenhe",
 		"vision": "cryo",
 		"rarity": 5,
-		"url": "../images/characters/Shenhe.webp",
+		"url": "/images/characters/Shenhe.webp",
 		"version": ["2.4.1"]
 	},
 	{
 		"name": "Yae",
 		"vision": "electro",
 		"rarity": 5,
-		"url": "../images/characters/Yae.webp",
+		"url": "/images/characters/Yae.webp",
 		"version": ["2.5.1", "3.2.2"]
 	},
 	{
 		"name": "Ayato",
 		"vision": "hydro",
 		"rarity": 5,
-		"url": "../images/characters/Ayato.webp",
+		"url": "/images/characters/Ayato.webp",
 		"version": ["2.6.1", "3.3.2"]
 	},
 	{
 		"name": "Yelan",
 		"vision": "hydro",
 		"rarity": 5,
-		"url": "../images/characters/Yelan.webp",
+		"url": "/images/characters/Yelan.webp",
 		"version": ["2.7.1", "3.4.2"]
 	},
 	{
 		"name": "Tighnari",
 		"vision": "dendro",
 		"rarity": 5,
-		"url": "../images/characters/Tighnari.webp",
+		"url": "/images/characters/Tighnari.webp",
 		"version": ["3.0.1"]
 	},
 	{
 		"name": "Cyno",
 		"vision": "electro",
 		"rarity": 5,
-		"url": "../images/characters/Cyno.webp",
+		"url": "/images/characters/Cyno.webp",
 		"version": ["3.1.1"]
 	},
 	{
 		"name": "Nilou",
 		"vision": "hydro",
 		"rarity": 5,
-		"url": "../images/characters/Nilou.webp",
+		"url": "/images/characters/Nilou.webp",
 		"version": ["3.1.2"]
 	},
 	{
 		"name": "Nahida",
 		"vision": "dendro",
-		"url": "../images/characters/Nahida.webp",
+		"url": "/images/characters/Nahida.webp",
 		"version": ["3.2.1"]
 	},
 	{
 		"name": "Wanderer",
 		"vision": "anemo",
-		"url": "../images/characters/Wanderer.webp",
+		"url": "/images/characters/Wanderer.webp",
 		"version": ["3.3.1"]
 	},
 	{
 		"name": "Alhatham",
 		"vision": "dendro",
-		"url": "../images/characters/Alhatham.webp",
+		"url": "/images/characters/Alhatham.webp",
 		"version": ["3.4.1"]
 	}
 ]
