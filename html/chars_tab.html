@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link href="/style.css" rel="stylesheet" type="text/css">-->
+  <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="/css/button.css" rel="stylesheet" type="text/css" />
+  <link href="/css/charTable.css" rel="stylesheet" type="text/css" />
+  <link href="/css/elements.css" rel="stylesheet" type="text/css" />
+  <script src="/js/jquery-3.6.1.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/rainbowvis.js"></script>
+  <script src="/js/tinycolor.js"></script>
+  <title>Chars stats with sort</title>
+  <script></script>
+</head>
+
+<body>
+  <div class="navbar-page"></div>
+
+  <div class="MyChartable">
+    <table id="MyTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable('0')">Version</th>
+          <th onclick="sortTable('1')">Rarity</th>
+          <th onclick="sortTable('2')">Name</th>
+          <th onclick="sortTable('3')">HP</th>
+          <th onclick="sortTable('4')">Attack</th>
+          <th onclick="sortTable('5')">Def</th>
+          <th onclick="sortTable('6')">Abil</th>
+        </tr>
+      </thead>
+
+      <tbody id="MyTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="/js/chars_table.js"></script>
+</body>
+
+</html>

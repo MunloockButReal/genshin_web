@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="/css/button.css" rel="stylesheet" type="text/css" />
+  <link href="/css/elements.css" rel="stylesheet" type="text/css" />
+  <link href="/css/choiceRerun.css" rel="stylesheet" type="text/css" />
+
+  <script>
+    window.onload = () => {
+      resizePage();
+    }
+  </script>
+  <title>Reruns</title>
+</head>
+
+<body>
+  <div class="pagewrapper">
+
+    <div id="buttonDiv" class=" buttons">
+      <div class="navbar-page"></div>
+
+
+      <div class="choiceOptionsDiv">
+        <ul class="choiceOptions">
+
+          <form>
+            <li>
+              <input type="radio" id="r4" name="rarity" value="4" checked="checked" />
+              <label for="r4">4*</label>
+            </li>
+            <li>
+              <input type="radio" id="r5" name="rarity" value="5" />
+              <label for="r5">5*</label>
+            </li>
+          </form>
+
+        </ul>
+        <ul class="choiceOptions">
+
+          <form>
+            <li>
+              <input type="radio" id="bannerID" name="bType" value="byBanner" />
+              <label for="bannerID">Banner</label>
+            </li>
+            <li>
+              <input type="radio" id="versionID" name="bType" checked="checked" value="byVersion" />
+              <label for="versionID">Version</label>
+            </li>
+          </form>
+
+        </ul>
+
+        <ul class="choiceOptions">
+
+          <form>
+            <li>
+
+              <input type="radio" id="visionID" name="sortType" checked="checked" value="vision" />
+              <label for="visionID">Vision</label>
+            </li>
+            <li>
+              <input type="radio" id="LastSeenID" name="sortType" value="LastSeen" />
+              <label for="LastSeenID">LastSeen</label>
+            </li>
+            <li>
+              <input type="radio" id="nameID" name="sortType" value="name" />
+              <label for="nameID">Name</label>
+            </li>
+          </form>
+
+        </ul>
+        <ul class="choiceOptions">
+
+          <form>
+            <li>
+              <input type="radio" id="ascID" name="way" value="asc" />
+              <label for="ascID">Asc</label>
+            </li>
+            <li>
+              <input type="radio" id="descID" name="way" checked="checked" value="desc" />
+              <label for="descID">Desc</label>
+            </li>
+          </form>
+
+        </ul>
+      </div>
+      <!-- ---------------------------------------------------------------------------------------------- -->
+
+      <div class="tableDiv">
+        <div id="rerunTable" class="rerunTables">
+          <!-- Table here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery-3.6.1.js"></script>
+  <script src="/js/navbar.js"></script>
+
+  <script src="/js/rainbowvis.js"></script>
+  <script src="/js/tinycolor.js"></script>
+  <script src="/js/char_bd.js"></script>
+  <script src="/js/rerun.js"></script>
+  <script src="/js/sortButtons.js"></script>
+</body>
+
+</html>

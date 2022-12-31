@@ -2,7 +2,7 @@
 let charData;
 
 $.ajax({
-	url: '../json/chars_table.json',
+	url: '/json/chars_table.json',
 	dataType: 'json',
 	async: false,
 	success: function (data) {
