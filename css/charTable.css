@@ -2,9 +2,15 @@
 	font-family: 'GenshinFont';
 	src: url('/genshin_web/font/zh-cn.ttf');
 }
+
+.navbar-page {
+	font-size: 1.6rem;
+	line-height: normal;
+}
+
 body {
 	font-family: 'GenshinFont';
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	text-align: center;
 }
 body {
@@ -23,8 +29,9 @@ th {
 
 th,
 td {
+	min-width: 80px;
+	padding: 12px 5px 12px 5px;
 	text-align: center;
-	padding: 16px;
 }
 
 tr:nth-child(even) {

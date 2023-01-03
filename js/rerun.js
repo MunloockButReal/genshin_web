@@ -388,9 +388,7 @@ function loadTableDataMain(divForTableId, charData, ext) {
 			tableDiv.removeChild(tableDiv.firstChild);
 			tableDiv.removeChild('head');
 		}
-	} catch (error) {
-		console.log(error);
-	}
+	} catch (e) {}
 
 	createTable(tableDiv); // Таблица
 	createHeadBody(table); // Голова и тело таблицы

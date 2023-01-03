@@ -39,3 +39,39 @@
 		--button-bg-lightness: 10%;
 	}
 }
+
+#navbarID {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	margin: 0 0 5px;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+#navbarID li {
+	float: left;
+	max-height: 60px;
+}
+
+#navbarID li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#navbarID li a:hover:not(.active) {
+	background-color: #111;
+}
+
+.active {
+	background-color: #4caf50;
+}
+
+.non-active {
+	opacity: 0;
+	display: none;
+}

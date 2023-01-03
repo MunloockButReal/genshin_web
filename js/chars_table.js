@@ -1,5 +1,5 @@
 // File reader
-let charData;
+charData = '';
 
 $.ajax({
 	url: '/genshin_web/json/chars_table.json',
@@ -10,7 +10,7 @@ $.ajax({
 	},
 });
 
-window.onload = () => {
+$(document).ready(function () {
 	// Dynamic table
 	loadTableData(charData);
 	//sort and color HP
@@ -25,12 +25,11 @@ window.onload = () => {
 	//back to default sort on load
 	sortTable(3);
 	sortTable(0);
-};
+});
 
 function loadTableData(charData) {
 	const tableBody = document.getElementById('MyTableBody');
 	let dataHtml = '';
-
 	for (let char of charData) {
 		dataHtml += ` <tr>
                         <td class="version">${char.version}</td>
@@ -43,10 +42,10 @@ function loadTableData(charData) {
                         </tr>
                         `;
 	}
-	tableBody.innerHTML = dataHtml;
+	tableBody.innerHTML += dataHtml;
 }
 
-function colorcode(columnName) {
+async function colorcode(columnName) {
 	var f = document.body.getElementsByClassName(columnName);
 
 	var min = parseInt(f[0].innerHTML);

@@ -1,6 +1,5 @@
-let characterLinks;
-
 function addEventsOnChars() {
+	let characterLinks;
 	$.ajax({
 		url: '/genshin_web/json/chars.json',
 		dataType: 'json',
@@ -16,9 +15,17 @@ function addEventsOnChars() {
 }
 
 function resizePage() {
-	let box = document.querySelector(`.reruns`);
-	let width = box.offsetWidth;
-	let height = box.offsetHeight;
+	try {
+		width = $('.reruns').width();
+		height = $('.reruns').height();
+		if (width === undefined || height === undefined) {
+			width = 600;
+			height = 0;
+		}
+		// console.log({ width, height });
+	} catch (error) {
+		// console.log(error);
+	}
 	$('body').css('min-width', width + 25 + 'px');
 	$('body').css('min-height', height + 25 + 'px');
 	$('.pagewrapper').css('display', 'flex');
