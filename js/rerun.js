@@ -267,7 +267,7 @@ function paintjob(number, charVision, cell, ext) {
 	cell.style.backgroundColor = color;
 
 	let colorT = tinycolor(color);
-
+	let darkenMult = 2.7;
 	if (number == 4) {
 		darkenMult = 2.7 * 1.5;
 	} else if (number == 5) {
