@@ -16,6 +16,18 @@
       display: none;
     }
   </style>
+  <script>
+    function setCookie(key, value, expiry) {
+      var expires = new Date();
+      expires.setTime(expires.getTime() + expiry * 24 * 60 * 60 * 1000);
+      document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+
+    function getCookie(key) {
+      var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+      return keyValue ? keyValue[2] : null;
+    }
+  </script>
   <title>Reruns</title>
 </head>
 
@@ -23,45 +35,49 @@
   <div class="pagewrapper">
     <div id="buttonDiv" class="buttons">
       <div class="choiceOptionsDiv non-active">
-        <ul class="choiceOptions">
+        <ul id="rarity-button" class="choiceOptions">
 
           <form>
             <li>
-              <input type="radio" id="r4" name="rarity" value="4" />
-              <label for="r4">4*</label>
+              <input type="radio" id="r4ID" name="rarity" value="4" />
+              <label for="r4ID">4*</label>
             </li>
             <li>
-              <input type="radio" id="r5" name="rarity" value="5" checked="checked" />
-              <label for="r5">5*</label>
+              <input type="radio" id="r5ID" name="rarity" value="5" />
+              <label for="r5ID">5*</label>
             </li>
           </form>
 
         </ul>
-        <ul class="choiceOptions">
+        <ul id="BV-button" class="choiceOptions">
 
           <form>
             <li>
-              <input type="radio" id="bannerID" name="bType" value="byBanner" checked="checked" />
-              <label for="bannerID">Banner</label>
+              <input type="radio" id="byBannerID" name="bType" value="byBanner" />
+              <label for="byBannerID">Banner</label>
             </li>
             <li>
-              <input type="radio" id="versionID" name="bType" value="byVersion" />
-              <label for="versionID">Version</label>
+              <input type="radio" id="byVersionID" name="bType" value="byVersion" />
+              <label for="byVersionID">Version</label>
             </li>
           </form>
 
         </ul>
 
-        <ul class="choiceOptions">
+        <ul id="sortType-button" class="choiceOptions">
 
           <form>
+            <li>
+              <input type="radio" id="versortID" name="sortType" value="versort" />
+              <label for="versortID">Version</label>
+            </li>
             <li>
 
               <input type="radio" id="visionID" name="sortType" value="vision" />
               <label for="visionID">Vision</label>
             </li>
             <li>
-              <input type="radio" id="LastSeenID" name="sortType" value="LastSeen" checked="checked" />
+              <input type="radio" id="LastSeenID" name="sortType" value="LastSeen" />
               <label for="LastSeenID">LastSeen</label>
             </li>
             <li>
@@ -71,7 +87,7 @@
           </form>
 
         </ul>
-        <ul class="choiceOptions">
+        <ul id="way-button" class="choiceOptions">
 
           <form>
             <li>
@@ -79,7 +95,7 @@
               <label for="ascID">Asc</label>
             </li>
             <li>
-              <input type="radio" id="descID" name="way" checked="checked" value="desc" />
+              <input type="radio" id="descID" name="way" value="desc" />
               <label for="descID">Desc</label>
             </li>
           </form>
@@ -95,6 +111,7 @@
       </div>
     </div>
   </div>
+
 
   <script src="/genshin_web/js/rainbowvis.js"></script>
   <script src="/genshin_web/js/tinycolor.js"></script>
