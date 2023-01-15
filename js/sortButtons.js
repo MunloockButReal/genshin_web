@@ -10,7 +10,7 @@ if (
 	setCookie('rrdWay', 'desc', 60);
 }
 
-$(document).ready(function () {
+$(function () {
 	function f_resresh() {
 		// extended banner or not
 		let bool;

@@ -3,7 +3,6 @@ import { getCookie, setCookie } from './mn-cookie.js';
 if (getCookie('selectedPage') === null) {
 	setCookie('selectedPage', 'Main', 60);
 }
-console.log(getCookie('href'));
 $(document).ready(function () {
 	let nav = $('.navbar-page');
 
@@ -18,20 +17,13 @@ $(document).ready(function () {
   </ul>
   `);
 
-	//   let page = getCookie()
 	let text = '#navbarID li:contains(' + getCookie('selectedPage') + ')';
-	console.log($(text).children().text());
 	buildPage('#navbarID li:contains(' + getCookie('selectedPage') + ')');
 	$('#navbarID li').click(function () {
 		if ($(this).children().attr('href') != undefined) {
 			setCookie('selectedPage', $(this).children().text(), 60);
 		}
-
-		// let href = $(_this).attr('href');
-		// console.log(href);
-
 		buildPage(this);
-		console.log(getCookie('selectedPage'));
 	});
 });
 
@@ -42,23 +34,18 @@ function buildPage(_this) {
 	let link = '';
 	switch (href) {
 		case '#banners.html':
-			// console.log('banners');
 			link = '/genshin_web/html/banners.html';
 			break;
 		case '#reruns.html':
-			// console.log('reruns');
 			link = '/genshin_web/html/reruns.html';
 			break;
 		case '#chars_tab.html':
-			// console.log('char-tabs');
 			link = '/genshin_web/html/chars_tab.html';
 			break;
 		case '#index.html':
-			// console.log('index');
 			link = '/genshin_web/html/test.html';
 			break;
 		case '#ntsh.html':
-			// console.log('this is testHTML');
 			link = '/genshin_web/html/test.html';
 			break;
 		default:

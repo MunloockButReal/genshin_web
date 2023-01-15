@@ -22,10 +22,7 @@ function resizePage() {
 			width = 600;
 			height = 0;
 		}
-		// console.log({ width, height });
-	} catch (error) {
-		// console.log(error);
-	}
+	} catch (error) {}
 	$('body').css('min-width', width + 25 + 'px');
 	$('body').css('min-height', height + 25 + 'px');
 	$('.pagewrapper').css('display', 'flex');

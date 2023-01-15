@@ -1,5 +1,6 @@
 // File reader
-charData = '';
+
+var charData;
 
 $.ajax({
 	url: '/genshin_web/json/chars_table.json',
@@ -10,27 +11,22 @@ $.ajax({
 	},
 });
 
-$(document).ready(function () {
-	// Dynamic table
-	loadTableData(charData);
-	//sort and color HP
-	sortTable(3);
+$(function () {
+	load_Table_Data(charData); // Dynamic table
+	sortTable(3); //sort and color HP
 	colorcode('HP');
-	//sort and color ATK
-	sortTable(4);
+	sortTable(4); //sort and color ATK
 	colorcode('ATK');
-	// sort and color DEF
-	sortTable(5);
+	sortTable(5); // sort and color DEF
 	colorcode('DEF');
-	//back to default sort on load
-	sortTable(3);
+	sortTable(3); //back to default sort on load
 	sortTable(0);
 });
 
-function loadTableData(charData) {
+function load_Table_Data(char_Data) {
 	const tableBody = document.getElementById('MyTableBody');
-	let dataHtml = '';
-	for (let char of charData) {
+	dataHtml = '';
+	for (let char of char_Data) {
 		dataHtml += ` <tr>
                         <td class="version">${char.version}</td>
                         <td class="Rarity">${char.Rarity}</td>
@@ -45,7 +41,7 @@ function loadTableData(charData) {
 	tableBody.innerHTML += dataHtml;
 }
 
-async function colorcode(columnName) {
+function colorcode(columnName) {
 	var f = document.body.getElementsByClassName(columnName);
 
 	var min = parseInt(f[0].innerHTML);
@@ -59,15 +55,9 @@ async function colorcode(columnName) {
 	rainbow.setSpectrum('darkred', 'orange', 'green');
 	rainbow.setNumberRange(0, f.length);
 
-	var hex = [];
-	for (let i = 0; i <= f.length; i++) {
-		hex.push('#' + 1);
-	}
-	//
 	step = Math.round((max - min) / f.length);
 
 	for (l = 0; l < f.length; l++) {
-		hex = '#' + rainbow.colourAt(l);
 		current = f[l].innerHTML;
 
 		if (current < currentmin + step) {
@@ -88,21 +78,13 @@ async function colorcode(columnName) {
 }
 
 function sortTable(n) {
-	var table,
-		rows,
-		switching,
-		i,
-		x,
-		y,
-		shouldSwitch,
-		dir,
-		switchcount = 0;
-	table = document.getElementById('MyTableBody');
+	let x = (y = shouldSwitch = switchcount = 0);
+	var table = document.getElementById('MyTableBody');
 	switching = true;
-	dir = 'asc';
+	let dir = 'asc';
 	while (switching) {
 		switching = false;
-		rows = table.getElementsByTagName('TR');
+		let rows = table.getElementsByTagName('TR');
 		for (i = 0; i < rows.length - 1; i++) {
 			shouldSwitch = false;
 			x = rows[i].getElementsByTagName('TD')[n];
