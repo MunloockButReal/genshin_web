@@ -38,8 +38,11 @@ function sortField(field, way) {
 		field = 'version';
 		return (a, b) =>
 			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
-	} else if (field === `name`) {
+	} else if (field === 'name') {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
+	} else if (field === 'count') {
+		field = 'version';
+		return (a, b) => (a[field].length > b[field].length ? w1 : w2);
 	}
 }
 /**
