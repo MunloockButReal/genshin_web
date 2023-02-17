@@ -36,8 +36,7 @@ function sortField(field, way) {
 	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
 		// sorting by last element of banner or version
 		field = 'version';
-		return (a, b) =>
-			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
+		return (a, b) => (a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2);
 	} else if (field === `name`) {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
 	}
@@ -80,7 +79,7 @@ function createVersions(ext, mainTable) {
 	let verToBanner = [];
 	let v1max = 6;
 	let v2max = 8;
-	let v3max = 4;
+	let v3max = 5;
 	versionCount = v1max + v2max + v3max + 3;
 	// (version * 2)
 	bannersCount = versionCount * 2;
@@ -320,9 +319,7 @@ function fillTableBody(body, charData, ext) {
 				}
 				let dif = vtb.indexOf(chData[i + 1]) - vtb.indexOf(chData[i]);
 
-				let difLast =
-					vtb.indexOf(vtb[vtb.length - 1]) -
-					vtb.indexOf(chData[chData.length - 1]);
+				let difLast = vtb.indexOf(vtb[vtb.length - 1]) - vtb.indexOf(chData[chData.length - 1]);
 
 				if (chData[i + 1] == undefined) {
 					dif = difLast + 1;
