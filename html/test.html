@@ -1,21 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
+    <meta charset="utf-8" />
+    <!-- <link href="/genshin_web/css/normalize.css" rel="stylesheet" type="text/css" /> -->
     <link href="/genshin_web/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/genshin_web/css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/genshin_web/css/elements.css" rel="stylesheet" type="text/css" />
+    <link href="/genshin_web/css/choiceRerun.css" rel="stylesheet" type="text/css" />
+    <link href="/test.css" rel="stylesheet" type="text/css" />
+
     <script src="/genshin_web/js/jquery-3.6.1.js"></script>
-    <title>Nothing to see here</title>
+    <script src="/genshin_web/js/rainbowvis.js"></script>
+    <script src="/genshin_web/js/tinycolor.js"></script>
     <style>
-        body {
-            color: white;
-            margin: 0
+        .non-active {
+            opacity: 0;
+            display: none;
         }
     </style>
+    <script>
+        function setCookie(key, value, expiry) {
+            var expires = new Date();
+            expires.setTime(expires.getTime() + expiry * 24 * 60 * 60 * 1000);
+            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        }
+
+        function getCookie(key) {
+            var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+            return keyValue ? keyValue[2] : null;
+        }
+    </script>
+    <title>Reruns</title>
 </head>
 
 <body>
+    <div class="pagewrapper">
+        <div id="buttonDiv" class="buttons">
+            <div class="choiceOptionsDiv non-active">
+                <ul id="rarity-button" class="choiceOptions">
+
+                    <form>
+                        <li>
+                            <input type="radio" id="r4ID" name="rarity" value="4" />
+                            <label for="r4ID">4*</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="r5ID" name="rarity" value="5" />
+                            <label for="r5ID">5*</label>
+                        </li>
+                    </form>
+
+                </ul>
+                <ul id="BV-button" class="choiceOptions">
+
+                    <form>
+                        <li>
+                            <input type="radio" id="byBannerID" name="bType" value="byBanner" />
+                            <label for="byBannerID">Banner</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="byVersionID" name="bType" value="byVersion" />
+                            <label for="byVersionID">Version</label>
+                        </li>
+                    </form>
+
+                </ul>
+
+                <ul id="sortType-button" class="choiceOptions">
+
+                    <form style="display: flex">
+                        <div>
+                            <li>
+                                <input type="radio" id="versortID" name="sortType" value="versort" />
+                                <label for="versortID">Version</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="visionID" name="sortType" value="vision" />
+                                <label for="visionID">Vision</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="LastSeenID" name="sortType" value="LastSeen" />
+                                <label for="LastSeenID">LastSeen</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="nameID" name="sortType" value="name" />
+                                <label for="nameID">Name</label>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li>
+                                <input type="radio" id="countID" name="sortType" value="count" />
+                                <label for="countID">Count</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="difMinID" name="sortType" value="difMin" />
+                                <label for="difMinID">Min</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="difMaxID" name="sortType" value="difMax" />
+                                <label for="difMaxID">Max</label>
+                            </li>
+                        </div>
+                    </form>
+
+                </ul>
+                <ul id="way-button" class="choiceOptions">
+
+                    <form>
+                        <li>
+                            <input type="radio" id="ascID" name="way" value="asc" />
+                            <label for="ascID">Asc</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="descID" name="way" value="desc" />
+                            <label for="descID">Desc</label>
+                        </li>
+                    </form>
+
+                </ul>
+            </div>
+            <!-- ---------------------------------------------------------------------------------------------- -->
+
+            <div class="tableDiv">
+                <div id="rerunTable" class="rerunTables">
+                    <!-- Table here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/genshin_web/js/rainbowvis.js"></script>
+    <script src="/genshin_web/js/tinycolor.js"></script>
+    <script src="/genshin_web/js/char_bd.js"></script>
+    <script src="/genshin_web/js/test.js"></script>
+    <script src="/genshin_web/js/sortButtons test.js"></script>
+    <!-- <script src="/genshin_web/js/sortButtons.js"></script> -->
 </body>
 
 </html>

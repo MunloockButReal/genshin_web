@@ -13,11 +13,12 @@ $(document).ready(function () {
 	<li><a href="#reruns.html">Reruns</a></li>
 	<li><a href="#chars_tab.html">Tables</a></li>
 	<li class='active'><a href="#index.html">Main</a></li>
-	<li><a href="#ntsh.html"></a></li>
+	<li><a href="#ntsh.html"> </a></li>
   </ul>
   `);
 
 	let text = '#navbarID li:contains(' + getCookie('selectedPage') + ')';
+	console.log(text);
 	buildPage('#navbarID li:contains(' + getCookie('selectedPage') + ')');
 	$('#navbarID li').click(function () {
 		if ($(this).children().attr('href') != undefined) {

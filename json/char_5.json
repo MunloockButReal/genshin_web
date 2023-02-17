@@ -1,0 +1,181 @@
+[
+	{
+		"name": "Venti",
+		"type": "anemo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Venti.webp",
+		"version": ["1.0.1", "1.4.1", "2.6.1", "3.1.1"]
+	},
+	{
+		"name": "Klee",
+		"type": "pyro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Klee.webp",
+		"version": ["1.0.2", "1.6.1", "2.8.1"]
+	},
+	{
+		"name": "Tartaglia",
+		"type": "hydro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Tartaglia.webp",
+		"version": ["1.1.1", "1.4.2", "2.2.1", "3.2.2"]
+	},
+	{
+		"name": "Zhongli",
+		"type": "geo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Zhongli.webp",
+		"version": ["1.1.2", "1.5.1", "2.4.2", "3.0.1"]
+	},
+	{
+		"name": "Albedo",
+		"type": "geo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Albedo.webp",
+		"version": ["1.2.1", "2.3.1", "3.1.2"]
+	},
+	{
+		"name": "Ganyu",
+		"type": "cryo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Ganyu.webp",
+		"version": ["1.2.2", "2.4.2", "3.0.2"]
+	},
+	{
+		"name": "Xiao",
+		"type": "anemo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Xiao.webp",
+		"version": ["1.3.1", "2.4.1", "2.7.1", "3.4.1"]
+	},
+	{
+		"name": "Keqing",
+		"type": "electro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Keqing.webp",
+		"version": ["1.3.2"]
+	},
+	{
+		"name": "Tao",
+		"type": "pyro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Tao.webp",
+		"version": ["1.3.3", "2.2.2", "3.4.2"]
+	},
+	{
+		"name": "Eula",
+		"type": "cryo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Eula.webp",
+		"version": ["1.5.2", "2.3.1"]
+	},
+	{
+		"name": "Kazuha",
+		"type": "anemo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Kazuha.webp",
+		"version": ["1.6.2", "2.8.1"]
+	},
+	{
+		"name": "Ayaka",
+		"type": "cryo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Ayaka.webp",
+		"version": ["2.0.1", "2.6.2"]
+	},
+	{
+		"name": "Yoimiya",
+		"type": "pyro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Yoimiya.webp",
+		"version": ["2.0.2", "2.8.2", "3.2.1"]
+	},
+	{
+		"name": "Raiden",
+		"type": "electro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Raiden.webp",
+		"version": ["2.1.1", "2.5.2", "3.3.2"]
+	},
+	{
+		"name": "Kokomi",
+		"type": "hydro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Kokomi.webp",
+		"version": ["2.1.2", "2.5.2", "3.0.2"]
+	},
+	{
+		"name": "Itto",
+		"type": "geo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Itto.webp",
+		"version": ["2.3.2", "2.7.2", "3.3.1"]
+	},
+	{
+		"name": "Shenhe",
+		"type": "cryo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Shenhe.webp",
+		"version": ["2.4.1"]
+	},
+	{
+		"name": "Yae",
+		"type": "electro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Yae.webp",
+		"version": ["2.5.1", "3.2.2"]
+	},
+	{
+		"name": "Ayato",
+		"type": "hydro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Ayato.webp",
+		"version": ["2.6.1", "3.3.2"]
+	},
+	{
+		"name": "Yelan",
+		"type": "hydro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Yelan.webp",
+		"version": ["2.7.1", "3.4.2"]
+	},
+	{
+		"name": "Tighnari",
+		"type": "dendro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Tighnari.webp",
+		"version": ["3.0.1"]
+	},
+	{
+		"name": "Cyno",
+		"type": "electro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Cyno.webp",
+		"version": ["3.1.1"]
+	},
+	{
+		"name": "Nilou",
+		"type": "hydro",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Nilou.webp",
+		"version": ["3.1.2"]
+	},
+	{
+		"name": "Nahida",
+		"type": "dendro",
+		"url": "/genshin_web/images/characters/Nahida.webp",
+		"version": ["3.2.1"]
+	},
+	{
+		"name": "Wanderer",
+		"type": "anemo",
+		"url": "/genshin_web/images/characters/Wanderer.webp",
+		"version": ["3.3.1"]
+	},
+	{
+		"name": "Alhatham",
+		"type": "dendro",
+		"url": "/genshin_web/images/characters/Alhatham.webp",
+		"version": ["3.4.1"]
+	}
+]

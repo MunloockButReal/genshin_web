@@ -1,0 +1,207 @@
+[
+	{
+		"name": "Barbara",
+		"type": "hydro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Barbara.webp",
+		"version": ["1.0.1", "1.3.2", "1.4.2", "1.6.1", "2.3.2", "2.7.1", "3.1.2"]
+	},
+	{
+		"name": "Fischl",
+		"type": "electro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Fischl.webp",
+		"version": ["1.0.1", "1.2.1", "1.4.2", "1.6.1", "2.5.1", "3.0.1"]
+	},
+	{
+		"name": "Xiangling",
+		"type": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Xiangling.webp",
+		"version": ["1.0.1", "1.2.2", "1.3.3", "2.1.1", "2.3.2", "2.6.1", "3.1.2"]
+	},
+	{
+		"name": "Xingqiu",
+		"type": "hydro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Xingqiu.webp",
+		"version": [
+			"1.0.2",
+			"1.2.2",
+			"1.3.3",
+			"1.5.2",
+			"2.1.2",
+			"2.4.2",
+			"3.0.2",
+			"3.4.2"
+		]
+	},
+	{
+		"name": "Sucrose",
+		"type": "anemo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Sucrose.webp",
+		"version": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2"]
+	},
+	{
+		"name": "Noel",
+		"type": "geo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Noel.webp",
+		"version": ["1.0.2", "1.2.2", "1.4.1", "1.5.1", "2.3.1", "2.7.1", "3.2.1"]
+	},
+	{
+		"name": "Diona",
+		"type": "cryo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Diona.webp",
+		"version": ["1.1.1", "1.3.1", "1.5.1", "2.0.2", "2.2.2", "2.5.1", "3.0.1"]
+	},
+	{
+		"name": "Beidou",
+		"type": "electro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Beidou.webp",
+		"version": ["1.1.1", "1.3.1", "1.5.2", "2.1.2", "2.4.2", "3.1.2", "3.4.2"]
+	},
+	{
+		"name": "Ningguang",
+		"type": "geo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Ningguang.webp",
+		"version": ["1.1.1", "1.3.2", "2.0.1", "2.2.1", "2.4.1", "2.8.1", "3.4.2"]
+	},
+	{
+		"name": "Chongyun",
+		"type": "cryo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Chongyun.webp",
+		"version": ["1.1.2", "1.3.3", "2.0.1", "2.2.1", "2.4.1", "2.7.2"]
+	},
+	{
+		"name": "Razor",
+		"type": "electro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Razor.webp",
+		"version": ["1.1.2", "1.4.1", "1.6.2", "2.6.2", "3.2.1"]
+	},
+	{
+		"name": "Xinyan",
+		"type": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Xinyan.webp",
+		"version": ["1.1.2", "1.3.1", "1.5.2", "2.0.2", "2.5.2", "2.8.2", "3.4.1"]
+	},
+	{
+		"name": "Bennett",
+		"type": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Bennett.webp",
+		"version": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1"]
+	},
+	{
+		"name": "Rosaria",
+		"type": "cryo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Rosaria.webp",
+		"version": ["1.4.2", "1.6.2", "2.1.2", "2.3.1", "2.6.2", "3.3.2"]
+	},
+	{
+		"name": "Yanfei",
+		"type": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Yanfei.webp",
+		"version": ["1.5.1", "2.0.1", "2.2.1", "2.4.2", "2.7.1", "3.3.1"]
+	},
+	{
+		"name": "Sayu",
+		"type": "anemo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Sayu.webp",
+		"version": ["2.0.2", "2.2.2", "2.6.2", "3.1.1", "3.3.2"]
+	},
+	{
+		"name": "Sara",
+		"type": "electro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Sara.webp",
+		"version": ["2.1.1", "2.5.2", "3.3.2"]
+	},
+	{
+		"name": "Thoma",
+		"type": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Thoma.webp",
+		"version": ["2.2.2", "2.5.1", "2.8.1", "3.2.2"]
+	},
+	{
+		"name": "Gorou",
+		"type": "geo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Gorou.webp",
+		"version": ["2.3.2", "2.7.2", "3.3.1"]
+	},
+	{
+		"name": "Yunjin",
+		"type": "geo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Yunjin.webp",
+		"version": ["2.4.1", "2.6.1", "2.8.2", "3.4.1"]
+	},
+	{
+		"name": "Shinobu",
+		"type": "electro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Shinobu.webp",
+		"version": ["2.7.2", "3.1.1"]
+	},
+	{
+		"name": "Heizo",
+		"type": "anemo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Heizo.webp",
+		"version": ["2.8.1", "3.2.2"]
+	},
+	{
+		"name": "Collei",
+		"type": "dendro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Collei.webp",
+		"version": ["3.0.1"]
+	},
+	{
+		"name": "Dori",
+		"type": "electro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Dori.webp",
+		"version": ["3.0.2"]
+	},
+	{
+		"name": "Candace",
+		"type": "hydro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Candace.webp",
+		"version": ["3.1.1"]
+	},
+	{
+		"name": "Layla",
+		"type": "cryo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Layla.webp",
+		"version": ["3.2.2"]
+	},
+	{
+		"name": "Faruzan",
+		"type": "anemo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Faruzan.webp",
+		"version": ["3.3.1"]
+	},
+	{
+		"name": "Yaoyao",
+		"type": "dendro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Yaoyao.webp",
+		"version": ["3.4.1"]
+	}
+]

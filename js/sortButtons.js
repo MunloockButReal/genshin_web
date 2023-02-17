@@ -14,19 +14,12 @@ $(function () {
 	function f_resresh() {
 		// extended banner or not
 		let bool;
-		if (bType === 'byBanner') {
-			bool = false;
-		} else if (bType === 'byVersion') {
-			bool = true;
-		}
 
-		if (sortType === 'LastSeen') {
-			sortType = 'lastDurationV';
-		}
+		bType == 'byBanner' ? (bool = false) : 0;
+		bType == 'byVersion' ? (bool = true) : 0;
 
-		if (sortType === 'versort') {
-			sortType = 'byVersion';
-		}
+		sortType == 'LastSeen' ? (sortType = 'lastDurationV') : 0;
+		sortType == 'versort' ? (sortType = 'byVersion') : 0;
 
 		loadTableData(
 			'rerunTable',
@@ -49,7 +42,9 @@ $(function () {
 	f_resresh();
 
 	$('input[type=radio]').change(function () {
-		id = $(this).parent().parent().parent().attr('id');
+		if ($(this).attr('name') == 'sortType')
+			id = $(this).parent().parent().parent().parent().attr('id');
+		else id = $(this).parent().parent().parent().attr('id');
 		switch (id) {
 			case 'rarity-button':
 				rarity = $('input[type=radio][name=rarity]:checked').val();

@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <link href="/genshin_web/css/normalize.css" rel="stylesheet" type="text/css" />
-  <link href="/genshin_web/css/style.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="/genshin_web/css/normalize.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <link href="/genshin_web/css/style.css" rel="stylesheet" type="text/css" /> -->
   <link href="/genshin_web/css/button.css" rel="stylesheet" type="text/css" />
   <link href="/genshin_web/css/elements.css" rel="stylesheet" type="text/css" />
   <link href="/genshin_web/css/choiceRerun.css" rel="stylesheet" type="text/css" />
@@ -66,28 +66,40 @@
 
         <ul id="sortType-button" class="choiceOptions">
 
-          <form>
-            <li>
-              <input type="radio" id="versortID" name="sortType" value="versort" />
-              <label for="versortID">Version</label>
-            </li>
-            <li>
+          <form style="display: flex">
+            <div>
+              <li>
+                <input type="radio" id="versortID" name="sortType" value="versort" />
+                <label for="versortID">Version</label>
+              </li>
+              <li>
+                <input type="radio" id="visionID" name="sortType" value="vision" />
+                <label for="visionID">Vision</label>
+              </li>
+              <li>
+                <input type="radio" id="LastSeenID" name="sortType" value="LastSeen" />
+                <label for="LastSeenID">LastSeen</label>
+              </li>
+              <li>
+                <input type="radio" id="nameID" name="sortType" value="name" />
+                <label for="nameID">Name</label>
+              </li>
+            </div>
 
-              <input type="radio" id="visionID" name="sortType" value="vision" />
-              <label for="visionID">Vision</label>
-            </li>
-            <li>
-              <input type="radio" id="LastSeenID" name="sortType" value="LastSeen" />
-              <label for="LastSeenID">LastSeen</label>
-            </li>
-            <li>
-              <input type="radio" id="nameID" name="sortType" value="name" />
-              <label for="nameID">Name</label>
-            </li>
-            <li>
-              <input type="radio" id="countID" name="sortType" value="count" />
-              <label for="countID">Count</label>
-            </li>
+            <div>
+              <li>
+                <input type="radio" id="countID" name="sortType" value="count" />
+                <label for="countID">Count</label>
+              </li>
+              <li>
+                <input type="radio" id="difMinID" name="sortType" value="difMin" />
+                <label for="difMinID">Min</label>
+              </li>
+              <li>
+                <input type="radio" id="difMaxID" name="sortType" value="difMax" />
+                <label for="difMaxID">Max</label>
+              </li>
+            </div>
           </form>
 
         </ul>

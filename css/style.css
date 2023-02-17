@@ -120,5 +120,15 @@ img {
 
 .rerunTables {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
+}
+
+.countingCell {
+	background: #292929;
+	color: white;
+}
+
+.undefined {
+	color: white;
 }

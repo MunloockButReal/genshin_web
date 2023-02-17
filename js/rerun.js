@@ -1,8 +1,23 @@
+//
+//
+//
+//
+
+var v1max = 6; // Version 1.0 - 1.X
+var v2max = 8; // Version 2.0 - 2.X
+var v3max = 5; // Version 3.0 - 3.X
+
+//
+//
+//
+//
+
 function read(rarity) {
 	var charData;
 
 	$.ajax({
 		url: '/genshin_web/json/rerun' + rarity + '.json',
+		// url: '/genshin_web/json/weapon_' + rarity + '.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {
@@ -13,37 +28,50 @@ function read(rarity) {
 	return charData;
 }
 
-window.onload = () => {};
-
 /**
  *
  * @param {string=} field vision, byVersion, byBanner, lastDurationV, lastDurationB /n Anything else(but nothing) will be ignored
  * @param {string=} way desc, anything else will be count as 'asc'
  * @returns sorted array
  */
-function sortField(field, way) {
+function sortField(field, way, number = 4) {
 	way === 'desc' ? ((w2 = 1), (w1 = -1)) : ((w1 = 1), (w2 = -1));
 
-	if (field === 'vision') {
-		// sort by vision
+	// let abc = read(number);
+	// console.log(abc);
+	// for (let abccha of abc) {
+	// 	console.log(abccha);
+	// 	console.log(abccha.name);
+	// }
 
+	if (field === 'vision' || field === 'name' || field === 'difMin' || field === 'difMax') {
 		return (a, b) => (a[field] > b[field] ? w1 : w2);
-	} else if (field === 'byVersion' || field === 'byBanner') {
+	}
+
+	if (field === 'byVersion' || field === 'byBanner') {
 		//sort by banner or version (first element)
 		field = 'version';
-
 		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
-	} else if (field === 'lastDurationV' || field === 'lastDurationB') {
+	}
+
+	if (field === 'lastDurationV' || field === 'lastDurationB') {
 		// sorting by last element of banner or version
 		field = 'version';
-		return (a, b) =>
-			a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2;
-	} else if (field === 'name') {
-		return (a, b) => (a[field] > b[field] ? w1 : w2);
-	} else if (field === 'count') {
+		return (a, b) => (a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2);
+	}
+
+	// else if (field === 'name' || field === 'difMin' || field === 'difMax') {
+	// 	return (a, b) => (a[field] > b[field] ? w1 : w2);
+	// }
+
+	if (field === 'count') {
 		field = 'version';
 		return (a, b) => (a[field].length > b[field].length ? w1 : w2);
 	}
+
+	console.log('Some non existed sort type');
+
+	return (a, b) => (a > b ? w1 : w2);
 }
 /**
  *
@@ -54,7 +82,7 @@ function sortField(field, way) {
  * @param {string} way asc or desc
  */
 function changeTableSort(divID, number, bool, field, way) {
-	loadTableData(divID, read(number).sort(sortField(field, way)), bool);
+	loadTableData(divID, read(number), bool).sort(sortField(field, way, number));
 	addEventsOnChars();
 	resizePage();
 }
@@ -81,9 +109,7 @@ function createVersionHeaderMain(table) {
 var vtb = [];
 function createVersions(ext, mainTable) {
 	let verToBanner = [];
-	let v1max = 6;
-	let v2max = 8;
-	let v3max = 4;
+
 	versionCount = v1max + v2max + v3max + 3;
 	// (version * 2)
 	bannersCount = versionCount * 2;
@@ -126,7 +152,7 @@ function createVersions(ext, mainTable) {
 					verToBanner.push(h + '.' + j + '.' + 1);
 					verToBanner.push(h + '.' + j + '.' + 2);
 				} else if (h == 3 && j <= v3max) {
-					// 3.(0-2)
+					// 3.(0-4)
 					vThreeColspan = th;
 					vThreeColspan.colSpan = 2;
 					vThreeColspan.innerText = h + '.' + j;
@@ -163,8 +189,17 @@ function createVersions(ext, mainTable) {
 			}
 		}
 	}
-	vtb = verToBanner;
 
+	if (!mainTable) {
+		bannerrow.innerHTML += `<th style="width: 80px;"></th>
+								<th style="width: 80px;">Count</th>
+								<th style="width: 80px;">Min</th>
+								<th style="width: 80px;">Max</th>
+								`;
+	}
+
+	vtb = verToBanner;
+	console.log(vtb);
 	if (mainTable) {
 		upRow = document.createElement('tr');
 		upRow.classList.add('bannerrow');
@@ -203,13 +238,13 @@ function createVersions(ext, mainTable) {
 		for (let i = 0; i <= bannersCount; i++) {
 			tdU = document.createElement('td');
 			tdB = document.createElement('td');
+			tdU.classList.add('char');
+			tdB.classList.add('char');
 			upRow.appendChild(tdU);
 			bottomRow.append(tdB);
 
 			imgU = document.createElement('img');
 			imgD = document.createElement('img');
-			imgU.classList.add('char');
-			imgD.classList.add('char');
 			// (imgU.height = 128), (imgD.height = 128);
 			imgU.height = imgD.height = 128;
 
@@ -219,9 +254,9 @@ function createVersions(ext, mainTable) {
 				count = ch[2];
 				if (count == i) {
 					let link = `/genshin_web/images/characters/${charName}.webp`;
-					let alt = `${charName}`;
-					if (`${charName}` != 'undefined') {
-						if (row === `top`) {
+					let alt = charName;
+					if (charName != 'undefined') {
+						if (row === 'top') {
 							imgU.src = link;
 							imgU.alt = alt;
 							tdU.append(imgU);
@@ -264,7 +299,7 @@ function paintjob(number, charVision, cell, ext) {
 		case 'dendro':	color = '#51810e'; break;
 		case 'cryo':	color = '#4878a8'; break;
 		case 'anemo':	color = '#26a684'; break;
-		default: break;
+		default: color = '#a4a4a4'; break
 	}
 
 	cell.style.backgroundColor = color;
@@ -287,13 +322,30 @@ function paintjob(number, charVision, cell, ext) {
 	// prettier-ignore
 	cell.style.color = tinycolor.mostReadable(cell.style.backgroundColor, ['000','fff',]);
 }
-function fillTableBody(body, charData, ext) {
+
+// function CountMinMax(cocd) {
+// cocd.difMax = 0;
+// cocd.difMin = vtb.indexOf(cocd.version[1]) - vtb.indexOf(cocd.version[0]);
+// 	console.log(
+// 		vtb,
+// 		cocd,
+// 		cocd.version,
+// 		cocd.version[0],
+// 		cocd.version[1],
+// 		vtb.indexOf(cocd.version[1]),
+// 		' ',
+// 		vtb.indexOf(cocd.version[0])
+// 	);
+// 	return cocd;
+// }
+
+function fillTableBody(body, charData, ext, mainTable = false) {
 	for (let char of charData) {
 		let chDataNew = [];
 		// Проверка на bool ext
 		//
-
 		chData = char.version;
+		// CountMinMax(char);
 		// Задаётся имя и цвет персонажа для всего ряда
 		charVision = document.createElement('tr');
 		charVision.classList.add(`${char.vision}`);
@@ -311,6 +363,7 @@ function fillTableBody(body, charData, ext) {
 			}
 			chData = chDataNew;
 		}
+
 		for (let i = 0; i <= chData.length; i++) {
 			if (chData[i] != undefined) {
 				// Заполнение "пустыми" ячейками до первого момента баннера персонажа
@@ -323,14 +376,22 @@ function fillTableBody(body, charData, ext) {
 				}
 				let dif = vtb.indexOf(chData[i + 1]) - vtb.indexOf(chData[i]);
 
-				let difLast =
-					vtb.indexOf(vtb[vtb.length - 1]) -
-					vtb.indexOf(chData[chData.length - 1]);
+				char.difMax = 0;
+				char.difMin = vtb.indexOf(char.version[1]) - vtb.indexOf(char.version[0]);
+
+				let difLast = vtb.indexOf(vtb[vtb.length - 1]) - vtb.indexOf(chData[chData.length - 1]);
+
+				if (char.version.length === 1) {
+					char.difMin = char.difMax = difLast;
+				} else {
+					dif > char.difMax ? (char.difMax = dif - 1) : 0;
+					difLast > char.difMax ? (char.difMax = difLast) : 0;
+					dif <= char.difMin && dif > 0 ? (char.difMin = dif - 1) : 0;
+				}
 
 				if (chData[i + 1] == undefined) {
 					dif = difLast + 1;
 				}
-
 				// Промежутки между баннерами персонажа
 
 				for (let noCharCell = 0; noCharCell < dif; noCharCell++) {
@@ -356,6 +417,16 @@ function fillTableBody(body, charData, ext) {
 					}
 				}
 			}
+		}
+
+		// console.log(char);
+		if (!mainTable) {
+			charVision.innerHTML += `
+			<th style="min-width: 78px; background-color: rgb(23, 23, 23);"></th>
+			<td class="countingCell">${char.version.length}</td>
+			<td class="countingCell">${char.difMin}</td>
+			<td class="countingCell">${char.difMax}</td>
+			`;
 		}
 	}
 }
@@ -384,7 +455,7 @@ function loadTableDataMain(divForTableId, charData, ext) {
 	// mainCharactersTable
 	// Get rerunTable as tableBody
 	const tableDiv = document.getElementById(divForTableId);
-	changeTableSort('rerunTable', 4, false, 'vision', 'desc');
+	// changeTableSort('rerunTable', 4, false, 'vision', 'desc');
 
 	try {
 		while (tableDiv.firstChild) {
@@ -398,5 +469,5 @@ function loadTableDataMain(divForTableId, charData, ext) {
 
 	createVersionHeaderMain(head); // Генерирует хедер Banners
 	createVersions(ext, true); // Генерирует версии в тело
-	fillTableBody(body, charData, ext); // Заполняет таблицу
+	fillTableBody(body, charData, ext, true); // Заполняет таблицу
 }

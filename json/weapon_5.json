@@ -1,0 +1,247 @@
+[
+	{
+		"name": "Aquila Favonia",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Aquila Favonia.png",
+		"version": ["1.0.1", "1.5.2"]
+	},
+	{
+		"name": "Amos Bow",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Amos Bow.png",
+		"version": ["1.0.1", "1.2.2", "2.4.2", "3.0.2"]
+	},
+	{
+		"name": "Wolfs Gravestone",
+		"type": "claymore",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Wolfs Gravestone.png",
+		"version": ["1.0.2", "1.3.2"]
+	},
+	{
+		"name": "Lost Prayer To The Sacred Winds",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Lost Prayer To The Sacred Winds.png",
+		"version": ["1.0.2", "1.4.2", "1.6.1", "2.8.1"]
+	},
+	{
+		"name": "Skyward Harp",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Skyward Harp.png",
+		"version": ["1.1.1", "1.4.2", "2.3.2"]
+	},
+	{
+		"name": "Memory Of Dust",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Memory Of Dust.png",
+		"version": ["1.1.1", "1.5.1", "2.2.1"]
+	},
+	{
+		"name": "Vortex Vanquisher",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Vortex Vanquisher.png",
+		"version": ["1.1.2", "2.4.2", "3.0.1"]
+	},
+	{
+		"name": "The Unforged",
+		"type": "claymore",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/The Unforged.png",
+		"version": ["1.1.2", "2.1.1", "2.6.2"]
+	},
+	{
+		"name": "Summit Shaper",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Summit Shaper.png",
+		"version": ["1.2.1", "1.5.1", "2.8.2"]
+	},
+	{
+		"name": "Skyward Atlas",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Skyward Atlas.png",
+		"version": ["1.2.1", "1.6.2"]
+	},
+	{
+		"name": "Skyward Pride",
+		"type": "claymore",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Skyward Pride.png",
+		"version": ["1.2.2", "1.6.1"]
+	},
+	{
+		"name": "Primordial Jade Winged-Spear",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Primordial Jade Winged-Spear.png",
+		"version": ["1.3.1", "2.4.1", "2.7.1", "3.4.1"]
+	},
+	{
+		"name": "Primordial Jade Cutter",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Primordial Jade Cutter.png",
+		"version": ["1.3.1", "2.1.2", "2.5.1", "3.1.2"]
+	},
+	{
+		"name": "Staff of Homa",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Staff of Homa.png",
+		"version": ["1.3.2", "2.2.2", "3.4.2"]
+	},
+	{
+		"name": "Elegy for the End",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Elegy for the End.png",
+		"version": ["1.4.1", "2.2.2", "2.6.1", "3.1.1"]
+	},
+	{
+		"name": "Skyward Blade",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Skyward Blade.png",
+		"version": ["1.4.1", "2.0.2"]
+	},
+	{
+		"name": "Song of Broken Pines",
+		"type": "claymore",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Song of Broken Pines.png",
+		"version": ["1.5.2", "2.3.1"]
+	},
+	{
+		"name": "Freedom-Sworn",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Freedom-Sworn.png",
+		"version": ["1.6.2", "2.3.1", "2.8.1"]
+	},
+	{
+		"name": "Mistsplitter Reforged",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Mistsplitter Reforged.png",
+		"version": ["2.0.1", "2.6.2"]
+	},
+	{
+		"name": "Skyward Spine",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Skyward Spine.png",
+		"version": ["2.0.1"]
+	},
+	{
+		"name": "Thundering Pulse",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Thundering Pulse.png",
+		"version": ["2.0.2", "2.8.2", "3.2.1"]
+	},
+	{
+		"name": "Engulfing Lightning",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Engulfing Lightning.png",
+		"version": ["2.1.1", "2.5.2", "3.3.2"]
+	},
+	{
+		"name": "Everlasting Moonglow",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Everlasting Moonglow.png",
+		"version": ["2.1.2", "2.5.2", "3.0.2"]
+	},
+	{
+		"name": "Polar Star",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Polar Star.png",
+		"version": ["2.2.1", "3.2.2"]
+	},
+	{
+		"name": "Redhorn Stonethresher",
+		"type": "claymore",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Redhorn Stonethresher.png",
+		"version": ["2.3.2", "2.7.2", "3.3.1"]
+	},
+	{
+		"name": "Calamity Queller",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Calamity Queller.png",
+		"version": ["2.4.1"]
+	},
+	{
+		"name": "Kagura's Verity",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Kagura's Verity.png",
+		"version": ["2.5.1", "3.2.2"]
+	},
+	{
+		"name": "Haran Geppaku Futsu",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Haran Geppaku Futsu.png",
+		"version": ["2.6.1", "3.3.2"]
+	},
+	{
+		"name": "Aqua Simulacra",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Aqua Simulacra.png",
+		"version": ["2.7.1", "3.4.2"]
+	},
+	{
+		"name": "Hunter's Path",
+		"type": "bow",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Hunter's Path.png",
+		"version": ["3.0.1"]
+	},
+	{
+		"name": "Staff of the Scarlet Sands",
+		"type": "polearm",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Staff of the Scarlet Sands.png",
+		"version": ["3.1.1"]
+	},
+	{
+		"name": "Key of Khaj-Nisut",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Key of Khaj-Nisut.png",
+		"version": ["3.1.2"]
+	},
+	{
+		"name": "A Thousand Floating Dreams",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/A Thousand Floating Dreams.png",
+		"version": ["3.2.1"]
+	},
+	{
+		"name": "Tulaytullah's Remembrance",
+		"type": "catalyst",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Tulaytullah's Remembrance.png",
+		"version": ["3.3.1"]
+	},
+	{
+		"name": "Light of Foliar Incision",
+		"type": "sword",
+		"rarity": 5,
+		"url": "/genshin_web/images/weapon/Light of Foliar Incision.png",
+		"version": ["3.4.1"]
+	}
+]
