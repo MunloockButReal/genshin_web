@@ -25,16 +25,7 @@
 		"type": "hydro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Xingqiu.webp",
-		"version": [
-			"1.0.2",
-			"1.2.2",
-			"1.3.3",
-			"1.5.2",
-			"2.1.2",
-			"2.4.2",
-			"3.0.2",
-			"3.4.2"
-		]
+		"version": ["1.0.2", "1.2.2", "1.3.3", "1.5.2", "2.1.2", "2.4.2", "3.0.2", "3.4.2"]
 	},
 	{
 		"name": "Sucrose",
@@ -203,5 +194,12 @@
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Yaoyao.webp",
 		"version": ["3.4.1"]
+	},
+	{
+		"name": "Mika",
+		"type": "cryo",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Mika.webp",
+		"version": ["3.5.2"]
 	}
 ]

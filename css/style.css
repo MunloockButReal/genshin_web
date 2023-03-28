@@ -7,15 +7,19 @@ body {
 	font-family: 'GenshinFont';
 	font-size: 1.6rem;
 	text-align: center;
-}
-
-body {
-	color: hsl(0, 0%, 0%);
+	color: #000;
 	background-color: hsl(30, 30%, 75%);
 }
 
 table {
-	background: rgb(255, 255, 255);
+	background-color: #fff;
+	border-collapse: collapse;
+	border: 1px solid #000;
+}
+
+td {
+	padding: 0;
+	backdrop-filter: drop-shadow(10px);
 }
 
 .emptycell {
@@ -23,26 +27,15 @@ table {
 	opacity: 0.7;
 }
 
-td {
-	backdrop-filter: drop-shadow(10px);
-	padding: 0px;
-}
-
 .bannerrow,
 .char,
 .whitecell {
-	/* background-color: #fdfdfd; */
 	width: 5rem;
 	height: 5rem;
 }
 
-table,
-th,
-td,
 tr {
-	border-collapse: collapse;
-	border: 1px solid #000;
-	align-content: center;
+	align-items: center;
 }
 
 img {
@@ -52,70 +45,44 @@ img {
 .char {
 	background-color: hsl(0, 0%, 100%);
 }
-/* .rerunTables {
-	display: flex;
-	justify-content: space-around;
-} */
 
-::-webkit-scrollbar {
-	height: 1rem;
-	width: 1rem;
+.pyro,
+.hydro,
+.cryo,
+.electro {
+	color: hsl(0, 0%, 100%);
 }
 
-::-webkit-scrollbar-track {
-	background-color: whitesmoke;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #101010;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: #101010ab;
-}
-
-::-webkit-scrollbar-corner {
-	visibility: none;
-}
 @media (prefers-color-scheme: dark) {
 	body {
-		background: hsl(0, 0%, 3%);
+		background-color: hsl(0, 0%, 3%);
 	}
 	.bannerrow {
-		color: white;
+		color: #fff;
 	}
 	table {
-		background: hsla(0, 0%, 26%, 0.251);
-		/* color: hsl(0, 0%, 100%); */
+		background-color: hsla(0, 0%, 26%, 0.251);
+		color: #fff;
 	}
 
 	.pyro,
 	.hydro,
 	.cryo,
 	.electro {
-		color: hsl(0, 0%, 100%);
+		color: #fff;
 	}
 	.char {
 		background-color: hsl(0, 0%, 10%);
 	}
-	::-webkit-scrollbar-thumb {
-		background: hsl(0, 0%, 50%);
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background-color: hsl(0, 0%, 20%);
-	}
-	::-webkit-scrollbar-track {
-		background-color: hsl(0, 0%, 5%);
-	}
 }
 
-.radiobutton {
-	color: white;
+.radiobutton,
+.radiobutton2 {
+	color: #fff;
 }
 
 .radiobutton2 {
 	display: block;
-	color: white;
 }
 
 .rerunTables {
@@ -125,10 +92,31 @@ img {
 }
 
 .countingCell {
-	background: #292929;
-	color: white;
+	background-color: #292929;
+	color: #fff;
 }
 
 .undefined {
-	color: white;
+	color: #fff;
+}
+
+::-webkit-scrollbar {
+	height: 1rem;
+	width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #101010;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #101010ab;
+}
+
+::-webkit-scrollbar-corner {
+	visibility: hidden;
 }

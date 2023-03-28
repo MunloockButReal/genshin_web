@@ -1,11 +1,11 @@
 var v1max = 6; // Version 1.0 - 1.X
 var v2max = 8; // Version 2.0 - 2.X
-var v3max = 4; // Version 3.0 - 3.X
+var v3max = 5; // Version 3.0 - 3.X
 
 // prettier-ignore
 var vtb = [ '1.0.1', '1.0.2', '1.1.1', '1.1.2', '1.2.1', '1.2.2', '1.3.1', '1.3.2', '1.3.3', '1.4.1', '1.4.2', '1.5.1', '1.5.2', '1.6.1', '1.6.2',
 			'2.0.1', '2.0.2', '2.1.1', '2.1.2', '2.2.1', '2.2.2', '2.3.1', '2.3.2', '2.4.1', '2.4.2', '2.5.1', '2.5.2', '2.6.1', '2.6.2', '2.7.1', '2.7.2', '2.8.1', '2.8.2', 
-			'3.0.1', '3.0.2', '3.1.1', '3.1.2', '3.2.1', '3.2.2', '3.3.1', '3.3.2', '3.4.1', '3.4.2'];
+			'3.0.1', '3.0.2', '3.1.1', '3.1.2', '3.2.1', '3.2.2', '3.3.1', '3.3.2', '3.4.1', '3.4.2', '3.5.1','3.5.2'];
 
 function read(type, rarity) {
 	var charData;
@@ -123,13 +123,13 @@ function THeaderCreate(_type, _bannerType, _extented) {
 
 		console.log(testarr);
 		for (let i = 0; i <= bannersCount; i++) {
-			tdU = document.createElement('td');
-			tdB = document.createElement('td');
+			let tdU = document.createElement('td');
+			let tdB = document.createElement('td');
 			upRow.appendChild(tdU);
 			bottomRow.append(tdB);
 
-			imgU = document.createElement('img');
-			imgD = document.createElement('img');
+			let imgU = document.createElement('img');
+			let imgD = document.createElement('img');
 			imgU.classList.add('char');
 			imgD.classList.add('char');
 			imgU.height = imgD.height = 128;
@@ -254,44 +254,49 @@ function THBodyCreate(_type, _bannerType, _extented, _rarity, _sortType, _sortWa
 	return string;
 }
 
-function sortField(field, way = 'asc', number = 4) {
+/**
+ * Sorts an array of objects by the specified field, in the specified order (ascending or descending).
+ * If the specified field doesn't match any of the predefined cases, the function logs an error message and uses the default sorting function.
+ *
+ * @param {string} field - The name of the field to sort by.
+ * @param {string} way - The sort order ('asc' for ascending, 'desc' for descending).
+ * @returns {function} A function to use as the sort callback for Array.prototype.sort().
+ */
+function sortField(field, way) {
+	// Set up the sort direction based on the specified order
 	way === 'desc' ? ((w2 = 1), (w1 = -1)) : ((w1 = 1), (w2 = -1));
 
-	// let abc = read(number);
-	// console.log(abc);
-	// for (let abccha of abc) {
-	// 	console.log(abccha);
-	// 	console.log(abccha.name);
-	// }
+	// Sort the array based on the specified field
+	switch (field) {
+		case 'vision':
+		case 'name':
+		case 'difMin':
+		case 'difMax':
+			// Sort by the specified field (vision, name, difMin, or difMax)
+			return (a, b) => (a[field] > b[field] ? w1 : w2);
 
-	if (field === 'type' || field === 'name' || field === 'difMin' || field === 'difMax') {
-		return (a, b) => (a[field] > b[field] ? w1 : w2);
+		case 'byVersion':
+		case 'byBanner':
+			// Sort by the first element of the version array (byVersion) or the banner array (byBanner)
+			field = 'version';
+			return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
+
+		case 'lastDurationV':
+		case 'lastDurationB':
+			// Sort by the last element of the version array (lastDurationV) or the banner array (lastDurationB)
+			field = 'version';
+			return (a, b) => (a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2);
+
+		case 'count':
+			// Sort by the length of the version array
+			field = 'version';
+			return (a, b) => (a[field].length > b[field].length ? w1 : w2);
+
+		default:
+			// If the specified field doesn't match any of the above cases, log an error message and use the default sorting function
+			console.log('Some non existed sort type');
+			return (a, b) => (a > b ? w1 : w2);
 	}
-
-	if (field === 'byVersion' || field === 'byBanner') {
-		//sort by banner or version (first element)
-		field = 'version';
-		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
-	}
-
-	if (field === 'lastDurationV' || field === 'lastDurationB') {
-		// sorting by last element of banner or version
-		field = 'version';
-		return (a, b) => (a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2);
-	}
-
-	// else if (field === 'name' || field === 'difMin' || field === 'difMax') {
-	// 	return (a, b) => (a[field] > b[field] ? w1 : w2);
-	// }
-
-	if (field === 'count') {
-		field = 'version';
-		return (a, b) => (a[field].length > b[field].length ? w1 : w2);
-	}
-
-	console.log('Some non existed sort type');
-
-	return (a, b) => (a > b ? w1 : w2);
 }
 
 $(function () {

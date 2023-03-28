@@ -38,6 +38,22 @@
     <div class="pagewrapper">
         <div id="buttonDiv" class="buttons">
             <div class="choiceOptionsDiv non-active">
+
+                <ul id="type-button" class="choiceOptions">
+
+                    <form>
+                        <li>
+                            <input type="radio" id="charID" name="type" value="char" />
+                            <label for="charID">Char</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="weaponID" name="type" value="weapon" />
+                            <label for="weaponID">5*</label>
+                        </li>
+                    </form>
+
+                </ul>
+
                 <ul id="rarity-button" class="choiceOptions">
 
                     <form>
@@ -116,6 +132,23 @@
                         <li>
                             <input type="radio" id="descID" name="way" value="desc" />
                             <label for="descID">Desc</label>
+                        </li>
+                    </form>
+
+                </ul>
+
+
+
+                <ul id="standard-char-button" class="choiceOptions">
+
+                    <form>
+                        <li>
+                            <input type="radio" id="allowStandardID" name="type" value="true" />
+                            <label for="allowStandardID">Allow</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="disallowStandardID" name="type" value="false" />
+                            <label for="disallowStandardID">Disallow</label>
                         </li>
                     </form>
 

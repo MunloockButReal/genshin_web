@@ -1,14 +1,20 @@
-if (
-	getCookie('rrdRarity') === null ||
-	getCookie('rrdVB') === null ||
-	getCookie('rrdSortType') === null ||
-	getCookie('rrdWay') === null
-) {
-	setCookie('rrdRarity', 5, 60);
-	setCookie('rrdVB', 'byBanner', 60);
-	setCookie('rrdSortType', 'versort', 60);
-	setCookie('rrdWay', 'desc', 60);
-}
+// if (
+// 	getCookie('rrdRarity') === null ||
+// 	getCookie('rrdVB') === null ||
+// 	getCookie('rrdSortType') === null ||
+// 	getCookie('rrdWay') === null
+// ) {
+// 	setCookie('rrdRarity', 5, 60);
+// 	setCookie('rrdVB', 'byBanner', 60);
+// 	setCookie('rrdSortType', 'versort', 60);
+// 	setCookie('rrdWay', 'desc', 60);
+// }
+
+getCookie('rrdType') || setCookie('rrdType', 'char', 60);
+getCookie('rrdRarity') || setCookie('rrdRarity', 5, 60);
+getCookie('rrdVB') || setCookie('rrdVB', 'byBanner', 60);
+getCookie('rrdSortType') || setCookie('rrdSortType', 'versort', 60);
+getCookie('rrdWay') || setCookie('rrdWay', 'desc', 60);
 
 $(function () {
 	function f_resresh() {
@@ -21,11 +27,7 @@ $(function () {
 		sortType == 'LastSeen' ? (sortType = 'lastDurationV') : 0;
 		sortType == 'versort' ? (sortType = 'byVersion') : 0;
 
-		loadTableData(
-			'rerunTable',
-			read(rarity).sort(sortField(sortType, sortWay)),
-			bool
-		);
+		loadTableData('rerunTable', read(rarity).sort(sortField(sortType, sortWay)), bool);
 		addEventsOnChars();
 		resizePage();
 	}
@@ -42,8 +44,7 @@ $(function () {
 	f_resresh();
 
 	$('input[type=radio]').change(function () {
-		if ($(this).attr('name') == 'sortType')
-			id = $(this).parent().parent().parent().parent().attr('id');
+		if ($(this).attr('name') == 'sortType') id = $(this).parent().parent().parent().parent().attr('id');
 		else id = $(this).parent().parent().parent().attr('id');
 		switch (id) {
 			case 'rarity-button':

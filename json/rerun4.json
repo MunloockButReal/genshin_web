@@ -4,7 +4,7 @@
 		"vision": "hydro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Barbara.webp",
-		"version": ["1.0.1", "1.3.2", "1.4.2", "1.6.1", "2.3.2", "2.7.1", "3.1.2"]
+		"version": ["1.0.1", "1.3.2", "1.4.2", "1.6.1", "2.3.2", "2.7.1", "3.1.2", "3.5.1"]
 	},
 	{
 		"name": "Fischl",
@@ -32,7 +32,7 @@
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Sucrose.webp",
-		"version": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2"]
+		"version": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2", "3.5.2"]
 	},
 	{
 		"name": "Noel",
@@ -46,7 +46,7 @@
 		"vision": "cryo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Diona.webp",
-		"version": ["1.1.1", "1.3.1", "1.5.1", "2.0.2", "2.2.2", "2.5.1", "3.0.1"]
+		"version": ["1.1.1", "1.3.1", "1.5.1", "2.0.2", "2.2.2", "2.5.1", "3.0.1", "3.5.2"]
 	},
 	{
 		"name": "Beidou",
@@ -88,7 +88,7 @@
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Bennett.webp",
-		"version": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1"]
+		"version": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1", "3.5.1"]
 	},
 	{
 		"name": "Rosaria",
@@ -158,7 +158,7 @@
 		"vision": "dendro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Collei.webp",
-		"version": ["3.0.1"]
+		"version": ["3.0.1", "3.5.1"]
 	},
 	{
 		"name": "Dori",

@@ -35,44 +35,32 @@ function read(rarity) {
  * @returns sorted array
  */
 function sortField(field, way, number = 4) {
-	way === 'desc' ? ((w2 = 1), (w1 = -1)) : ((w1 = 1), (w2 = -1));
+	const w1 = way === 'desc' ? 1 : -1;
+	const w2 = way === 'desc' ? -1 : 1;
 
-	// let abc = read(number);
-	// console.log(abc);
-	// for (let abccha of abc) {
-	// 	console.log(abccha);
-	// 	console.log(abccha.name);
-	// }
+	switch (field) {
+		case 'lastDurationV':
+		case 'lastDurationB':
+			return (a, b) => (a.version[a.version.length - 1] < b.version[b.version.length - 1] ? w1 : w2);
 
-	if (field === 'vision' || field === 'name' || field === 'difMin' || field === 'difMax') {
-		return (a, b) => (a[field] > b[field] ? w1 : w2);
+		case 'count':
+			return (a, b) => (a.version.length > b.version.length ? w1 : w2);
+
+		case 'vision':
+		case 'name':
+		case 'difMin':
+		case 'difMax':
+			return (a, b) => (a[field] > b[field] ? w1 : w2);
+
+		case 'byVersion':
+		case 'byBanner':
+			return (a, b) => (a.version[0] < b.version[0] ? w1 : w2);
+
+		default:
+			throw new Error(`Invalid sort type: ${field}`);
 	}
-
-	if (field === 'byVersion' || field === 'byBanner') {
-		//sort by banner or version (first element)
-		field = 'version';
-		return (a, b) => (a[field][0] < b[field][0] ? w1 : w2);
-	}
-
-	if (field === 'lastDurationV' || field === 'lastDurationB') {
-		// sorting by last element of banner or version
-		field = 'version';
-		return (a, b) => (a[field][a[field].length - 1] < b[field][b[field].length - 1] ? w1 : w2);
-	}
-
-	// else if (field === 'name' || field === 'difMin' || field === 'difMax') {
-	// 	return (a, b) => (a[field] > b[field] ? w1 : w2);
-	// }
-
-	if (field === 'count') {
-		field = 'version';
-		return (a, b) => (a[field].length > b[field].length ? w1 : w2);
-	}
-
-	console.log('Some non existed sort type');
-
-	return (a, b) => (a > b ? w1 : w2);
 }
+
 /**
  *
  * @param {string} divID Div where is table will be created
@@ -238,13 +226,14 @@ function createVersions(ext, mainTable) {
 		for (let i = 0; i <= bannersCount; i++) {
 			tdU = document.createElement('td');
 			tdB = document.createElement('td');
-			tdU.classList.add('char');
-			tdB.classList.add('char');
+
 			upRow.appendChild(tdU);
 			bottomRow.append(tdB);
 
 			imgU = document.createElement('img');
 			imgD = document.createElement('img');
+			imgU.classList.add('char');
+			imgD.classList.add('char');
 			// (imgU.height = 128), (imgD.height = 128);
 			imgU.height = imgD.height = 128;
 

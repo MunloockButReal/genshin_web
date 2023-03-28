@@ -81,7 +81,7 @@
 		"type": "cryo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Ayaka.webp",
-		"version": ["2.0.1", "2.6.2"]
+		"version": ["2.0.1", "2.6.2", "3.5.2"]
 	},
 	{
 		"name": "Yoimiya",
@@ -116,7 +116,7 @@
 		"type": "cryo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Shenhe.webp",
-		"version": ["2.4.1"]
+		"version": ["2.4.1", "3.5.2"]
 	},
 	{
 		"name": "Yae",
@@ -151,7 +151,7 @@
 		"type": "electro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Cyno.webp",
-		"version": ["3.1.1"]
+		"version": ["3.1.1", "3.5.1"]
 	},
 	{
 		"name": "Nilou",
@@ -177,5 +177,11 @@
 		"type": "dendro",
 		"url": "/genshin_web/images/characters/Alhatham.webp",
 		"version": ["3.4.1"]
+	},
+	{
+		"name": "Dehya",
+		"type": "pyro",
+		"url": "/genshin_web/images/characters/Dehya.webp",
+		"version": ["3.5.1"]
 	}
 ]
