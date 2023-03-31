@@ -201,5 +201,12 @@
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Mika.webp",
 		"version": ["3.5.2"]
+	},
+	{
+		"name": "Kaveh",
+		"vision": "dendro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Kaveh.webp",
+		"version": ["3.6.2"]
 	}
 ]

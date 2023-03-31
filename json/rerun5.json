@@ -39,7 +39,7 @@
 		"vision": "cryo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Ganyu.webp",
-		"version": ["1.2.2", "2.4.2", "3.0.2"]
+		"version": ["1.2.2", "2.4.2", "3.0.2", "3.6.2"]
 	},
 	{
 		"name": "Xiao",
@@ -158,13 +158,13 @@
 		"vision": "hydro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Nilou.webp",
-		"version": ["3.1.2"]
+		"version": ["3.1.2", "3.6.1"]
 	},
 	{
 		"name": "Nahida",
 		"vision": "dendro",
 		"url": "/genshin_web/images/characters/Nahida.webp",
-		"version": ["3.2.1"]
+		"version": ["3.2.1", "3.6.1"]
 	},
 	{
 		"name": "Wanderer",
@@ -183,5 +183,11 @@
 		"vision": "pyro",
 		"url": "/genshin_web/images/characters/Dehya.webp",
 		"version": ["3.5.1"]
+	},
+	{
+		"name": "Baizhu",
+		"vision": "dendro",
+		"url": "/genshin_web/images/characters/Baizhu.webp",
+		"version": ["3.6.2"]
 	}
 ]
