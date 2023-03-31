@@ -1,12 +1,3 @@
-var v1max = 6; // Version 1.0 - 1.X
-var v2max = 8; // Version 2.0 - 2.X
-var v3max = 5; // Version 3.0 - 3.X
-
-// prettier-ignore
-var vtb = [ '1.0.1', '1.0.2', '1.1.1', '1.1.2', '1.2.1', '1.2.2', '1.3.1', '1.3.2', '1.3.3', '1.4.1', '1.4.2', '1.5.1', '1.5.2', '1.6.1', '1.6.2',
-			'2.0.1', '2.0.2', '2.1.1', '2.1.2', '2.2.1', '2.2.2', '2.3.1', '2.3.2', '2.4.1', '2.4.2', '2.5.1', '2.5.2', '2.6.1', '2.6.2', '2.7.1', '2.7.2', '2.8.1', '2.8.2', 
-			'3.0.1', '3.0.2', '3.1.1', '3.1.2', '3.2.1', '3.2.2', '3.3.1', '3.3.2', '3.4.1', '3.4.2', '3.5.1','3.5.2'];
-
 function read(type, rarity) {
 	var charData;
 
@@ -21,6 +12,15 @@ function read(type, rarity) {
 
 	return charData;
 }
+
+var v1max = 6; // Version 1.0 - 1.X
+var v2max = 8; // Version 2.0 - 2.X
+var v3max = 5; // Version 3.0 - 3.X
+
+// prettier-ignore
+var vtb = [ '1.0.1', '1.0.2', '1.1.1', '1.1.2', '1.2.1', '1.2.2', '1.3.1', '1.3.2', '1.3.3', '1.4.1', '1.4.2', '1.5.1', '1.5.2', '1.6.1', '1.6.2',
+			'2.0.1', '2.0.2', '2.1.1', '2.1.2', '2.2.1', '2.2.2', '2.3.1', '2.3.2', '2.4.1', '2.4.2', '2.5.1', '2.5.2', '2.6.1', '2.6.2', '2.7.1', '2.7.2', '2.8.1', '2.8.2', 
+			'3.0.1', '3.0.2', '3.1.1', '3.1.2', '3.2.1', '3.2.2', '3.3.1', '3.3.2', '3.4.1', '3.4.2', '3.5.1','3.5.2'];
 /**
  *
  * @param {*} _type Data Type - 'char' | 'weapon'
@@ -155,44 +155,6 @@ function THeaderCreate(_type, _bannerType, _extented) {
 	return string;
 }
 
-function colorJob(_extented, number, rarity, charVision) {
-	let color = '#000';
-	// prettier-ignore
-	switch (charVision) {
-	case 'pyro': 	color = '#bf2818'; break;
-	case 'hydro': 	color = '#0b4dda'; break;
-	case 'geo':		color = '#b68d07'; break;
-	case 'electro':	color = '#9336b0'; break;
-	case 'dendro':	color = '#51810e'; break;
-	case 'cryo':	color = '#4878a8'; break;
-	case 'anemo':	color = '#26a684'; break;
-	default: color = '#a4a4a4'; break 
-	}
-
-	let returnArray = {};
-
-	let colorT = tinycolor(color);
-	let darkenMult = 2.7;
-	if (rarity == 4) {
-		darkenMult = 2.7 * 1.5;
-	} else if (rarity == 5) {
-		darkenMult = 2.7;
-	}
-
-	if (!_extented) {
-		darkenMult *= 1.4;
-	}
-
-	returnArray['backgroundColor'] = tinycolor(colorT)
-		.darken(number * darkenMult)
-		.toRgbString();
-
-	// prettier-ignore
-	returnArray['color'] = tinycolor.mostReadable(returnArray['backgroundColor'], ['000','fff',]).toRgbString();
-
-	return returnArray;
-}
-
 function THBodyCreate(_type, _bannerType, _extented, _rarity, _sortType, _sortWay) {
 	let string = '<tbody>';
 	let data = read(_type, _rarity).sort(sortField(_sortType, _sortWay));
@@ -252,6 +214,44 @@ function THBodyCreate(_type, _bannerType, _extented, _rarity, _sortType, _sortWa
 		}
 	}
 	return string;
+}
+
+function colorJob(_extented, number, rarity, charVision) {
+	let color = '#000';
+	// prettier-ignore
+	switch (charVision) {
+	case 'pyro': 	color = '#bf2818'; break;
+	case 'hydro': 	color = '#0b4dda'; break;
+	case 'geo':		color = '#b68d07'; break;
+	case 'electro':	color = '#9336b0'; break;
+	case 'dendro':	color = '#51810e'; break;
+	case 'cryo':	color = '#4878a8'; break;
+	case 'anemo':	color = '#26a684'; break;
+	default: color = '#a4a4a4'; break 
+	}
+
+	let returnArray = {};
+
+	let colorT = tinycolor(color);
+	let darkenMult = 2.7;
+	if (rarity == 4) {
+		darkenMult = 2.7 * 1.5;
+	} else if (rarity == 5) {
+		darkenMult = 2.7;
+	}
+
+	if (!_extented) {
+		darkenMult *= 1.4;
+	}
+
+	returnArray['backgroundColor'] = tinycolor(colorT)
+		.darken(number * darkenMult)
+		.toRgbString();
+
+	// prettier-ignore
+	returnArray['color'] = tinycolor.mostReadable(returnArray['backgroundColor'], ['000','fff',]).toRgbString();
+
+	return returnArray;
 }
 
 /**
