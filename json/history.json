@@ -1,0 +1,105 @@
+{
+	"1.0": {
+		"startDate": "28.09.2020",
+		"endDate": "10.11.2020",
+		"1": [["Venti"], ["Barbara", "Fischl", "Xiangling"]],
+		"2": [["Klee"], ["Xingqiu", "Sucroce", "Noel"]]
+	},
+	"1.1": {
+		"1": [["Tartaglia"], ["Diona", "Beidou", "Ningguang"]],
+		"2": [["Zhongli"], ["Chongyun", "Razor", "Xinyan"]]
+	},
+	"1.2": {
+		"1": [["Albedo"], ["Fischl", "Sucroce", "Bennet"]],
+		"2": [["Ganyu"], ["Xingqiu", "Xinyan", "Noel"]]
+	},
+	"1.3": {
+		"1": [["Xiao"], ["Diona", "Beidou", "Xinyan"]],
+		"2": [["Keqing"], ["Barbara", "Ningguang", "Bennet"]],
+		"3": [["Hu Tao"], ["Xingqiu", "Xiangling", "Chongyun"]]
+	},
+	"1.4": {
+		"1": [["Venti"], ["Sucroce", "Razor", "Noel"]],
+		"2": [["Tartaglia"], ["Rosaria", "Fischl", "Barbara"]]
+	},
+	"1.5": {
+		"1": [["Zhongli"], ["Yanfei", "Diona", "Noel"]],
+		"2": [["Eula"], ["Xinyan", "Xingqiu", "Beidou"]]
+	},
+	"1.6": {
+		"1": [["Klee"], ["Fischl", "Sucroce", "Barbara"]],
+		"2": [["Kazuha"], ["Rosaria", "Bennet", "Razor"]]
+	},
+	"2.0": {
+		"1": [["Ayaka"], ["Ningguang", "Chongyun", "Yanfei"]],
+		"2": [["Yoimiya"], ["Sayu", "Diona", "Xinyan"]]
+	},
+	"2.1": {
+		"1": [["Raiden Shogun"], ["Sara", "Xiangling", "Sucroce"]],
+		"2": [["Sangonomiya Kokomi"], ["Rosaria", "Beidou", "Xingqiu"]]
+	},
+	"2.2": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"2.3": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"2.4": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"2.52": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"2.6": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"2.7": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"2.8": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.0": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.1": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.2": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.3": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.4": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.5": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.6": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.7": {
+		"1": [[], []],
+		"2": [[], []]
+	},
+	"3.8": {
+		"1": [[], []],
+		"2": [[], []]
+	}
+}

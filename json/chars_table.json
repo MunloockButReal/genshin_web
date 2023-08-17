@@ -601,5 +601,41 @@
 		"ATK": 234,
 		"DEF": 751,
 		"Abil": "EM: 96"
+	},
+	{
+		"version": "3.7",
+		"Rarity": 4,
+		"name": "Кирара",
+		"HP": 12180,
+		"ATK": 223,
+		"DEF": 546,
+		"Abil": "HP: 24%"
+	},
+	{
+		"version": "4.0",
+		"Rarity": 5,
+		"name": "Лини",
+		"HP": 11021,
+		"ATK": 318,
+		"DEF": 538,
+		"Abil": "CR: 24.2%"
+	},
+	{
+		"version": "4.0",
+		"Rarity": 4,
+		"name": "Линетт",
+		"HP": 12397,
+		"ATK": 232,
+		"DEF": 712,
+		"Abil": "ED(Anemo): 24%"
+	},
+	{
+		"version": "4.0",
+		"Rarity": 4,
+		"name": "Фремине",
+		"HP": 12071,
+		"ATK": 255,
+		"DEF": 708,
+		"Abil": "ATK: 24%"
 	}
 ]

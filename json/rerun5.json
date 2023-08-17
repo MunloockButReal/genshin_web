@@ -11,21 +11,21 @@
 		"vision": "pyro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Klee.webp",
-		"version": ["1.0.2", "1.6.1", "2.8.1"]
+		"version": ["1.0.2", "1.6.1", "2.8.1", "3.8.1"]
 	},
 	{
 		"name": "Tartaglia",
 		"vision": "hydro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Tartaglia.webp",
-		"version": ["1.1.1", "1.4.2", "2.2.1", "3.2.2"]
+		"version": ["1.1.1", "1.4.2", "2.2.1", "3.2.2", "4.0.2"]
 	},
 	{
 		"name": "Zhongli",
 		"vision": "geo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Zhongli.webp",
-		"version": ["1.1.2", "1.5.1", "2.4.2", "3.0.1"]
+		"version": ["1.1.2", "1.5.1", "2.4.2", "3.0.1", "4.0.2"]
 	},
 	{
 		"name": "Albedo",
@@ -67,14 +67,14 @@
 		"vision": "cryo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Eula.webp",
-		"version": ["1.5.2", "2.3.1"]
+		"version": ["1.5.2", "2.3.1", "3.8.1"]
 	},
 	{
 		"name": "Kazuha",
 		"vision": "anemo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Kazuha.webp",
-		"version": ["1.6.2", "2.8.1"]
+		"version": ["1.6.2", "2.8.1", "3.7.2"]
 	},
 	{
 		"name": "Ayaka",
@@ -88,7 +88,7 @@
 		"vision": "pyro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Yoimiya.webp",
-		"version": ["2.0.2", "2.8.2", "3.2.1"]
+		"version": ["2.0.2", "2.8.2", "3.2.1", "3.7.1"]
 	},
 	{
 		"name": "Raiden",
@@ -102,7 +102,7 @@
 		"vision": "hydro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Kokomi.webp",
-		"version": ["2.1.2", "2.5.2", "3.0.2"]
+		"version": ["2.1.2", "2.5.2", "3.0.2", "3.8.2"]
 	},
 	{
 		"name": "Itto",
@@ -123,7 +123,7 @@
 		"vision": "electro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Yae.webp",
-		"version": ["2.5.1", "3.2.2"]
+		"version": ["2.5.1", "3.2.2", "3.7.1"]
 	},
 	{
 		"name": "Ayato",
@@ -137,7 +137,7 @@
 		"vision": "hydro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Yelan.webp",
-		"version": ["2.7.1", "3.4.2"]
+		"version": ["2.7.1", "3.4.2", "4.0.1"]
 	},
 	{
 		"name": "Tighnari",
@@ -170,13 +170,13 @@
 		"name": "Wanderer",
 		"vision": "anemo",
 		"url": "/genshin_web/images/characters/Wanderer.webp",
-		"version": ["3.3.1"]
+		"version": ["3.3.1", "3.8.2"]
 	},
 	{
 		"name": "Alhatham",
 		"vision": "dendro",
 		"url": "/genshin_web/images/characters/Alhatham.webp",
-		"version": ["3.4.1"]
+		"version": ["3.4.1", "3.7.2"]
 	},
 	{
 		"name": "Dehya",
@@ -189,5 +189,11 @@
 		"vision": "dendro",
 		"url": "/genshin_web/images/characters/Baizhu.webp",
 		"version": ["3.6.2"]
+	},
+	{
+		"name": "Lyney",
+		"vision": "pyro",
+		"url": "/genshin_web/images/characters/Lyney.webp",
+		"version": ["4.0.1"]
 	}
 ]

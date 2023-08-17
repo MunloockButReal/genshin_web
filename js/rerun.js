@@ -9,7 +9,6 @@ function read(rarity) {
 			charData = data;
 		},
 	});
-
 	return charData;
 }
 
@@ -79,12 +78,13 @@ function createVersions(ext, mainTable) {
 	let verToBanner = [];
 	let v1max = 6;
 	let v2max = 8;
-	let v3max = 6;
-	versionCount = v1max + v2max + v3max + 3;
+	let v3max = 8;
+	let v4max = 0;
+	versionCount = v1max + v2max + v3max + v4max + 4;
 	// (version * 2)
 	bannersCount = versionCount * 2;
 
-	for (let h = 1; h < 4; h++) {
+	for (let h = 1; h < 5; h++) {
 		// Генерирует подверсию (.0 ... .8)
 
 		for (let j = 0; j < 9; j++) {
@@ -130,6 +130,15 @@ function createVersions(ext, mainTable) {
 
 					verToBanner.push(h + '.' + j + '.' + 1);
 					verToBanner.push(h + '.' + j + '.' + 2);
+				} else if (h == 4 && j <= v4max) {
+					// 4.(0-1)
+					vThreeColspan = th;
+					vThreeColspan.colSpan = 2;
+					vThreeColspan.innerText = h + '.' + j;
+					bannerrow.append(vThreeColspan);
+
+					verToBanner.push(h + '.' + j + '.' + 1);
+					verToBanner.push(h + '.' + j + '.' + 2);
 				}
 			} else {
 				// Если требуется таблица по версиям
@@ -149,7 +158,14 @@ function createVersions(ext, mainTable) {
 
 					verToBanner.push(h + '.' + j);
 				} else if (h == 3 && j <= v3max) {
-					// 3.(0-2)
+					// 3.(0-8)
+					vThree = th;
+					vThree.innerText = h + '.' + j;
+					bannerrow.append(vThree);
+
+					verToBanner.push(h + '.' + j);
+				} else if (h == 4 && j <= v4max) {
+					// 4.(0-0)
 					vThree = th;
 					vThree.innerText = h + '.' + j;
 					bannerrow.append(vThree);
@@ -394,3 +410,40 @@ function loadTableDataMain(divForTableId, charData, ext) {
 	createVersions(ext, true); // Генерирует версии в тело
 	fillTableBody(body, charData, ext); // Заполняет таблицу
 }
+
+// let obj = {
+// 	'1.0': {
+// 		startDate: '28.09.2020',
+// 		endDate: '10.11.2020',
+// 		1: [['Venti'], ['Barbara', 'Fischl', 'Xiangling']],
+// 		2: [['Klee'], ['Xingqiu', 'Sucroce', 'Noel']],
+// 	},
+// 	1.1: {
+// 		1: [['Tartaglia'], ['Diona', 'Beidou', 'Ningguang']],
+// 		2: [['Zhongli'], ['Chongyun', 'Razor', 'Xinyan']],
+// 	},
+// 	1.2: {
+// 		1: [['Albedo'], ['Fischl', 'Sucroce', 'Bennet']],
+// 		2: [['Ganyu'], ['Xingqiu', 'Xinyan', 'Noel']],
+// 	},
+// 	1.3: {
+// 		1: [['Xiao'], ['Diona', 'Beidou', 'Xinyan']],
+// 		2: [['Keqing'], ['Barbara', 'Ningguang', 'Bennet']],
+// 		3: [['Hu Tao'], ['Xingqiu', 'Xiangling', 'Chongyun']],
+// 	},
+// };
+
+// // console.log(obj);
+
+// for (const version in obj) {
+// 	console.log('Version: ' + version);
+// 	for (const banner in obj[version]) {
+// 		if (banner != 'startDate' && banner != 'endDate') {
+// 			console.log('Banner #' + banner);
+// 			console.log(`5 stars: ${obj[version][banner][0]}`);
+// 			console.log(`4 stars: ${obj[version][banner][1]}`);
+// 		}
+// 	}
+// 	console.log(`From: ${obj[version]['startDate']} to ${obj[version]['endDate']}`);
+// 	console.log('');
+// }

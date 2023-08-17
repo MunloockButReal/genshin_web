@@ -46,20 +46,20 @@ function loadTableData(charData) {
 }
 
 async function colorcode(columnName) {
-	var f = document.body.getElementsByClassName(columnName);
+	let f = document.body.getElementsByClassName(columnName);
 
-	var min = parseInt(f[0].innerHTML);
-	var max = parseInt(f[f.length - 1].innerHTML);
+	let min = parseInt(f[0].innerHTML);
+	let max = parseInt(f[f.length - 1].innerHTML);
 
 	let currentmin = min;
 	let current = 0;
 
 	// Background color generation
-	var rainbow = new Rainbow();
+	let rainbow = new Rainbow();
 	rainbow.setSpectrum('darkred', 'orange', 'green');
 	rainbow.setNumberRange(0, f.length);
 
-	var hex = [];
+	let hex = [];
 	for (let i = 0; i <= f.length; i++) {
 		hex.push('#' + 1);
 	}
@@ -72,23 +72,17 @@ async function colorcode(columnName) {
 
 		if (current < currentmin + step) {
 			f[l].style.backgroundColor = '#' + rainbow.colourAt(l);
-			f[l].style.color = tinycolor.mostReadable(rainbow.colourAt(l), [
-				'white',
-				'black',
-			]);
+			f[l].style.color = tinycolor.mostReadable(rainbow.colourAt(l), ['white', 'black']);
 		} else {
 			currentmin += step;
 			f[l].style.backgroundColor = '#' + rainbow.colourAt(l);
-			f[l].style.color = tinycolor.mostReadable(rainbow.colourAt(l + 1), [
-				'white',
-				'black',
-			]);
+			f[l].style.color = tinycolor.mostReadable(rainbow.colourAt(l + 1), ['white', 'black']);
 		}
 	}
 }
 
 function sortTable(n) {
-	var table,
+	let table,
 		rows,
 		switching,
 		i,
