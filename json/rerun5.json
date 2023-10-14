@@ -4,7 +4,7 @@
 		"vision": "anemo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Venti.webp",
-		"version": ["1.0.1", "1.4.1", "2.6.1", "3.1.1"]
+		"version": ["1.0.1", "1.4.1", "2.6.1", "3.1.1", "4.1.2"]
 	},
 	{
 		"name": "Klee",
@@ -60,7 +60,7 @@
 		"vision": "pyro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Tao.webp",
-		"version": ["1.3.3", "2.2.2", "3.4.2"]
+		"version": ["1.3.3", "2.2.2", "3.4.2", "4.1.1"]
 	},
 	{
 		"name": "Eula",
@@ -195,5 +195,17 @@
 		"vision": "pyro",
 		"url": "/genshin_web/images/characters/Lyney.webp",
 		"version": ["4.0.1"]
+	},
+	{
+		"name": "Neuvillette",
+		"vision": "hydro",
+		"url": "/genshin_web/images/characters/Neuvillette.webp",
+		"version": ["4.1.1"]
+	},
+	{
+		"name": "Wriothesley",
+		"vision": "cryo",
+		"url": "/genshin_web/images/characters/Wriothesley.webp",
+		"version": ["4.1.2"]
 	}
 ]
