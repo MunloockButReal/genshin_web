@@ -79,7 +79,7 @@ function createVersions(ext, mainTable) {
 	let v1max = 6;
 	let v2max = 8;
 	let v3max = 8;
-	let v4max = 1;
+	let v4max = 2;
 	versionCount = v1max + v2max + v3max + v4max + 4;
 	// (version * 2)
 	bannersCount = versionCount * 2;
@@ -203,9 +203,9 @@ function createVersions(ext, mainTable) {
 			for (let a of chars) {
 				if (a.version[i] != undefined) {
 					if (temp2.includes(a.version[i])) {
-						testarr.push([`top`, a.name, vtb.indexOf(a.version[i])]);
+						testarr.push([`top`, a.name, a.url, vtb.indexOf(a.version[i])]);
 					} else {
-						testarr.push([`bottom`, a.name, vtb.indexOf(a.version[i])]);
+						testarr.push([`bottom`, a.name, a.url, vtb.indexOf(a.version[i])]);
 						temp2.push(a.version[i]);
 					}
 				}
@@ -213,25 +213,25 @@ function createVersions(ext, mainTable) {
 		}
 
 		for (let i = 0; i <= bannersCount; i++) {
-			tdU = document.createElement('td');
-			tdB = document.createElement('td');
+			const tdU = document.createElement('td');
+			const tdB = document.createElement('td');
 			upRow.appendChild(tdU);
 			bottomRow.append(tdB);
 
-			imgU = document.createElement('img');
-			imgD = document.createElement('img');
+			const imgU = document.createElement('img');
+			const imgD = document.createElement('img');
 			imgU.classList.add('char');
 			imgD.classList.add('char');
 			// (imgU.height = 128), (imgD.height = 128);
 			imgU.height = imgD.height = 128;
 
 			for (let ch of testarr) {
-				row = ch[0];
-				charName = ch[1];
-				count = ch[2];
+				const row = ch[0];
+				const charName = ch[1];
+				const link = ch[2];
+				const count = ch[3];
 				if (count == i) {
-					let link = `/genshin_web/images/characters/${charName}.webp`;
-					let alt = `${charName}`;
+					const alt = `${charName}`;
 					if (`${charName}` != 'undefined') {
 						if (row === `top`) {
 							imgU.src = link;
