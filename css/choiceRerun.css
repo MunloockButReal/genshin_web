@@ -6,8 +6,8 @@
 
 .choiceOptions li {
 	margin: 0 5px 0 0;
-	width: 200px;
-	height: 50px;
+	width: 100px;
+	height: 30px;
 	position: relative;
 }
 
@@ -48,4 +48,5 @@
 .choiceOptionsDiv {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 5px;
 }

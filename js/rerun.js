@@ -223,7 +223,7 @@ function createVersions(ext, mainTable) {
 			imgU.classList.add('char');
 			imgD.classList.add('char');
 			// (imgU.height = 128), (imgD.height = 128);
-			imgU.height = imgD.height = 128;
+			imgU.height = imgD.height = 32;
 
 			for (let ch of testarr) {
 				const row = ch[0];
@@ -360,7 +360,7 @@ function fillTableBody(body, charData, ext) {
 						itIsChar.classList.add('char');
 						itIsChar.src = `${char.url}`;
 						itIsChar.alt = `${char.name}`;
-						itIsChar.height = 128;
+						itIsChar.height = 32;
 
 						charCell.appendChild(itIsChar);
 						charVision.append(charCell);
@@ -411,7 +411,7 @@ function loadTableDataMain(divForTableId, charData, ext) {
 	createVersions(ext, true); // Генерирует версии в тело
 	fillTableBody(body, charData, ext); // Заполняет таблицу
 }
-
+/*
 let obj = {
 	'1.0': {
 		startDate: '28.09.2020',
@@ -473,3 +473,4 @@ for (const version in obj) {
 	}
 	console.log('');
 }
+*/

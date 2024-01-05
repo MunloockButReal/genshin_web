@@ -10,11 +10,7 @@
 	--button-bg-hue: 0;
 	--button-bg-saturation: 0%;
 	--button-bg-lightness: 20%;
-	background-color: hsl(
-		var(--button-bg-hue),
-		var(--button-bg-saturation),
-		var(--button-bg-lightness)
-	);
+	background-color: hsl(var(--button-bg-hue), var(--button-bg-saturation), var(--button-bg-lightness));
 	color: hsl(0, 100%, 100%);
 }
 
@@ -59,7 +55,7 @@
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 10px;
 	text-decoration: none;
 }
 
