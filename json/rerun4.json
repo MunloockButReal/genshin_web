@@ -32,7 +32,7 @@
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Sucrose.png",
-		"version": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2", "3.5.2"]
+		"version": ["1.0.2", "1.2.1", "1.4.1", "1.6.1", "2.1.1", "2.6.1", "3.0.2", "3.5.2", "4.3.1"]
 	},
 	{
 		"name": "Noel",
@@ -88,14 +88,14 @@
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Bennett.png",
-		"version": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1", "3.5.1"]
+		"version": ["1.2.1", "1.3.2", "1.6.2", "2.3.1", "2.5.2", "2.8.2", "3.2.1", "3.5.1", "4.3.2"]
 	},
 	{
 		"name": "Rosaria",
 		"vision": "cryo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Rosaria.png",
-		"version": ["1.4.2", "1.6.2", "2.1.2", "2.3.1", "2.6.2", "3.3.2", "3.8.2"]
+		"version": ["1.4.2", "1.6.2", "2.1.2", "2.3.1", "2.6.2", "3.3.2", "3.8.2", "4.3.1"]
 	},
 	{
 		"name": "Yanfei",
@@ -116,7 +116,7 @@
 		"vision": "electro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Sara.png",
-		"version": ["2.1.1", "2.5.2", "3.3.2"]
+		"version": ["2.1.1", "2.5.2", "3.3.2", "4.3.2"]
 	},
 	{
 		"name": "Thoma",
@@ -172,7 +172,7 @@
 		"vision": "hydro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Candace.png",
-		"version": ["3.1.1", "3.6.2"]
+		"version": ["3.1.1", "3.6.2", "4.3.1"]
 	},
 	{
 		"name": "Layla",
@@ -236,5 +236,12 @@
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Charlotte.png",
 		"version": ["4.2.1"]
+	},
+	{
+		"name": "Chevreuse",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Chevreuse.png",
+		"version": ["4.3.2"]
 	}
 ]

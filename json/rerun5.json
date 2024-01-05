@@ -81,21 +81,21 @@
 		"vision": "cryo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Ayaka.png",
-		"version": ["2.0.1", "2.6.2", "3.5.2"]
+		"version": ["2.0.1", "2.6.2", "3.5.2", "4.3.1"]
 	},
 	{
 		"name": "Yoimiya",
 		"vision": "pyro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Yoimiya.png",
-		"version": ["2.0.2", "2.8.2", "3.2.1", "3.7.1"]
+		"version": ["2.0.2", "2.8.2", "3.2.1", "3.7.1", "4.3.2"]
 	},
 	{
 		"name": "Raiden Shougun",
 		"vision": "electro",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Shougun.png",
-		"version": ["2.1.1", "2.5.2", "3.3.2"]
+		"version": ["2.1.1", "2.5.2", "3.3.2", "4.3.2"]
 	},
 	{
 		"name": "Kokomi",
@@ -213,5 +213,11 @@
 		"vision": "hydro",
 		"url": "/genshin_web/images/characters/Furina.png",
 		"version": ["4.2.1"]
+	},
+	{
+		"name": "Navia",
+		"vision": "geo",
+		"url": "/genshin_web/images/characters/Navia.png",
+		"version": ["4.3.1"]
 	}
 ]

@@ -79,7 +79,7 @@ function createVersions(ext, mainTable) {
 	let v1max = 6;
 	let v2max = 8;
 	let v3max = 8;
-	let v4max = 2;
+	let v4max = 3;
 	versionCount = v1max + v2max + v3max + v4max + 4;
 	// (version * 2)
 	bannersCount = versionCount * 2;
@@ -311,7 +311,8 @@ function fillTableBody(body, charData, ext) {
 		charVision.classList.add(`${char.vision}`);
 
 		// Имена персов
-		charName = document.createElement('td');
+		const charName = document.createElement('td');
+		charName.style.setProperty('padding', '0 15px');
 		charName.innerText = `${char.name}`;
 		charVision.appendChild(charName);
 		body.appendChild(charVision);
@@ -411,39 +412,64 @@ function loadTableDataMain(divForTableId, charData, ext) {
 	fillTableBody(body, charData, ext); // Заполняет таблицу
 }
 
-// let obj = {
-// 	'1.0': {
-// 		startDate: '28.09.2020',
-// 		endDate: '10.11.2020',
-// 		1: [['Venti'], ['Barbara', 'Fischl', 'Xiangling']],
-// 		2: [['Klee'], ['Xingqiu', 'Sucroce', 'Noel']],
-// 	},
-// 	1.1: {
-// 		1: [['Tartaglia'], ['Diona', 'Beidou', 'Ningguang']],
-// 		2: [['Zhongli'], ['Chongyun', 'Razor', 'Xinyan']],
-// 	},
-// 	1.2: {
-// 		1: [['Albedo'], ['Fischl', 'Sucroce', 'Bennet']],
-// 		2: [['Ganyu'], ['Xingqiu', 'Xinyan', 'Noel']],
-// 	},
-// 	1.3: {
-// 		1: [['Xiao'], ['Diona', 'Beidou', 'Xinyan']],
-// 		2: [['Keqing'], ['Barbara', 'Ningguang', 'Bennet']],
-// 		3: [['Hu Tao'], ['Xingqiu', 'Xiangling', 'Chongyun']],
-// 	},
-// };
+let obj = {
+	'1.0': {
+		startDate: '28.09.2020',
+		endDate: '10.11.2020',
+		1: [['Venti'], ['Barbara', 'Fischl', 'Xiangling']],
+		2: [['Klee'], ['Xingqiu', 'Sucroce', 'Noel']],
+	},
+	1.1: {
+		1: [['Tartaglia'], ['Diona', 'Beidou', 'Ningguang']],
+		2: [['Zhongli'], ['Chongyun', 'Razor', 'Xinyan']],
+	},
+	1.2: {
+		1: [['Albedo'], ['Fischl', 'Sucroce', 'Bennet']],
+		2: [['Ganyu'], ['Xingqiu', 'Xinyan', 'Noel']],
+	},
+	1.3: {
+		1: [['Xiao'], ['Diona', 'Beidou', 'Xinyan']],
+		2: [['Keqing'], ['Barbara', 'Ningguang', 'Bennet']],
+		3: [['Hu Tao'], ['Xingqiu', 'Xiangling', 'Chongyun']],
+	},
+	1.4: {
+		1: [['Venti'], ['Sucroce', 'Razor', 'Noel']],
+		2: [['Tartaglia'], ['Rosaria', 'Fischl', 'Barbara']],
+	},
+	1.5: {
+		1: [['Zhongli'], ['Yanfei', 'Diona', 'Noel']],
+		2: [['Eula'], ['Xinyan', 'Xingqiu', 'Beidou']],
+	},
+	1.6: {
+		1: [['Klee'], ['Fischl', 'Sucroce', 'Barbara']],
+		2: [['Kazuha'], ['Rosaria', 'Bennet', 'Razor']],
+	},
+	'2.0': {
+		1: [['Ayaka'], ['Ningguang', 'Chongyun', 'Yanfei']],
+		2: [['Yoimiya'], ['Sayu', 'Diona', 'Xinyan']],
+	},
+	2.1: {
+		1: [['Raiden Shogun'], ['Sara', 'Xiangling', 'Sucroce']],
+		2: [['Sangonomiya Kokomi'], ['Rosaria', 'Beidou', 'Xingqiu']],
+	},
+};
 
-// // console.log(obj);
+// console.log(obj);
 
-// for (const version in obj) {
-// 	console.log('Version: ' + version);
-// 	for (const banner in obj[version]) {
-// 		if (banner != 'startDate' && banner != 'endDate') {
-// 			console.log('Banner #' + banner);
-// 			console.log(`5 stars: ${obj[version][banner][0]}`);
-// 			console.log(`4 stars: ${obj[version][banner][1]}`);
-// 		}
-// 	}
-// 	console.log(`From: ${obj[version]['startDate']} to ${obj[version]['endDate']}`);
-// 	console.log('');
-// }
+for (const version in obj) {
+	console.log(
+		'Version: ' +
+			version +
+			(obj[version]['startDate'] !== undefined && obj[version]['endDate'] !== undefined
+				? `: ${obj[version]['startDate']} - ${obj[version]['endDate']}`
+				: '')
+	);
+	for (const banner in obj[version]) {
+		if (banner != 'startDate' && banner != 'endDate') {
+			console.log('Banner #' + banner);
+			console.log(`5 stars: ${obj[version][banner][0]}`);
+			console.log(`4 stars: ${obj[version][banner][1]}`);
+		}
+	}
+	console.log('');
+}
