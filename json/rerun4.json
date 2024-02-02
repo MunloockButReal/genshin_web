@@ -39,7 +39,7 @@
 		"vision": "geo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Noel.png",
-		"version": ["1.0.2", "1.2.2", "1.4.1", "1.5.1", "2.3.1", "2.7.1", "3.2.1"]
+		"version": ["1.0.2", "1.2.2", "1.4.1", "1.5.1", "2.3.1", "2.7.1", "3.2.1", "4.4.1"]
 	},
 	{
 		"name": "Diona",
@@ -60,7 +60,7 @@
 		"vision": "geo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Ningguang.png",
-		"version": ["1.1.1", "1.3.2", "2.0.1", "2.2.1", "2.4.1", "2.8.1", "3.4.2"]
+		"version": ["1.1.1", "1.3.2", "2.0.1", "2.2.1", "2.4.1", "2.8.1", "3.4.2", "4.4.2"]
 	},
 	{
 		"name": "Chongyun",
@@ -81,7 +81,7 @@
 		"vision": "pyro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Xinyan.png",
-		"version": ["1.1.2", "1.3.1", "1.5.2", "2.0.2", "2.5.2", "2.8.2", "3.4.1"]
+		"version": ["1.1.2", "1.3.1", "1.5.2", "2.0.2", "2.5.2", "2.8.2", "3.4.1", "4.4.2"]
 	},
 	{
 		"name": "Bennett",
@@ -186,14 +186,14 @@
 		"vision": "anemo",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Faruzan.png",
-		"version": ["3.3.1", "3.8.2"]
+		"version": ["3.3.1", "3.8.2", "4.4.1"]
 	},
 	{
 		"name": "Yaoyao",
 		"vision": "dendro",
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Yaoyao.png",
-		"version": ["3.4.1", "3.7.2"]
+		"version": ["3.4.1", "3.7.2", "4.4.2"]
 	},
 	{
 		"name": "Mika",
@@ -243,5 +243,12 @@
 		"rarity": 4,
 		"url": "/genshin_web/images/characters/Chevreuse.png",
 		"version": ["4.3.2"]
+	},
+	{
+		"name": "Gaming",
+		"vision": "pyro",
+		"rarity": 4,
+		"url": "/genshin_web/images/characters/Gaming.png",
+		"version": ["4.4.1"]
 	}
 ]
