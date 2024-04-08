@@ -74,7 +74,7 @@
 		"vision": "anemo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Kazuha.png",
-		"version": ["1.6.2", "2.8.1", "3.7.2"]
+		"version": ["1.6.2", "2.8.1", "3.7.2", "4.5.2"]
 	},
 	{
 		"name": "Ayaka",
@@ -109,7 +109,7 @@
 		"vision": "geo",
 		"rarity": 5,
 		"url": "/genshin_web/images/characters/Itto.png",
-		"version": ["2.3.2", "2.7.2", "3.3.1"]
+		"version": ["2.3.2", "2.7.2", "3.3.1", "4.5.1"]
 	},
 	{
 		"name": "Shenhe",
@@ -200,7 +200,7 @@
 		"name": "Neuvillette",
 		"vision": "hydro",
 		"url": "/genshin_web/images/characters/Neuvillette.png",
-		"version": ["4.1.1"]
+		"version": ["4.1.1", "4.5.2"]
 	},
 	{
 		"name": "Wriothesley",
@@ -225,5 +225,12 @@
 		"vision": "anemo",
 		"url": "/genshin_web/images/characters/Liuyun.png",
 		"version": ["4.4.1"]
+	},
+	{
+		"name": "Chiori",
+		"vision": "geo",
+		"rarity": 5,
+		"url": "/genshin_web/images/characters/Chiori.png",
+		"version": ["4.5.1"]
 	}
 ]

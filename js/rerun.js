@@ -79,7 +79,7 @@ function createVersions(ext, mainTable) {
 	let v1max = 6;
 	let v2max = 8;
 	let v3max = 8;
-	let v4max = 4;
+	let v4max = 5;
 	versionCount = v1max + v2max + v3max + v4max + 4;
 	// (version * 2)
 	bannersCount = versionCount * 2;
